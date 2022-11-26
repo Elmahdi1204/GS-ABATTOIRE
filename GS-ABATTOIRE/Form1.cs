@@ -28,5 +28,11 @@ namespace GS_ABATTOIRE
             liste_des_fournisseur1.Show();
             liste_des_fournisseur1.BringToFront();
         }
+
+        private void bunifuButton28_Click(object sender, EventArgs e)
+        {
+            liste_Des_Produits1.Show();
+            liste_Des_Produits1.BringToFront();
+        }
     }
 }
