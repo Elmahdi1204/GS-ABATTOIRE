@@ -155,6 +155,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Achats\Liste_Des_Achats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Achats\Liste_Des_Achats.Designer.cs">
+      <DependentUpon>Liste_Des_Achats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion des clients\Ajouter_client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Achats\Liste_Des_Achats.resx">
+      <DependentUpon>Liste_Des_Achats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion des clients\Ajouter_client.resx">
       <DependentUpon>Ajouter_client.cs</DependentUpon>
