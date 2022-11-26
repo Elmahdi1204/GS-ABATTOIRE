@@ -34,5 +34,10 @@ namespace GS_ABATTOIRE
             liste_Des_Produits1.Show();
             liste_Des_Produits1.BringToFront();
         }
+
+        private void liste_Des_Produits1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
