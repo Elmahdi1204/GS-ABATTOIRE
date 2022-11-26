@@ -144,7 +144,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton210.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton210.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton210.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton210.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton210.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton210.ForeColor = System.Drawing.Color.White;
             this.bunifuButton210.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton210.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -235,7 +235,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton29.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton29.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton29.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton29.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton29.ForeColor = System.Drawing.Color.White;
             this.bunifuButton29.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton29.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -326,7 +326,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton28.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton28.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton28.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton28.ForeColor = System.Drawing.Color.White;
             this.bunifuButton28.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton28.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -417,7 +417,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton27.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton27.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton27.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton27.ForeColor = System.Drawing.Color.White;
             this.bunifuButton27.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton27.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -508,7 +508,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton26.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton26.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton26.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton26.ForeColor = System.Drawing.Color.White;
             this.bunifuButton26.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton26.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -599,7 +599,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton25.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton25.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton25.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton25.ForeColor = System.Drawing.Color.White;
             this.bunifuButton25.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton25.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -690,7 +690,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton24.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton24.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton24.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton24.ForeColor = System.Drawing.Color.White;
             this.bunifuButton24.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton24.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -782,7 +782,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton23.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton23.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton23.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton23.ForeColor = System.Drawing.Color.White;
             this.bunifuButton23.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton23.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -874,7 +874,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton22.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton22.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton22.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton22.ForeColor = System.Drawing.Color.White;
             this.bunifuButton22.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton22.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -965,7 +965,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton21.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuButton21.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton21.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton21.ForeColor = System.Drawing.Color.White;
             this.bunifuButton21.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton21.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1079,6 +1079,7 @@ namespace GS_ABATTOIRE
             this.Controls.Add(this.liste_des_clients1);
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

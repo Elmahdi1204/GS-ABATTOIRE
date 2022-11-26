@@ -193,6 +193,12 @@
     <Compile Include="Gestion des fournisseurs\Modifier_fournisseur.Designer.cs">
       <DependentUpon>Modifier_fournisseur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Produits\Liste_Des_Produits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Produits\Liste_Des_Produits.Designer.cs">
+      <DependentUpon>Liste_Des_Produits.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion des fournisseurs\Modifier_fournisseur.resx">
       <DependentUpon>Modifier_fournisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Produits\Liste_Des_Produits.resx">
+      <DependentUpon>Liste_Des_Produits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
