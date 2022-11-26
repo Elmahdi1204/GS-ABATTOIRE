@@ -17,7 +17,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("insert into Fournisseurs ( nomfournisseur , adress , numtele  ) values ('" + nomfournisseur + "' ,  '" + adress + "' , '" + numtele + "' );", Connexion.conn);
+                SqlCommand sql = new SqlCommand("insert into Fournisseurs ( nomfournisseur , adress , numtele  ) values (N'" + nomfournisseur + "' ,  N'" + adress + "' , N'" + numtele + "' );", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -32,7 +32,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  Fournisseurs Set nomfournisseur='" + nomfournisseur + "' , adress ='" + adress + "' , numtele ='" + numtele + "' where idfournisseur='" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update  Fournisseurs Set nomfournisseur=N'" + nomfournisseur + "' , adress =N'" + adress + "' , numtele =N'" + numtele + "' where idfournisseur=N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -68,7 +68,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("delete from Fournisseurs where idfournisseur ='" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("delete from Fournisseurs where idfournisseur =N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }

@@ -76,7 +76,7 @@
             this.bunifuButton21.BackColor1 = System.Drawing.Color.DodgerBlue;
             this.bunifuButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton21.BackgroundImage")));
             this.bunifuButton21.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton21.ButtonText = "Enregestrer";
+            this.bunifuButton21.ButtonText = "Enregistrer";
             this.bunifuButton21.ButtonTextMarginLeft = 0;
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
@@ -91,7 +91,7 @@
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuButton21.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton21.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton21.Font = new System.Drawing.Font("Century Gothic", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuButton21.ForeColor = System.Drawing.Color.White;
             this.bunifuButton21.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton21.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -150,6 +150,7 @@
             this.bunifuButton21.TextMarginLeft = 0;
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
             // bunifuTextBox1
             // 
@@ -169,7 +170,7 @@
             this.bunifuTextBox1.BorderThickness = 1;
             this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Century Gothic", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextBox1.DefaultText = "";
             this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
             this.bunifuTextBox1.HideSelection = true;
@@ -258,10 +259,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 18.32727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 28);
+            this.label1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(103, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 33);
+            this.label1.Size = new System.Drawing.Size(212, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Modifier Produit";
             // 
@@ -276,6 +277,7 @@
             this.Name = "Modifier_Produit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modifier_Produit";
+            this.Load += new System.EventHandler(this.Modifier_Produit_Load);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
