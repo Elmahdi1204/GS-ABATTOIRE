@@ -205,6 +205,7 @@
     <Compile Include="Gestion Des Produits\Ajouter_Prouduit.Designer.cs">
       <DependentUpon>Ajouter_Prouduit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Produits\Dataproduit.cs" />
     <Compile Include="Gestion Des Produits\Liste_Des_Produits.cs">
       <SubType>UserControl</SubType>
     </Compile>

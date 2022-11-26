@@ -21,5 +21,19 @@ namespace GS_ABATTOIRE.Gestion_Des_Produits
         {
 
         }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            if (bunifuTextBox1.Text == "" )
+            {
+                MessageBox.Show("Esseyer remplir toutes les zones.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Dataproduit.Ajouter_Produits(bunifuTextBox1.Text);
+                MessageBox.Show("Produits ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
     }
 }

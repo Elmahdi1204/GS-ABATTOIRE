@@ -7,18 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace GS_ABATTOIRE.Gestion_des_clients
+namespace GS_ABATTOIRE.Gestion_Des_Produits
 {
-    class Dataclients
+    class Dataproduit
     {
-
-        public static void Ajouter_Client(String nomclient, string numtele, string adress, string nis, String numregistre, string nif)
+        public static void Ajouter_Produits(String nomproduit)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("insert into Clients ( nomclient , numtele , adress , nis , nif , numregistre ) values (N'" + nomclient + "' ,  N'" + numtele + "' , N'" + adress + "' , N'" + nis + "', N'" + nif + "' ,  N'" + numregistre + "');", Connexion.conn);
+                SqlCommand sql = new SqlCommand("insert into Produits (nomproduit) values (N'" + nomproduit + "' );", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -28,12 +26,12 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                 Connexion.conn.Close();
             }
         }
-        public static void Modifier_Client(String nomclient, string numtele, string adress, string nis, string nif, String numregistre, int id)
+        public static void Modifier_Produits(int id, String nomproduit)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  Clients Set nomclient=N'" + nomclient + "' , numtele =N'" + numtele + "' , adress =N'" + adress + "', nis =N'" + nis + "', nif =N'" + nif + "' , numregistre =N'" + numregistre + "' where idclient=N'" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update  Produits Set nomproduit=N'" + nomproduit + "'  where idproduit=N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -43,17 +41,17 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                 Connexion.conn.Close();
             }
         }
-        public static void List_des_clients(BunifuDataGridView bunifuDataGridView, String txt)
+        public static void List_des_produits(BunifuDataGridView bunifuDataGridView, String txt)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("Select * from Clients  ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("Select * from Produits  ;", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
                 {
-                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], dr[6]);
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1]);
 
                 }
                 Connexion.conn.Close();
@@ -64,12 +62,12 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                 Connexion.conn.Close();
             }
         }
-        public static void Supprimer_clients(int id)
+        public static void Supprimer_produits(int id)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("delete from Clients where idclient =N'" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("delete from Produits where idproduit =N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
