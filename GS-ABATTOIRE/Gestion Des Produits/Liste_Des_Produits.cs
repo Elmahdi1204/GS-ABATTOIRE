@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GS_ABATTOIRE.Gestion_Des_Produits;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Projets
 
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
-
+            Ajouter_Prouduit ajtP = new Ajouter_Prouduit();
+            ajtP.ShowDialog();
         }
     }
 }
