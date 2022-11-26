@@ -310,7 +310,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton28.BackColor1 = System.Drawing.Color.DodgerBlue;
             this.bunifuButton28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton28.BackgroundImage")));
             this.bunifuButton28.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton28.ButtonText = "bunifuButton28";
+            this.bunifuButton28.ButtonText = "Produit";
             this.bunifuButton28.ButtonTextMarginLeft = 0;
             this.bunifuButton28.ColorContrastOnClick = 45;
             this.bunifuButton28.ColorContrastOnHover = 45;

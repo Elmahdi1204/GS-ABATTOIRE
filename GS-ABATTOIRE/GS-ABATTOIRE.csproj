@@ -193,11 +193,23 @@
     <Compile Include="Gestion des fournisseurs\Modifier_fournisseur.Designer.cs">
       <DependentUpon>Modifier_fournisseur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Produits\Ajouter_Prouduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Produits\Ajouter_Prouduit.Designer.cs">
+      <DependentUpon>Ajouter_Prouduit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion Des Produits\Liste_Des_Produits.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Gestion Des Produits\Liste_Des_Produits.Designer.cs">
       <DependentUpon>Liste_Des_Produits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion Des Produits\Modifier_Produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Produits\Modifier_Produit.Designer.cs">
+      <DependentUpon>Modifier_Produit.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,8 +234,14 @@
     <EmbeddedResource Include="Gestion des fournisseurs\Modifier_fournisseur.resx">
       <DependentUpon>Modifier_fournisseur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Produits\Ajouter_Prouduit.resx">
+      <DependentUpon>Ajouter_Prouduit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Produits\Liste_Des_Produits.resx">
       <DependentUpon>Liste_Des_Produits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Produits\Modifier_Produit.resx">
+      <DependentUpon>Modifier_Produit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
