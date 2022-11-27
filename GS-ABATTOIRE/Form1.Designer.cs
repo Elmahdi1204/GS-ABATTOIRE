@@ -54,10 +54,11 @@ namespace GS_ABATTOIRE
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.liste_Des_Achats1 = new GS_ABATTOIRE.Gestion_Des_Achats.Liste_Des_Achats();
             this.liste_Des_Produits1 = new GS_ABATTOIRE.Gestion_Des_Projets.Liste_Des_Produits();
             this.liste_des_fournisseur1 = new GS_ABATTOIRE.Gestion_des_fournisseurs.Liste_des_fournisseur();
             this.liste_des_clients1 = new GS_ABATTOIRE.Gestion_des_clients.Liste_des_clients();
-            this.liste_Des_Achats1 = new GS_ABATTOIRE.Gestion_Des_Achats.Liste_Des_Achats();
+            this.liste_Des_Ventes1 = new GS_ABATTOIRE.Gestion_Des_Ventes.Liste_Des_Ventes();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -480,6 +481,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton27.TextMarginLeft = 0;
             this.bunifuButton27.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton27.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton27.Click += new System.EventHandler(this.bunifuButton27_Click);
             // 
             // bunifuButton26
             // 
@@ -1058,6 +1060,14 @@ namespace GS_ABATTOIRE
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // liste_Des_Achats1
+            // 
+            this.liste_Des_Achats1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.liste_Des_Achats1.Location = new System.Drawing.Point(209, 0);
+            this.liste_Des_Achats1.Name = "liste_Des_Achats1";
+            this.liste_Des_Achats1.Size = new System.Drawing.Size(1026, 689);
+            this.liste_Des_Achats1.TabIndex = 5;
+            // 
             // liste_Des_Produits1
             // 
             this.liste_Des_Produits1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1083,19 +1093,20 @@ namespace GS_ABATTOIRE
             this.liste_des_clients1.Size = new System.Drawing.Size(1026, 689);
             this.liste_des_clients1.TabIndex = 2;
             // 
-            // liste_Des_Achats1
+            // liste_Des_Ventes1
             // 
-            this.liste_Des_Achats1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.liste_Des_Achats1.Location = new System.Drawing.Point(209, 0);
-            this.liste_Des_Achats1.Name = "liste_Des_Achats1";
-            this.liste_Des_Achats1.Size = new System.Drawing.Size(1026, 689);
-            this.liste_Des_Achats1.TabIndex = 5;
+            this.liste_Des_Ventes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.liste_Des_Ventes1.Location = new System.Drawing.Point(209, 0);
+            this.liste_Des_Ventes1.Name = "liste_Des_Ventes1";
+            this.liste_Des_Ventes1.Size = new System.Drawing.Size(1026, 689);
+            this.liste_Des_Ventes1.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 689);
+            this.Controls.Add(this.liste_Des_Ventes1);
             this.Controls.Add(this.liste_Des_Achats1);
             this.Controls.Add(this.liste_Des_Produits1);
             this.Controls.Add(this.liste_des_fournisseur1);
@@ -1132,6 +1143,7 @@ namespace GS_ABATTOIRE
         private Gestion_des_fournisseurs.Liste_des_fournisseur liste_des_fournisseur1;
         private Gestion_Des_Projets.Liste_Des_Produits liste_Des_Produits1;
         private Gestion_Des_Achats.Liste_Des_Achats liste_Des_Achats1;
+        private Gestion_Des_Ventes.Liste_Des_Ventes liste_Des_Ventes1;
     }
 }
 

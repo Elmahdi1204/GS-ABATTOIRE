@@ -45,5 +45,11 @@ namespace GS_ABATTOIRE
             liste_Des_Achats1.Show();
             liste_Des_Achats1.BringToFront();
         }
+
+        private void bunifuButton27_Click(object sender, EventArgs e)
+        {
+            liste_Des_Ventes1.Show();
+            liste_Des_Ventes1.BringToFront();
+        }
     }
 }
