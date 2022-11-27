@@ -13,11 +13,13 @@ namespace GS_ABATTOIRE.Gestion_Des_Produits
     public partial class Modifier_Produit : Form
     {
         int id = 0;
-        public Modifier_Produit(int id , String nom )
+        public Modifier_Produit(int id , String nom  , String categorie)
         {
             InitializeComponent();
             bunifuTextBox1.Text = nom;
             this.id = id;
+            bunifuDropdown1.Text = categorie;
+
 
         }
 
@@ -28,14 +30,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Produits
 
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
-            if (bunifuTextBox1.Text == "" )
+            if (bunifuTextBox1.Text == "" || bunifuDropdown1.Text == "Selectioner une Categorie" )
             {
                 MessageBox.Show("Esseyer remplir toutes les zones.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
             else
             {
-                Dataproduit.Modifier_Produits(id ,bunifuTextBox1.Text);
-                MessageBox.Show("Client modifier avec succes", "Modifier avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Dataproduit.Modifier_Produits(id ,bunifuTextBox1.Text , bunifuDropdown1.Text);
+                MessageBox.Show("Produit  modifier avec succes", "Modifier avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
             }

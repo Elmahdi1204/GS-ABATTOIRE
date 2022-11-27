@@ -161,6 +161,7 @@
     <Compile Include="Gestion Des Achats\Ajouter_Ensemble.Designer.cs">
       <DependentUpon>Ajouter_Ensemble.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Achats\DataAchats.cs" />
     <Compile Include="Gestion Des Achats\Liste_Des_Achats.cs">
       <SubType>UserControl</SubType>
     </Compile>
