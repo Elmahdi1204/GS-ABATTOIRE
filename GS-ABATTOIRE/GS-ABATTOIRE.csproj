@@ -148,6 +148,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbattoireDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbattoireDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Connexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -291,6 +296,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="AbattoireDataSet.xsc">
+      <DependentUpon>AbattoireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AbattoireDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AbattoireDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AbattoireDataSet.xss">
+      <DependentUpon>AbattoireDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
