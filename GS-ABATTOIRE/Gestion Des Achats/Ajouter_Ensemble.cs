@@ -86,33 +86,25 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 bunifuDataGridView2.Rows.RemoveAt(getindex(int.Parse(id.Text)));
                 bunifuDataGridView2.Rows.Add(id.Text, nom.Text,qtenv , categorie);
 
-                    if (categorie == "Les abats")
-                    {
-                        qteabats.Text = (double.Parse(qteabats.Text) - double.Parse(qte.Text)).ToString();
-                    }
-                    if (categorie == "Poulet , Dende")
-                    {
-                        Qtepoulet.Text = (double.Parse(Qtepoulet.Text) - double.Parse(qte.Text)).ToString();
-                    }
-
+                  
 
                 }
             else
             {
-                    if (categorie =="Les abats")
-                    {
-                        qteabats.Text = (double.Parse(qteabats.Text) - double.Parse(qte.Text)).ToString();
-                    }
-                    if (categorie =="Poulet , Dende")
-                    {
-                        Qtepoulet.Text = (double.Parse(Qtepoulet.Text) - double.Parse(qte.Text)).ToString();
-                    }
+                    
 
                 bunifuDataGridView2.Rows.Add(id.Text, nom.Text, qte.Text , categorie);
 
 
             }
-               
+                if (categorie == "Les abats")
+                {
+                    qteabats.Text = (double.Parse(qteabats.Text) - double.Parse(qte.Text)).ToString();
+                }
+                if (categorie == "Poulet , Dende")
+                {
+                    Qtepoulet.Text = (double.Parse(Qtepoulet.Text) - double.Parse(qte.Text)).ToString();
+                }
 
             }
             catch
