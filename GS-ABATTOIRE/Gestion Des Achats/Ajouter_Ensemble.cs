@@ -13,11 +13,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
     public partial class Ajouter_Ensemble : Form
     {
         String categorie="";
+        double prixtotale = 0;
 
 
         public Ajouter_Ensemble()
         {
             InitializeComponent();
+            bunifuTextBox15.Text = "0";
+            bunifuTextBox14.Text = "0";
         }
 
         private void bunifuPanel3_Click(object sender, EventArgs e)
@@ -37,6 +40,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
         private void Ajouter_Ensemble_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'abattoireDataSet.Fournisseurs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.fournisseursTableAdapter.Fill(this.abattoireDataSet.Fournisseurs);
             Gestion_Des_Produits.Dataproduit.List_des_produits(bunifuDataGridView1 , Recherche.Text);
 
 
@@ -77,8 +82,17 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             try{
 
-            
-            
+                if (Qtepoulet.Text=="" || qteabats.Text =="")
+                {
+                    MessageBox.Show("Esseyer remplir toutes les zones De quantité des abats et Quantite totale de poulet& Dende.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                }
+                else{
+
+                    if (verifierqte(int.Parse(qte.Text)))
+                    {
+
+                   
+
             if (verifier(id.Text))
             {
                 double qnteancien  = double.Parse(bunifuDataGridView2.Rows[getindex(int.Parse(id.Text))].Cells[2].Value.ToString());
@@ -86,26 +100,30 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 bunifuDataGridView2.Rows.RemoveAt(getindex(int.Parse(id.Text)));
                 bunifuDataGridView2.Rows.Add(id.Text, nom.Text,qtenv , categorie);
 
-                  
-
                 }
             else
             {
-                    
-
                 bunifuDataGridView2.Rows.Add(id.Text, nom.Text, qte.Text , categorie);
 
-
             }
+     
                 if (categorie == "Les abats")
                 {
-                    qteabats.Text = (double.Parse(qteabats.Text) - double.Parse(qte.Text)).ToString();
+                       
+                            qteabats.Text = (double.Parse(qteabats.Text) - double.Parse(qte.Text)).ToString();
+                       
                 }
                 if (categorie == "Poulet , Dende")
-                {
-                    Qtepoulet.Text = (double.Parse(Qtepoulet.Text) - double.Parse(qte.Text)).ToString();
+                { 
+                            Qtepoulet.Text = (double.Parse(Qtepoulet.Text) - double.Parse(qte.Text)).ToString();
                 }
-
+                }
+                    else
+                    {
+                        MessageBox.Show("Quantité indisponible", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    }
+                }
+                 
             }
             catch
             {
@@ -114,7 +132,30 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
 
         }
-       
+       bool verifierqte(int qnte)
+        {
+            bool done = true;
+            if (categorie == "Les abats")
+            {
+
+                if (qnte >int.Parse(qteabats.Text))
+                {
+
+                    done = false;
+                }
+
+            }
+            if (categorie == "Poulet , Dende")
+            {
+                if (qnte > int.Parse(Qtepoulet.Text))
+                {
+
+                    done = false;
+                }
+            }
+
+            return done;
+        }
        
         bool verifier(String id)
 
@@ -148,6 +189,117 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             }
 
             return index;
+        }
+
+        private void bunifuTextBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox9_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox10.Text = (double.Parse(bunifuTextBox8.Text) * double.Parse(bunifuTextBox9.Text)).ToString();
+                bunifuTextBox16.Text = (double.Parse(bunifuTextBox10.Text) - double.Parse(bunifuTextBox15.Text)).ToString();
+                bunifuTextBox11.Text = bunifuTextBox16.Text;
+                bunifuTextBox12.Text = (double.Parse(bunifuTextBox16.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
+
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuTextBox15_TextChanged(object sender, EventArgs e)
+        {
+            try{
+                bunifuTextBox16.Text = (double.Parse(bunifuTextBox10.Text) - double.Parse(bunifuTextBox15.Text)).ToString();
+                bunifuTextBox11.Text = bunifuTextBox16.Text;
+                bunifuTextBox12.Text = (double.Parse(bunifuTextBox16.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuTextBox11_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+               
+                bunifuTextBox12.Text = (double.Parse(bunifuTextBox16.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
+            Gestion_des_fournisseurs.Ajouter_fournisseur ajouter = new Gestion_des_fournisseurs.Ajouter_fournisseur();
+            ajouter.ShowDialog();
+            this.fournisseursTableAdapter.Fill(this.abattoireDataSet.Fournisseurs);
+
+        }
+
+        private void bunifuTextBox13_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                prixtotale = (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text));
+
+                bunifuTextBox17.Text = $"{ prixtotale :### ### ###.##}";
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuTextBox14_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                prixtotale = (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text));
+
+                bunifuTextBox17.Text = $"{ prixtotale:### ### ###.##}";
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Qtepoulet.Text = bunifuTextBox2.Text;
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                qteabats.Text = bunifuTextBox1.Text;
+            }
+            catch
+            {
+
+            }
         }
     }
     
