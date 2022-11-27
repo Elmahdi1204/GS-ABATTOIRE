@@ -143,7 +143,9 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+#pragma warning disable CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
+#pragma warning restore CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(8, 8);
             this.bunifuDataGridView1.Margin = new System.Windows.Forms.Padding(2);

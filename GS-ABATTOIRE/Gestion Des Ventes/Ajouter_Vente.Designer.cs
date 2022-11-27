@@ -202,7 +202,9 @@
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+#pragma warning disable CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
+#pragma warning restore CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(0, 84);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";
@@ -848,7 +850,9 @@
             this.bunifuDataGridView2.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView2.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+#pragma warning disable CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView2.HeaderBgColor = System.Drawing.Color.Empty;
+#pragma warning restore CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView2.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView2.Location = new System.Drawing.Point(0, 0);
             this.bunifuDataGridView2.Margin = new System.Windows.Forms.Padding(2);
