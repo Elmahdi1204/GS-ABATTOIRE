@@ -16,5 +16,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             InitializeComponent();
         }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            Ajouter_Ensemble ajtE = new Ajouter_Ensemble();
+            ajtE.ShowDialog();
+
+        }
     }
 }

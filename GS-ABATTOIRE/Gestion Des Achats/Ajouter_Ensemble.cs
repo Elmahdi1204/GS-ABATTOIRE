@@ -16,5 +16,20 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             InitializeComponent();
         }
+
+        private void bunifuPanel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuDropdown2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
