@@ -39,5 +39,11 @@ namespace GS_ABATTOIRE
         {
 
         }
+
+        private void bunifuButton25_Click(object sender, EventArgs e)
+        {
+            liste_Des_Achats1.Show();
+            liste_Des_Achats1.BringToFront();
+        }
     }
 }
