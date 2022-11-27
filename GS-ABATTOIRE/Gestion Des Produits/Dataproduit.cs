@@ -11,12 +11,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Produits
 {
     class Dataproduit
     {
-        public static void Ajouter_Produits(String nomproduit)
+        public static void Ajouter_Produits(String nomproduit , string categorie)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("insert into Produits (nomproduit) values (N'" + nomproduit + "' );", Connexion.conn);
+                SqlCommand sql = new SqlCommand("insert into Produits (nomproduit , Categorie) values (N'" + nomproduit + "' ,N'"+categorie+"' );", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -26,12 +26,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Produits
                 Connexion.conn.Close();
             }
         }
-        public static void Modifier_Produits(int id, String nomproduit)
+        public static void Modifier_Produits(int id, String nomproduit , string categorie)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  Produits Set nomproduit=N'" + nomproduit + "'  where idproduit=N'" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update  Produits Set nomproduit=N'" + nomproduit + "'  ,Categorie=N'" + categorie + "'  where idproduit=N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -51,7 +51,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Produits
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
                 {
-                    bunifuDataGridView.Rows.Add(dr[0], dr[1]);
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1] , dr[2]);
 
                 }
                 Connexion.conn.Close();

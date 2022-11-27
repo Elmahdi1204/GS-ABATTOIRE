@@ -48,8 +48,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Projets
                 String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
                 String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                String adress = bunifuDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-                String numtele = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                String categorie = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+               
 
 
 
@@ -57,7 +57,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Projets
                 {
 
 
-                    Modifier_Produit MOdifier_Produit = new Modifier_Produit(int.Parse(id), nom);
+                    Modifier_Produit MOdifier_Produit = new Modifier_Produit(int.Parse(id), nom , categorie);
                     MOdifier_Produit.ShowDialog();
 
                 }
