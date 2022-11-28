@@ -58,7 +58,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             {
                 id.Text = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 nom.Text = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                 categorie = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                categorie = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 qte.Clear();
                 qte.Focus();
 
