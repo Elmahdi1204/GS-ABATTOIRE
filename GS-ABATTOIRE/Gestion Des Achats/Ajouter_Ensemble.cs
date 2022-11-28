@@ -301,6 +301,15 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
             }
         }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+            Gestion_Des_Produits.Ajouter_Prouduit ajouter_Prouduit = new Gestion_Des_Produits.Ajouter_Prouduit();
+            ajouter_Prouduit.ShowDialog();
+            Gestion_Des_Produits.Dataproduit.List_des_produits(bunifuDataGridView1, Recherche.Text);
+
+
+        }
     }
     
 }
