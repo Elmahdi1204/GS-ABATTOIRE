@@ -21,6 +21,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             InitializeComponent();
             bunifuTextBox15.Text = "0";
             bunifuTextBox14.Text = "0";
+            bunifuTextBox3.Text = "0";
         }
 
         private void bunifuPanel3_Click(object sender, EventArgs e)
@@ -43,6 +44,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             // TODO: cette ligne de code charge les données dans la table 'abattoireDataSet.Fournisseurs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.fournisseursTableAdapter.Fill(this.abattoireDataSet.Fournisseurs);
             Gestion_Des_Produits.Dataproduit.List_des_produits(bunifuDataGridView1 , Recherche.Text);
+            bunifuDropdown1.Text = "Selectioner un fournisseur";
+            bunifuDropdown2.Text = "Selectioner une categorie";
 
 
         }
@@ -253,7 +256,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             try
             {
-                prixtotale = (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text));
+               prixtotale= (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text) + double.Parse(bunifuTextBox3.Text));
 
                 bunifuTextBox17.Text = $"{ prixtotale :### ### ###.##}";
 
@@ -268,7 +271,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             try
             {
-                prixtotale = (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text));
+                prixtotale = (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text) + double.Parse(bunifuTextBox3.Text));
 
                 bunifuTextBox17.Text = $"{ prixtotale:### ### ###.##}";
             }
@@ -308,6 +311,134 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             ajouter_Prouduit.ShowDialog();
             Gestion_Des_Produits.Dataproduit.List_des_produits(bunifuDataGridView1, Recherche.Text);
 
+
+        }
+
+        private void bunifuTextBox4_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox3.Text = (double.Parse(bunifuTextBox4.Text) * double.Parse(bunifuTextBox7.Text)).ToString();
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                prixtotale = (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text)+ double.Parse(bunifuTextBox3.Text));
+
+                bunifuTextBox17.Text = $"{ prixtotale:### ### ###.##}";
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuPanel8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuDataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+              
+                String colname = bunifuDataGridView2.Columns[e.ColumnIndex].Name;
+                String categorie = bunifuDataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                String qtne = bunifuDataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                
+
+
+               
+                if (colname == "supp")
+                {
+                    DialogResult dialog = MessageBox.Show("Vous etes sur ?", "Supprimer un client", MessageBoxButtons.YesNo);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        if (categorie == "Les abats")
+                        {
+
+                            qteabats.Text = (double.Parse(qteabats.Text) + double.Parse(qtne)).ToString();
+
+                        }
+                        if (categorie == "Poulet , Dende")
+                        {
+                            Qtepoulet.Text = (double.Parse(Qtepoulet.Text) + double.Parse(qtne)).ToString();
+                        }
+
+                        bunifuDataGridView2.Rows.RemoveAt(e.RowIndex);
+                    }
+
+
+                }
+              
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuButton24_Click(object sender, EventArgs e)
+        {
+            if (bunifuDropdown1.Text=="Selectioner un fournissuer" || bunifuDropdown2.Text=="Selectioner une categorie"|| bunifuTextBox7.Text =="" || bunifuTextBox8.Text=="" || bunifuTextBox9.Text=="" || bunifuTextBox15.Text=="" || bunifuTextBox16.Text==""|| bunifuTextBox11.Text==""|| bunifuTextBox2.Text=="" || bunifuTextBox1.Text==""|| bunifuTextBox14.Text=="" || bunifuTextBox13.Text==""|| bunifuTextBox4.Text=="")
+            {
+                MessageBox.Show("Esseyer remplir toutes les zones.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int idkottas = DataAchats.Get_lastid() + 1;
+                DataAchats.Ajouter_kottas(idkottas, "Ensemble - " +bunifuDropdown2.Text+ " - " + idkottas + " - " + DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), double.Parse(bunifuTextBox8.Text), double.Parse(bunifuTextBox9.Text), double.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), double.Parse(bunifuTextBox11.Text), double.Parse(bunifuTextBox2.Text), double.Parse(bunifuTextBox1.Text), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), DateTime.Now);
+                for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
+                {
+                    int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());
+                    double qte = double.Parse(bunifuDataGridView2.Rows[i].Cells[2].Value.ToString());
+
+
+                    DataAchats.Ajouter_produitachete(idproduit, idkottas, qte);
+
+                }
+                bunifuDataGridView2.Rows.Clear();
+                MessageBox.Show("Ajouter avec succes");
+                bunifuTextBox1.Clear();
+                bunifuTextBox2.Clear();
+                bunifuTextBox4.Clear();
+                bunifuTextBox7.Clear();
+                bunifuTextBox8.Clear();
+                bunifuTextBox9.Clear();
+                bunifuTextBox10.Clear();
+                bunifuTextBox11.Clear();
+                bunifuTextBox12.Clear();
+                bunifuTextBox13.Clear();
+                bunifuTextBox16.Clear();
+                bunifuTextBox17.Clear();
+                bunifuTextBox15.Text = "0";
+                bunifuTextBox14.Text = "0";
+                bunifuTextBox3.Text = "0";
+                bunifuDropdown1.Text = "Selectioner un fournisseur";
+                bunifuDropdown2.Text = "Selectioner une categorie";
+
+            }
+
+         
+        }
+
+        private void bunifuTextBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox10_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

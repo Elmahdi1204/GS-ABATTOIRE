@@ -173,6 +173,12 @@
     <Compile Include="Gestion Des Achats\Liste_Des_Achats.Designer.cs">
       <DependentUpon>Liste_Des_Achats.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Achats\Modifier_Ensemble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Achats\Modifier_Ensemble.Designer.cs">
+      <DependentUpon>Modifier_Ensemble.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion des clients\Ajouter_client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     <EmbeddedResource Include="Gestion Des Achats\Liste_Des_Achats.resx">
       <DependentUpon>Liste_Des_Achats.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Achats\Modifier_Ensemble.resx">
+      <DependentUpon>Modifier_Ensemble.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion des clients\Ajouter_client.resx">
       <DependentUpon>Ajouter_client.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,6 +304,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AbattoireDataSet.xsc">
       <DependentUpon>AbattoireDataSet.xsd</DependentUpon>
@@ -321,6 +331,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
