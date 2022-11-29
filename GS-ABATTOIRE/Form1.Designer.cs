@@ -59,6 +59,7 @@ namespace GS_ABATTOIRE
             this.liste_des_fournisseur1 = new GS_ABATTOIRE.Gestion_des_fournisseurs.Liste_des_fournisseur();
             this.liste_des_clients1 = new GS_ABATTOIRE.Gestion_des_clients.Liste_des_clients();
             this.liste_Des_Ventes1 = new GS_ABATTOIRE.Gestion_Des_Ventes.Liste_Des_Ventes();
+            this.liste_Des_Stocks1 = new GS_ABATTOIRE.Gestion_Des_Stocks.Liste_Des_Stocks();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -116,6 +117,7 @@ namespace GS_ABATTOIRE
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(179, 548);
             this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // bunifuButton210
             // 
@@ -940,6 +942,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton22.TextMarginLeft = 0;
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click);
             // 
             // bunifuButton21
             // 
@@ -1101,11 +1104,20 @@ namespace GS_ABATTOIRE
             this.liste_Des_Ventes1.Size = new System.Drawing.Size(1026, 689);
             this.liste_Des_Ventes1.TabIndex = 6;
             // 
+            // liste_Des_Stocks1
+            // 
+            this.liste_Des_Stocks1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.liste_Des_Stocks1.Location = new System.Drawing.Point(209, 0);
+            this.liste_Des_Stocks1.Name = "liste_Des_Stocks1";
+            this.liste_Des_Stocks1.Size = new System.Drawing.Size(1026, 689);
+            this.liste_Des_Stocks1.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 689);
+            this.Controls.Add(this.liste_Des_Stocks1);
             this.Controls.Add(this.liste_Des_Ventes1);
             this.Controls.Add(this.liste_Des_Achats1);
             this.Controls.Add(this.liste_Des_Produits1);
@@ -1115,6 +1127,7 @@ namespace GS_ABATTOIRE
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
@@ -1144,6 +1157,7 @@ namespace GS_ABATTOIRE
         private Gestion_Des_Projets.Liste_Des_Produits liste_Des_Produits1;
         private Gestion_Des_Achats.Liste_Des_Achats liste_Des_Achats1;
         private Gestion_Des_Ventes.Liste_Des_Ventes liste_Des_Ventes1;
+        private Gestion_Des_Stocks.Liste_Des_Stocks liste_Des_Stocks1;
     }
 }
 

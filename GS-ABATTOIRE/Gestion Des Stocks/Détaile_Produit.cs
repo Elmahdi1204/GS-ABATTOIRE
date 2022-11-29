@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GS_ABATTOIRE.Gestion_Des_Ventes
+namespace GS_ABATTOIRE.Gestion_Des_Stocks
 {
-    public partial class Ajouter_Vente : Form
+    public partial class Détaile_Produit : Form
     {
-        public Ajouter_Vente()
+        public Détaile_Produit()
         {
             InitializeComponent();
-        }
-
-        private void bunifuDataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

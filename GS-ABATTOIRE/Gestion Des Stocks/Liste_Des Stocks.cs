@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GS_ABATTOIRE.Gestion_Des_Ventes
+namespace GS_ABATTOIRE.Gestion_Des_Stocks
 {
-    public partial class Ajouter_Vente : Form
+    public partial class Liste_Des_Stocks : UserControl
     {
-        public Ajouter_Vente()
+        public Liste_Des_Stocks()
         {
             InitializeComponent();
         }
 
-        private void bunifuDataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
