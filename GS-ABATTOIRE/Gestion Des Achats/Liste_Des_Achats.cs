@@ -48,6 +48,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 int id = int.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 Modifier_Ensemble modifier_Ensemble = new Modifier_Ensemble(id);
                 modifier_Ensemble.ShowDialog();
+                DataAchats.List_des_ensembles(bunifuDataGridView1, bunifuTextBox1.Text);
 
 
             }
