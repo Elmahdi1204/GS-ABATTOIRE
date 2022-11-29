@@ -51,5 +51,16 @@ namespace GS_ABATTOIRE
             liste_Des_Ventes1.Show();
             liste_Des_Ventes1.BringToFront();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+            liste_Des_Stocks1.Show();
+            liste_Des_Stocks1.BringToFront();
+        }
     }
 }
