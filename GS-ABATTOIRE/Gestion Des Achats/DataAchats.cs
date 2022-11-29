@@ -147,5 +147,35 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 Connexion.conn.Close();
             }
         }
+        public static void Modifier_kottas(int idkottas, String nomkottas, int idfournisseur, String categorie, int qteunite, double qtepoid, double prixunitaire, double remise, double prixfournisseur, double versment, double poidapres, double poidabats, double transport, double charges, double Prixterunitaire, DateTime date)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("update  kottas set    nomkottas ='"+nomkottas+"',idfournisseur ='"+idfournisseur+"',categorie ='"+categorie+"', qteunite ='"+qteunite+"', qtepoid ='"+qtepoid+"' , prixunitaire ='"+prixunitaire+"' , remise ='"+remise+"', prixfournisseur ='"+prixfournisseur+"' , versment ='"+versment+"', poidapres ='"+poidapres+"', poidabats ='"+poidabats+"' , transport ='"+transport+"', charges ='"+charges+"' ,Prixterunitaire = '"+Prixterunitaire+"',  date ='"+date+"'  where idkottas = '"+idkottas+"';", Connexion.conn);
+                sql.ExecuteNonQuery();
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
+        public static void Delete_produit_achete( int idkotta)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("delete  from Produit_achet  where   idkotta = N'" + idkotta + "' ;", Connexion.conn);
+                sql.ExecuteNonQuery();
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
     }
 }
