@@ -140,7 +140,7 @@
             this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
             this.bunifuDropdown1.Items.AddRange(new object[] {
-            "Poulet , Dend",
+            "Poulet , Dende",
             "Les abats"});
             this.bunifuDropdown1.ItemTopMargin = 3;
             this.bunifuDropdown1.Location = new System.Drawing.Point(28, 105);

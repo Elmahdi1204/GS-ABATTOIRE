@@ -1276,7 +1276,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuTextBox17.BorderThickness = 1;
             this.bunifuTextBox17.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox17.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox17.DefaultFont = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextBox17.DefaultFont = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextBox17.DefaultText = "";
             this.bunifuTextBox17.FillColor = System.Drawing.Color.White;
             this.bunifuTextBox17.HideSelection = true;
@@ -1322,7 +1322,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuTextBox17.SelectionLength = 0;
             this.bunifuTextBox17.SelectionStart = 0;
             this.bunifuTextBox17.ShortcutsEnabled = true;
-            this.bunifuTextBox17.Size = new System.Drawing.Size(292, 51);
+            this.bunifuTextBox17.Size = new System.Drawing.Size(292, 55);
             this.bunifuTextBox17.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox17.TabIndex = 102;
             this.bunifuTextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -2771,6 +2771,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "Modifier_Ensemble";
             this.Text = "Modifier_Ensemble";
+            this.Load += new System.EventHandler(this.Modifier_Ensemble_Load);
             this.bunifuPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
             this.bunifuPanel5.ResumeLayout(false);

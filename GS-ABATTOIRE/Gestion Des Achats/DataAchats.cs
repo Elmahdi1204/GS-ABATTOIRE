@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bunifu.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("INSERT INTO kottas (idkottas,   nomkottas,idfournisseur,categorie, qteunite, qtepoid , prixunitaire , remise , prixfournisseur , versment , poidapres , poidabats , transport, charges ,Prixterunitaire ,  date)VALUES ('"+idkottas+"' , +N'"+nomkottas+"', '"+idfournisseur+"', N'"+categorie+ "', '" + qteunite + "','" + qtepoid + "','" + prixunitaire + "','" + remise + "','" + prixfournisseur + "','" + versment + "' , '" + poidapres + "', '" + poidabats + "', '" + charges + "','" + transport + "','" + Prixterunitaire + "','" + date + "');", Connexion.conn);
+                SqlCommand sql = new SqlCommand("INSERT INTO kottas (idkottas,   nomkottas,idfournisseur,categorie, qteunite, qtepoid , prixunitaire , remise , prixfournisseur , versment , poidapres , poidabats , transport, charges ,Prixterunitaire ,  date)VALUES ('"+idkottas+"' , +N'"+nomkottas+"', '"+idfournisseur+"', N'"+categorie+ "', '" + qteunite + "','" + qtepoid + "','" + prixunitaire + "','" + remise + "','" + prixfournisseur + "','" + versment + "' , '" + poidapres + "', '" + poidabats + "', '" + transport + "','" + charges + "','" + Prixterunitaire + "','" + date + "');", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -61,6 +62,89 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Connexion.conn.Close();
                 return 0;
+            }
+        }
+        public static void List_des_ensembles(BunifuDataGridView bunifuDataGridView, String txt)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur- versment  , date , prixfournisseur + transport +charges +(Prixterunitaire* qteunite) from kottas  , Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur ;", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                bunifuDataGridView.Rows.Clear();
+                while (dr.Read())
+                {
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], DateTime.Parse(dr[6].ToString()).ToString("dd-MM | HH:mm") , dr[7]);
+
+                }
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
+        public static List<String> Getcotta(int id )
+        {
+            List<String> list = new List<String>();
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select * from kottas where idkottas ='"+id+"' ;", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+              
+                while (dr.Read())
+                {
+                   list.Add(dr[0].ToString());
+                    list.Add(dr[1].ToString());
+                    list.Add(dr[2].ToString());
+                    list.Add(dr[3].ToString());
+                    list.Add(dr[4].ToString());
+                    list.Add(dr[5].ToString());
+                    list.Add(dr[6].ToString());
+                    list.Add(dr[7].ToString());
+                    list.Add(dr[8].ToString());
+                    list.Add(dr[9].ToString());
+                    list.Add(dr[10].ToString());
+                    list.Add(dr[11].ToString());
+                    list.Add(dr[12].ToString());
+                    list.Add(dr[13].ToString());
+                    list.Add(dr[14].ToString());
+                    list.Add(dr[15].ToString());
+                  
+
+
+                }
+                Connexion.conn.Close();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+                return list ;
+            }
+        }
+        public static void Get_produit_cotta(BunifuDataGridView bunifuDataGridView, int id )
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select Produits.idproduit , nomproduit , qteunit  , categorie from Produit_achet , produits where Produit_achet.idproduit = Produits.idproduit and idkotta ='"+id+"';", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                bunifuDataGridView.Rows.Clear();
+                while (dr.Read())
+                {
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3]);
+
+                }
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
             }
         }
     }
