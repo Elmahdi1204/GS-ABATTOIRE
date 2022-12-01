@@ -99,7 +99,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
             if (verifier(id.Text))
             {
-                double qnteancien  = double.Parse(bunifuDataGridView2.Rows[getindex(int.Parse(qte.Text))].Cells[2].Value.ToString());
+                double qnteancien  = double.Parse(bunifuDataGridView2.Rows[getindex(int.Parse(id.Text))].Cells[2].Value.ToString());
                 double qtenv = double.Parse(qte.Text) + qnteancien;
                 bunifuDataGridView2.Rows.RemoveAt(getindex(int.Parse(id.Text)));
                 bunifuDataGridView2.Rows.Add(id.Text, nom.Text,qtenv , categorie);
