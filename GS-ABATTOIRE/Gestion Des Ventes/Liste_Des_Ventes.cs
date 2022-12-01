@@ -31,11 +31,17 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         {
             Ajouter_Vente ajitV = new Ajouter_Vente();
             ajitV.ShowDialog();
+            Datavents.List_des_vents(bunifuDataGridView1, bunifuTextBox1.Text);
         }
 
         private void bunifuPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Liste_Des_Ventes_Load(object sender, EventArgs e)
+        {
+            Datavents.List_des_vents(bunifuDataGridView1 , bunifuTextBox1.Text);
         }
     }
 }
