@@ -153,6 +153,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AbattoireDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AbattoireDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbattoireDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Connexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -242,6 +247,7 @@
     <Compile Include="Gestion Des Ventes\Ajouter_Vente.Designer.cs">
       <DependentUpon>Ajouter_Vente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Ventes\Datavents.cs" />
     <Compile Include="Gestion Des Ventes\Liste_Des_Ventes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -316,6 +322,17 @@
     </None>
     <None Include="AbattoireDataSet.xss">
       <DependentUpon>AbattoireDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AbattoireDataSet1.xsc">
+      <DependentUpon>AbattoireDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AbattoireDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AbattoireDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AbattoireDataSet1.xss">
+      <DependentUpon>AbattoireDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

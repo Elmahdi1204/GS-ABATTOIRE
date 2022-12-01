@@ -77,5 +77,6 @@ namespace GS_ABATTOIRE.Gestion_Des_Produits
                 Connexion.conn.Close();
             }
         }
+      
     }
 }

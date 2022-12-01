@@ -11,12 +11,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 {
     class DataAchats
     {
-        public static void Ajouter_kottas(int idkottas,String  nomkottas, int idfournisseur,String categorie,int qteunite,double qtepoid , double prixunitaire , double remise , double prixfournisseur , double versment , double poidapres , double poidabats , double transport, double charges , double Prixterunitaire ,DateTime date )
+        public static void Ajouter_kottas(int idkottas,String  nomkottas, int idfournisseur,String categorie,int qteunite,double qtepoid , double prixunitaire , double remise , double prixfournisseur , double versment , double poidapres , double poidabats , double transport, double charges , double Prixterunitaire ,DateTime date , int mort )
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("INSERT INTO kottas (idkottas,   nomkottas,idfournisseur,categorie, qteunite, qtepoid , prixunitaire , remise , prixfournisseur , versment , poidapres , poidabats , transport, charges ,Prixterunitaire ,  date)VALUES ('"+idkottas+"' , +N'"+nomkottas+"', '"+idfournisseur+"', N'"+categorie+ "', '" + qteunite + "','" + qtepoid + "','" + prixunitaire + "','" + remise + "','" + prixfournisseur + "','" + versment + "' , '" + poidapres + "', '" + poidabats + "', '" + transport + "','" + charges + "','" + Prixterunitaire + "','" + date + "');", Connexion.conn);
+                SqlCommand sql = new SqlCommand("INSERT INTO kottas (idkottas,   nomkottas,idfournisseur,categorie, qteunite, qtepoid , prixunitaire , remise , prixfournisseur , versment , poidapres , poidabats , transport, charges ,Prixterunitaire ,  date , mort )VALUES ('"+idkottas+"' , +N'"+nomkottas+"', '"+idfournisseur+"', N'"+categorie+ "', '" + qteunite + "','" + qtepoid + "','" + prixunitaire + "','" + remise + "','" + prixfournisseur + "','" + versment + "' , '" + poidapres + "', '" + poidabats + "', '" + transport + "','" + charges + "','" + Prixterunitaire + "','" + date + "' , '"+mort+"');", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -112,7 +112,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                     list.Add(dr[13].ToString());
                     list.Add(dr[14].ToString());
                     list.Add(dr[15].ToString());
-                  
+                    list.Add(dr[16].ToString());
+
 
 
                 }
@@ -168,6 +169,21 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             {
                 Connexion.conn.Open();
                 SqlCommand sql = new SqlCommand("delete  from Produit_achet  where   idkotta = N'" + idkotta + "' ;", Connexion.conn);
+                sql.ExecuteNonQuery();
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
+        public static void Supprimer_Cotta(int id)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("delete from kottas where idkottas =N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }

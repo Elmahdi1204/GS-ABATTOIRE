@@ -60,7 +60,41 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+                String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
+                String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+               
 
+                if (colname == "mod")
+                {
+
+
+                   
+                    Modifier_Ensemble modifier_Ensemble = new Modifier_Ensemble(int.Parse(id));
+                    modifier_Ensemble.ShowDialog();
+                    DataAchats.List_des_ensembles(bunifuDataGridView1, bunifuTextBox1.Text);
+                }
+                if (colname == "supp")
+                {
+                    DialogResult dialog = MessageBox.Show("Vous etes sur ?", "Supprimer un client", MessageBoxButtons.YesNo);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        DataAchats.Supprimer_Cotta(int.Parse(id));
+                        DataAchats.Delete_produit_achete(int.Parse(id));
+                    }
+
+
+                }
+                bunifuButton22.PerformClick();
+                bunifuDataGridView1.Rows[index].Selected = true;
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -28,7 +28,9 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             bunifuDatePicker1.Value = DateTime.Parse( data[15].ToString());
             bunifuDropdown1.SelectedValue =  data[2];
             bunifuDropdown2.Text = data[3];
-            bunifuTextBox7.Text = data[4];
+            bunifuTextBox18.Text = data[4];
+            bunifuTextBox6.Text = data[16];
+            bunifuTextBox7.Text = (int.Parse(data[4]) -int.Parse( data[16])).ToString();
             bunifuTextBox8.Text = data[5];
             bunifuTextBox9.Text = data[6];
             bunifuTextBox10.Text = (double.Parse(data[5]) * double.Parse(data[6])).ToString(); 
@@ -402,6 +404,18 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 MessageBox.Show("Ensemble modifier avec success.", "Modifier Ensemble", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
                 
+            }
+        }
+
+        private void bunifuTextBox6_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox7.Text = (int.Parse(bunifuTextBox18.Text) - int.Parse(bunifuTextBox6.Text)).ToString();
+            }
+            catch
+            {
+
             }
         }
     }

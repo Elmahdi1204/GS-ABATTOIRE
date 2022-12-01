@@ -398,7 +398,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             else
             {
                 int idkottas = DataAchats.Get_lastid() + 1;
-                DataAchats.Ajouter_kottas(idkottas, "Ensemble - " +bunifuDropdown2.Text+ " - " + idkottas + " - " + DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), double.Parse(bunifuTextBox8.Text), double.Parse(bunifuTextBox9.Text), double.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), double.Parse(bunifuTextBox11.Text), double.Parse(bunifuTextBox2.Text), double.Parse(bunifuTextBox1.Text), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), DateTime.Now);
+                DataAchats.Ajouter_kottas(idkottas, "Ensemble - " +bunifuDropdown2.Text+ " - " + idkottas + " - " + DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox6.Text), double.Parse(bunifuTextBox8.Text), double.Parse(bunifuTextBox9.Text), double.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), double.Parse(bunifuTextBox11.Text), double.Parse(bunifuTextBox2.Text), double.Parse(bunifuTextBox1.Text), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), DateTime.Now  , int.Parse(bunifuTextBox5.Text));
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
                     int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());
@@ -441,6 +441,18 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         private void bunifuTextBox10_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox7.Text = (int.Parse(bunifuTextBox6.Text) - int.Parse(bunifuTextBox5.Text)).ToString();
+            }
+            catch
+            {
+
+            }
         }
     }
     
