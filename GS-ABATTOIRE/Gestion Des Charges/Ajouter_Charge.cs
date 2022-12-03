@@ -31,7 +31,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
             }
             else
             {
-                DataCharge.Ajouter_Charge(bunifuTextBox1.Text, bunifuTextBox3.Text, double.Parse(bunifuTextBox2.Text),bunifuDatePicker1.Value);
+                DataCharges.Ajouter_Charge(bunifuTextBox1.Text, bunifuTextBox3.Text, double.Parse(bunifuTextBox2.Text),bunifuDatePicker1.Value);
                 MessageBox.Show("charge ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
