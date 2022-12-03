@@ -190,6 +190,7 @@
     <Compile Include="Gestion Des Charges\Ajouter_Charge.Designer.cs">
       <DependentUpon>Ajouter_Charge.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Charges\Datacharges.cs" />
     <Compile Include="Gestion Des Charges\Liste_Des_Charges.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -24,12 +24,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
         {
             Ajouter_Charge ajtch = new Ajouter_Charge();
             ajtch.ShowDialog();
-            DataCharge.liste_Charge(bunifuDataGridView1, bunifuTextBox1.Text);
+            DataCharges.liste_Charge(bunifuDataGridView1, bunifuTextBox1.Text);
         }
 
         private void Liste_Des_Charges_Load(object sender, EventArgs e)
         {
-            DataCharge.liste_Charge(bunifuDataGridView1, bunifuTextBox1.Text);
+            DataCharges.liste_Charge(bunifuDataGridView1, bunifuTextBox1.Text);
         }
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -49,8 +49,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
                 {
 
 
-                   Modifier_Charge modifier_charge =new Modifier_Charge(ID, Titre, Descreption, Montant, date);
-                    modifier_charge.ShowDialog();
+             //      Modifier_Charge modifier_charge =new Modifier_Charge(ID, Titre, Descreption, Montant, date);
+             //       modifier_charge.ShowDialog();
 
                 }
                 if (colname == "sup")
@@ -58,7 +58,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
                     DialogResult dialog = MessageBox.Show("Vous etes sur ?", "Supprimer un client", MessageBoxButtons.YesNo);
                     if(dialog == DialogResult.Yes)
                     {
-                        DataCharge.Supprimer_Charge(int.Parse(ID));
+                        DataCharges.Supprimer_Charge(int.Parse(ID));
                     }
                 }
                 bunifuButton22.PerformClick();
@@ -76,7 +76,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
 
         private void bunifuButton22_Click(object sender, EventArgs e)
         {
-            DataCharge.liste_Charge(bunifuDataGridView1, bunifuTextBox1.Text);
+            DataCharges.liste_Charge(bunifuDataGridView1, bunifuTextBox1.Text);
         }
     }
 }
