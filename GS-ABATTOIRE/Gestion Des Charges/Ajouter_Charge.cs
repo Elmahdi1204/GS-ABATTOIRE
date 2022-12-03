@@ -21,5 +21,20 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
         {
 
         }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            if(bunifuTextBox1.Text=="" || bunifuTextBox2.Text=="" || bunifuTextBox3.Text=="")
+            {
+                MessageBox.Show("Esseyer remplir toutes les zones.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                DataCharge.Ajouter_Charge(bunifuTextBox1.Text, bunifuTextBox3.Text, double.Parse(bunifuTextBox2.Text),bunifuDatePicker1.Value);
+                MessageBox.Show("charge ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+        }
     }
 }
