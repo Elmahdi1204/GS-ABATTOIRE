@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GS_ABATTOIRE.Gestion_des_fournisseurs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             bunifuTextBox5.Text = data[1];
             bunifuDatePicker1.Value = DateTime.Parse( data[15].ToString());
             bunifuDropdown1.SelectedValue =  data[2];
+            bunifuDropdown1.Text = Datafournissuer.Get_specifice_fournissuer(int.Parse(data[2]));
             bunifuDropdown2.Text = data[3];
             bunifuTextBox7.Text = data[4];
             bunifuTextBox8.Text = data[5];

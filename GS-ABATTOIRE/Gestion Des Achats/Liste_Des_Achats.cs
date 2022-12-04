@@ -60,7 +60,46 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+                bunifuButton22.PerformClick();
+                String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
+                String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                double mntvente = int.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString());
 
+
+
+                if (mntvente == 0)
+                {
+                if (colname == "supp")
+                {
+                    DialogResult dialog = MessageBox.Show("Vous etes sur ?", "Supprimer un Kottas", MessageBoxButtons.YesNo);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        DataAchats.Delete_kottas(int.Parse(id));
+                        DataAchats.Delete_produit_achete(int.Parse(id));
+                    }
+
+
+                }
+                }
+                bunifuButton22.PerformClick();
+                bunifuDataGridView1.Rows[index].Selected = true;
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue ==13)
+            {
+                bunifuButton21.PerformClick();
+            }
         }
     }
 }

@@ -69,12 +69,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur- versment  , date , prixfournisseur + transport +charges +(Prixterunitaire* qteunite) from kottas  , Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur - versment, date, prixfournisseur + transport + charges + (Prixterunitaire * qteunite), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas ), 0), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and Fournisseurs.nomfournisseur LIKE N'%"+txt+"%'  order by Kottas.date desc ; ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
                 {
-                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], DateTime.Parse(dr[6].ToString()).ToString("dd-MM | HH:mm") , dr[7]);
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], DateTime.Parse(dr[6].ToString()).ToString("dd-MM | HH:mm") , dr[7], dr[8], dr[9]);
 
                 }
                 Connexion.conn.Close();
@@ -153,6 +153,21 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             {
                 Connexion.conn.Open();
                 SqlCommand sql = new SqlCommand("update  kottas set    nomkottas ='"+nomkottas+"',idfournisseur ='"+idfournisseur+"',categorie ='"+categorie+"', qteunite ='"+qteunite+"', qtepoid ='"+qtepoid+"' , prixunitaire ='"+prixunitaire+"' , remise ='"+remise+"', prixfournisseur ='"+prixfournisseur+"' , versment ='"+versment+"', poidapres ='"+poidapres+"', poidabats ='"+poidabats+"' , transport ='"+transport+"', charges ='"+charges+"' ,Prixterunitaire = '"+Prixterunitaire+"',  date ='"+date+"'  where idkottas = '"+idkottas+"';", Connexion.conn);
+                sql.ExecuteNonQuery();
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
+        public static void Delete_kottas(int idkotta)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("delete  from kottas  where   idkottas = N'" + idkotta + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }

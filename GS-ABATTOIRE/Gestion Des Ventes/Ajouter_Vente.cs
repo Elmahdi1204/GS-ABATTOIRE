@@ -335,5 +335,19 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             }
 
         }
+
+        private void bunifuDataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox11_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue ==13)
+            {
+                Gestion_Des_Achats.DataAchats.List_des_ensembles(bunifuDataGridView3, bunifuTextBox11.Text);
+
+            }
+        }
     }
 }
