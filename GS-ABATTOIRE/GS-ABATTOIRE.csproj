@@ -197,6 +197,12 @@
     <Compile Include="Gestion Des Charges\Liste_Des_Charges.Designer.cs">
       <DependentUpon>Liste_Des_Charges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Charges\Modifier_Charge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Charges\Modifier_Charge.Designer.cs">
+      <DependentUpon>Modifier_Charge.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion des clients\Ajouter_client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,13 @@
     <Compile Include="Gestion Des Ventes\Liste_Des_Ventes.Designer.cs">
       <DependentUpon>Liste_Des_Ventes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Versement\DataVersement.cs" />
+    <Compile Include="Gestion Des Versement\Versement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Versement\Versement.Designer.cs">
+      <DependentUpon>Versement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -299,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Charges\Liste_Des_Charges.resx">
       <DependentUpon>Liste_Des_Charges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Charges\Modifier_Charge.resx">
+      <DependentUpon>Modifier_Charge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion des clients\Ajouter_client.resx">
       <DependentUpon>Ajouter_client.cs</DependentUpon>
@@ -338,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Ventes\Liste_Des_Ventes.resx">
       <DependentUpon>Liste_Des_Ventes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Versement\Versement.resx">
+      <DependentUpon>Versement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -389,5 +408,6 @@
   <ItemGroup>
     <None Include="Resources\trash.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

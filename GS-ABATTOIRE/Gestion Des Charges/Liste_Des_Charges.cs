@@ -49,8 +49,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
                 {
 
 
-             //      Modifier_Charge modifier_charge =new Modifier_Charge(ID, Titre, Descreption, Montant, date);
-             //       modifier_charge.ShowDialog();
+                   Modifier_Charge modifier_charge =new Modifier_Charge(ID, Titre, Descreption, Montant, date);
+                   modifier_charge.ShowDialog();
 
                 }
                 if (colname == "sup")
