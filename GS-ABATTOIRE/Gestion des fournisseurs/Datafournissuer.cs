@@ -27,6 +27,28 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 Connexion.conn.Close();
             }
         }
+        public static string Get_specifice_fournissuer(int id)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("Select * from Fournisseurs where idfournisseur ='" + id + "'  ;", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                String nom = "";
+                while (dr.Read())
+                {
+                    nom = dr[1].ToString();
+                }
+                Connexion.conn.Close();
+                return nom;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+                return "";
+            }
+        }
         public static void Modifier_fournissuer(String nomfournisseur, string adress, string numtele, int id)
         {
             try

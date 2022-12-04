@@ -12,9 +12,17 @@ namespace GS_ABATTOIRE.Gestion_Des_Stocks
 {
     public partial class Détaile_Produit : Form
     {
-        public Détaile_Produit()
+        int id = 0;
+
+        public Détaile_Produit(int id )
         {
             InitializeComponent();
+            this.id = id;
+        }
+
+        private void Détaile_Produit_Load(object sender, EventArgs e)
+        {
+            Datastocks.get_details(bunifuDataGridView1  , id);
         }
     }
 }

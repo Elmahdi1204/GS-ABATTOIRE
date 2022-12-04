@@ -32,6 +32,27 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 Connexion.conn.Close();
             }
         }
+        public static void Get_specfic_ensmble(BunifuDataGridView bunifuDataGridView, String txt , int idkotta)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur- versment  , date , prixfournisseur + transport +charges +(Prixterunitaire* qteunite) from kottas  , Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and idkottas ='"+idkotta+"' ;", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                bunifuDataGridView.Rows.Clear();
+                while (dr.Read())
+                {
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], DateTime.Parse(dr[6].ToString()).ToString("dd-MM | HH:mm"), dr[7]);
+
+                }
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
         public static void Ajouter_vents(int idvent , int idkotta, int idclient , double remise , double prixtotale , double versment , DateTime date)
         {
             try
@@ -86,12 +107,33 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 return 0;
             }
         }
+        public static void Get_produit_vendu(BunifuDataGridView bunifuDataGridView, int id)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select produits.idproduit , nomproduit , qteunit , prixunit from Produits_vendu , produits where Produits_vendu.idproduit = Produits.idproduit and Produits_vendu.idvent ='"+id+"'; ", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                bunifuDataGridView.Rows.Clear();
+                while (dr.Read())
+                {
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3]);
+
+                }
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
         public static void List_des_vents(BunifuDataGridView bunifuDataGridView, String txt)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select idvent , nomkottas , nomclient , vents.remise , vents.prixtotal , vents.versment , vents.prixtotal- vents.versment , vents.date from Vents , clients , Kottas where  Clients.idclient = Vents.idclient and Kottas.idkottas = Vents.idkotta order by vents.date desc", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select idvent , nomkottas , nomclient , vents.remise , vents.prixtotal , vents.versment , vents.prixtotal- vents.versment , vents.date from Vents , clients , Kottas where  Clients.idclient = Vents.idclient and Kottas.idkottas = Vents.idkotta and nomclient LIKE N'%"+txt+"%' order by vents.date desc", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
@@ -107,13 +149,13 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 Connexion.conn.Close();
             }
         }
-        public static List<String> Getcotta(int id)
+        public static List<String> Getvents(int id)
         {
             List<String> list = new List<String>();
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select * from kottas where idkottas ='" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select * from vents where idvent ='" + id + "' ;", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
 
                 while (dr.Read())
@@ -125,15 +167,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     list.Add(dr[4].ToString());
                     list.Add(dr[5].ToString());
                     list.Add(dr[6].ToString());
-                    list.Add(dr[7].ToString());
-                    list.Add(dr[8].ToString());
-                    list.Add(dr[9].ToString());
-                    list.Add(dr[10].ToString());
-                    list.Add(dr[11].ToString());
-                    list.Add(dr[12].ToString());
-                    list.Add(dr[13].ToString());
-                    list.Add(dr[14].ToString());
-                    list.Add(dr[15].ToString());
+                  
 
 
 
@@ -149,7 +183,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             }
         }
       
-        public static void Modifier_kottas(int idkottas, String nomkottas, int idfournisseur, String categorie, int qteunite, double qtepoid, double prixunitaire, double remise, double prixfournisseur, double versment, double poidapres, double poidabats, double transport, double charges, double Prixterunitaire, DateTime date)
+        public static void Modifier_vents(int idkottas, String nomkottas, int idfournisseur, String categorie, int qteunite, double qtepoid, double prixunitaire, double remise, double prixfournisseur, double versment, double poidapres, double poidabats, double transport, double charges, double Prixterunitaire, DateTime date)
         {
             try
             {
@@ -164,12 +198,27 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 Connexion.conn.Close();
             }
         }
-        public static void Delete_produit_achete(int idkotta)
+        public static void Delete_vente(int idvent)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("delete  from Produit_achet  where   idkotta = N'" + idkotta + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("delete  from vents  where   idvent = N'" + idvent + "' ;", Connexion.conn);
+                sql.ExecuteNonQuery();
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
+        public static void Delete_produit_vendu(int idvent)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("delete  from Produits_vendu  where   idvent = N'" + idvent + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
