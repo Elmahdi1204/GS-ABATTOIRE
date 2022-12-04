@@ -34,7 +34,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  Charge set Titre=N '" + Titre + "', Description=N '" + Description + "',Montant=N'" + Montant + "',date=N'" + date + "' where ID=N'" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update  Charge set Titre=N'" + Titre + "', Description=N'" + Description + "',Montant=N'" + Montant + "',date=N'" + date + "' where ID=N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
 
