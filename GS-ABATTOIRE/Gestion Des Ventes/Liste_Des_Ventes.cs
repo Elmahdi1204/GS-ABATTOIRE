@@ -49,8 +49,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             try
             {
                 int id = int.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                Modifier_vents modifier_Vents = new Modifier_vents(id);
-                modifier_Vents.ShowDialog();
+             //odifier_vents modifier_Vents = new Modifier_vents(id);
+             // modifier_Vents.ShowDialog();
                 Datavents.List_des_vents(bunifuDataGridView1, bunifuTextBox1.Text);
             }
             catch
