@@ -31,5 +31,20 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 this.Close();
             }
         }
+
+        private void bunifuTextBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox7_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

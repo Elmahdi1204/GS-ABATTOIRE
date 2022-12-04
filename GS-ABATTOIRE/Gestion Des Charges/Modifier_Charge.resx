@@ -120,8 +120,8 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAVcAAAHoCAYAAAD9ray4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAbISURBVHhe7daxjcJAFEVRh5SxISGlUMKGlEHlNmM8CSnm
+        iVBORw0KGgoAAAANSUhEUgAAAVcAAAHpCAYAAAA28X8dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEOoAABDqAYLTCpgAAAbLSURBVHhe7daxjcJAFEVRh5SxISGlUMKGlEHlNmM8CSnm
         ZudITyP9Aq5mASC0bdvf2NPMzL7edSb1MA63MQDOu8+0vuO6FxeA854zreIK8EPiChAQV4CAuAIExBUg
         IK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEF
         CIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBc
@@ -149,8 +149,8 @@
         AXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgr
         QEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLi
         ChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CA
-        uAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQIfcb0fNwDOWNf1MdN6
-        GLf/sf0Ha2ZmX2wP63gvM6sA/NayvAAR9rI+nDPsFQAAAABJRU5ErkJggg==
+        uAIExBUgIK4AAXEFCIgrQEBcAQLiChAQV4CAuAIExBUgIK4AAXEFCIgrQEBcAQLiChD4iOv9uAFwxrqu
+        j5nWw7j9j+0/WDMz+2J7WMd7mVkF4LeW5QVmuwBGRHHLfAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
