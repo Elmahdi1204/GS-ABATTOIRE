@@ -48,13 +48,15 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                 String Nis = bunifuDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 String NIf = bunifuDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 String Registre = bunifuDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                String narticl  = bunifuDataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                String numccp = bunifuDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
 
 
                 if (colname == "mod")
                 {
 
 
-                    Modifier_client modifier_client = new Modifier_client(id, nom, numtele, adress, NIf, Nis, Registre);
+                    Modifier_client modifier_client = new Modifier_client(id, nom, numtele, adress, NIf, Nis, Registre  , narticl  , numccp);
                     modifier_client.ShowDialog();
 
                 }
@@ -76,6 +78,11 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             {
 
             }
+        }
+
+        private void bunifuPanel2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

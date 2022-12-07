@@ -12,12 +12,12 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
 {
     class Datafournissuer
     {
-        public static void Ajouter_Fournisseur(String nomfournisseur, string adress, string numtele)
+        public static void Ajouter_Fournisseur(String nomfournisseur, string adress, string numtele , String numregistre  , String nif , String nis , String numarticl , String ccp)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("insert into Fournisseurs ( nomfournisseur , adress , numtele  ) values (N'" + nomfournisseur + "' ,  N'" + adress + "' , N'" + numtele + "' );", Connexion.conn);
+                SqlCommand sql = new SqlCommand("insert into Fournisseurs ( nomfournisseur , adress , numtele , numregistre  , nif , nis , numarticl , ccp  ) values (N'" + nomfournisseur + "' ,  N'" + adress + "'  ,N'" + numtele + "',N'" + numregistre + "',N'" + nif + "',N'" + nis + "' ,N'" + numarticl  + "' ,N'" + ccp + "');", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -49,12 +49,12 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 return "";
             }
         }
-        public static void Modifier_fournissuer(String nomfournisseur, string adress, string numtele, int id)
+        public static void Modifier_fournissuer(String nomfournisseur, string adress, string numtele,string nis  ,string nif  , string numregistre,string numarticl ,string ccp ,  int id)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  Fournisseurs Set nomfournisseur=N'" + nomfournisseur + "' , adress =N'" + adress + "' , numtele =N'" + numtele + "' where idfournisseur=N'" + id + "' ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update  Fournisseurs Set nomfournisseur=N'" + nomfournisseur + "' , adress =N'" + adress + "' , numtele =N'" + numtele + "' ,nis =N'" + nis + "' ,nif =N'" + nif + "' ,numregistre =N'" + numregistre + "' ,numarticl =N'" + numarticl + "' ,ccp =N'" + ccp + "'  where idfournisseur=N'" + id + "' ;", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -74,7 +74,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
                 {
-                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3]);
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3] , dr[4] , dr[5], dr[6], dr[7], dr[8]);
 
                 }
                 Connexion.conn.Close();
