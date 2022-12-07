@@ -19,7 +19,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
 
         private void Liste_des_fournisseur_Load(object sender, EventArgs e)
         {
-
+            bunifuButton22.PerformClick();
         }
 
         private void bunifuButton21_Click(object sender, EventArgs e)
@@ -49,6 +49,13 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 String adress = bunifuDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 String numtele = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                String nis  = bunifuDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                String nif = bunifuDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+               
+                String numregistre = bunifuDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                String numarticl = bunifuDataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                String ccp = bunifuDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+
 
 
 
@@ -56,7 +63,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 {
 
 
-                    Modifier_fournisseur modifier_Fournisseur = new Modifier_fournisseur(id, nom, adress, numtele);
+                    Modifier_fournisseur modifier_Fournisseur = new Modifier_fournisseur(id, nom, adress, numtele , numregistre , nis , nif , numarticl , ccp);
                     modifier_Fournisseur.ShowDialog();
 
                 }
@@ -74,9 +81,9 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 bunifuDataGridView1.Rows[index].Selected = true;
 
             }
-            catch
+            catch(Exception x)
             {
-
+                MessageBox.Show(x.Message);
             }
         }
     }

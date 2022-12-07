@@ -77,12 +77,20 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 bunifuButton21.PerformClick();
                 String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
                 String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-               
+                String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                String credit = bunifuDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+              
+
+                if (colname == "Credit")
+                {
+                    Gestion_Des_Versement.Versement versement = new Gestion_Des_Versement.Versement("Vents", int.Parse(id), nom, credit);
+                    versement.ShowDialog();
+                }
 
 
 
-               
-                    if (colname == "supp")
+
+                if (colname == "supp")
                     {
                         DialogResult dialog = MessageBox.Show("Vous etes sur ?", "Supprimer une Ventes", MessageBoxButtons.YesNo);
                         if (dialog == DialogResult.Yes)

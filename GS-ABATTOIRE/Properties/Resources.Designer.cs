@@ -63,9 +63,29 @@ namespace GS_ABATTOIRE.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap payment_method {
+            get {
+                object obj = ResourceManager.GetObject("payment-method", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trash {
             get {
                 object obj = ResourceManager.GetObject("trash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap update_arrows__1_ {
+            get {
+                object obj = ResourceManager.GetObject("update-arrows (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

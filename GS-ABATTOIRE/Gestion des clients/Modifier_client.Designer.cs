@@ -64,11 +64,6 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.Idclient = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.bunifuTextBox8 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox7 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -78,6 +73,11 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox3 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.Idclient = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,70 +109,6 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(303, 555);
             this.bunifuPanel2.TabIndex = 5;
-            // 
-            // Idclient
-            // 
-            this.Idclient.AutoSize = true;
-            this.Idclient.BackColor = System.Drawing.Color.Transparent;
-            this.Idclient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Idclient.Location = new System.Drawing.Point(92, 15);
-            this.Idclient.Name = "Idclient";
-            this.Idclient.Size = new System.Drawing.Size(70, 18);
-            this.Idclient.TabIndex = 16;
-            this.Idclient.Text = "Paiment :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 18);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Client N° :";
-            // 
-            // bunifuPanel1
-            // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuPanel1.Controls.Add(this.label1);
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(303, 81);
-            this.bunifuPanel1.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Modifier Client";
             // 
             // bunifuTextBox8
             // 
@@ -415,6 +351,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuButton21.TextMarginLeft = 0;
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click_1);
             // 
             // bunifuTextBox6
             // 
@@ -871,6 +808,70 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox1.TextPlaceholder = "Nom";
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
+            // 
+            // Idclient
+            // 
+            this.Idclient.AutoSize = true;
+            this.Idclient.BackColor = System.Drawing.Color.Transparent;
+            this.Idclient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Idclient.Location = new System.Drawing.Point(92, 15);
+            this.Idclient.Name = "Idclient";
+            this.Idclient.Size = new System.Drawing.Size(63, 16);
+            this.Idclient.TabIndex = 16;
+            this.Idclient.Text = "Paiment :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Client N° :";
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuPanel1.Controls.Add(this.label1);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(303, 81);
+            this.bunifuPanel1.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(94, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Modifier Client";
             // 
             // Modifier_client
             // 

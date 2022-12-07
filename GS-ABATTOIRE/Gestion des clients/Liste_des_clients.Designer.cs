@@ -48,6 +48,8 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod = new System.Windows.Forms.DataGridViewImageColumn();
             this.supp = new System.Windows.Forms.DataGridViewImageColumn();
@@ -79,6 +81,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(911, 476);
             this.bunifuPanel2.TabIndex = 3;
+            this.bunifuPanel2.Click += new System.EventHandler(this.bunifuPanel2_Click);
             // 
             // bunifuDataGridView1
             // 
@@ -110,6 +113,8 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Column6,
             this.Column5,
             this.Column7,
+            this.Column9,
+            this.Column10,
             this.Column8,
             this.mod,
             this.supp});
@@ -143,9 +148,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
             this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-#pragma warning disable CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
-#pragma warning restore CS0618 // 'BunifuDataGridView.HeaderBgColor' est obsolète : 'This property has been deprecated. Use HeaderBackColor instead.'
             this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(8, 8);
             this.bunifuDataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -163,10 +166,13 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column1.FillWeight = 60F;
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 49;
             // 
             // Column2
             // 
@@ -210,6 +216,18 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "N°Article";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "N°ccp";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // Column8
             // 
             this.Column8.HeaderText = "Crédit";
@@ -228,7 +246,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.mod.ReadOnly = true;
             this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.mod.Width = 21;
+            this.mod.Width = 17;
             // 
             // supp
             // 
@@ -241,7 +259,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.supp.ReadOnly = true;
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 21;
+            this.supp.Width = 17;
             // 
             // bunifuPanel1
             // 
@@ -555,6 +573,11 @@ namespace GS_ABATTOIRE.Gestion_des_clients
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -562,13 +585,10 @@ namespace GS_ABATTOIRE.Gestion_des_clients
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewImageColumn mod;
         private System.Windows.Forms.DataGridViewImageColumn supp;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
     }
 }

@@ -25,7 +25,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             }
             else
             {
-                Datafournissuer.Ajouter_Fournisseur(bunifuTextBox1.Text, bunifuTextBox3.Text, bunifuTextBox2.Text);
+                Datafournissuer.Ajouter_Fournisseur(bunifuTextBox1.Text, bunifuTextBox3.Text, bunifuTextBox2.Text , bunifuTextBox4.Text , bunifuTextBox5.Text , bunifuTextBox6.Text , bunifuTextBox7.Text, bunifuTextBox8.Text);
                 MessageBox.Show("Fournisseurs ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
