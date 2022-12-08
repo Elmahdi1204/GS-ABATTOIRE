@@ -1,4 +1,5 @@
 ﻿using GS_ABATTOIRE.Gestion_des_fournisseurs;
+using GS_ABATTOIRE.Gestion_Des_Versement;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,18 +32,23 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             bunifuDropdown1.Text = Datafournissuer.Get_specifice_fournissuer(int.Parse(data[2]));
             bunifuDropdown2.Text = data[3];
             bunifuTextBox7.Text = data[4];
+            bunifuTextBox6.Text = data[16];
+           
+            bunifuTextBox18.Text = (double.Parse(data[4]) + double.Parse(data[16])).ToString();
             bunifuTextBox8.Text = data[5];
             bunifuTextBox9.Text = data[6];
             bunifuTextBox10.Text = (double.Parse(data[5]) * double.Parse(data[6])).ToString(); 
             bunifuTextBox15.Text = data[7];
             bunifuTextBox16.Text = data[8];
             bunifuTextBox11.Text = data[9];
+            bunifuTextBox19.Text = (DataAchats.Totale_des_versment(int.Parse(data[0])) + double.Parse(data[9]) ).ToString();
             bunifuTextBox12.Text= (double.Parse(data[8]) - double.Parse(data[9])).ToString();
             bunifuTextBox2.Text = data[10];
             bunifuTextBox1.Text = data[11];
             bunifuTextBox13.Text = data[12];
             bunifuTextBox14.Text = data[13];
             bunifuTextBox4.Text = data[14];
+
             bunifuTextBox3.Text = (double.Parse(data[4]) * double.Parse(data[14])).ToString();
             double prixteriache = double.Parse(data[4]) * double.Parse(data[14]);
             double autre = double.Parse(data[8]) + double.Parse(data[12]) + double.Parse(data[13]);
@@ -383,14 +389,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
         private void bunifuButton24_Click(object sender, EventArgs e)
         {
-            if (bunifuDropdown1.Text == "Selectioner un fournissuer" || bunifuDropdown2.Text == "Selectioner une categorie" || bunifuTextBox7.Text == "" || bunifuTextBox8.Text == "" || bunifuTextBox9.Text == "" || bunifuTextBox15.Text == "" || bunifuTextBox16.Text == "" || bunifuTextBox11.Text == "" || bunifuTextBox2.Text == "" || bunifuTextBox1.Text == "" || bunifuTextBox14.Text == "" || bunifuTextBox13.Text == "" || bunifuTextBox4.Text == "")
+            if (bunifuDropdown1.Text == "Selectioner un fournissuer" || bunifuDropdown2.Text == "Selectioner une categorie" || bunifuTextBox7.Text == "" || bunifuTextBox8.Text == "" || bunifuTextBox9.Text == "" || bunifuTextBox15.Text == "" || bunifuTextBox16.Text == "" || bunifuTextBox11.Text == "" || bunifuTextBox2.Text == "" || bunifuTextBox1.Text == "" || bunifuTextBox14.Text == "" || bunifuTextBox13.Text == "" || bunifuTextBox4.Text == "" || bunifuTextBox6.Text =="")
             {
                 MessageBox.Show("Esseyer remplir toutes les zones.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
             else
             {
 
-                DataAchats.Modifier_kottas(int.Parse(data[0]), "Ensemble - " + bunifuDropdown2.Text + " - " + data[0] + " - " + bunifuDatePicker1.Value.Day + " - " + bunifuDatePicker1.Value.Month + " - " + bunifuDatePicker1.Value.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), double.Parse(bunifuTextBox8.Text), double.Parse(bunifuTextBox9.Text), double.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), double.Parse(bunifuTextBox11.Text), double.Parse(bunifuTextBox2.Text), double.Parse(bunifuTextBox1.Text), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), bunifuDatePicker1.Value);
+                DataAchats.Modifier_kottas(int.Parse(data[0]), "Ensemble - " + bunifuDropdown2.Text + " - " + data[0] + " - " + bunifuDatePicker1.Value.Day + " - " + bunifuDatePicker1.Value.Month + " - " + bunifuDatePicker1.Value.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), double.Parse(bunifuTextBox8.Text), double.Parse(bunifuTextBox9.Text), double.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), double.Parse(bunifuTextBox11.Text), double.Parse(bunifuTextBox2.Text), double.Parse(bunifuTextBox1.Text), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), bunifuDatePicker1.Value , int.Parse(bunifuTextBox6.Text));
                 DataAchats.Delete_produit_achete(int.Parse(data[0]));
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
@@ -405,6 +411,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 this.Close();
                 
             }
+        }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+            Voirelesversement voirelesversement = new Voirelesversement(int.Parse(data[0]));
+            voirelesversement.ShowDialog();
         }
     }
 }

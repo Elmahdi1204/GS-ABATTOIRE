@@ -11,12 +11,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 {
     class DataAchats
     {
-        public static void Ajouter_kottas(int idkottas,String  nomkottas, int idfournisseur,String categorie,int qteunite,double qtepoid , double prixunitaire , double remise , double prixfournisseur , double versment , double poidapres , double poidabats , double transport, double charges , double Prixterunitaire ,DateTime date )
+        public static void Ajouter_kottas(int idkottas,String  nomkottas, int idfournisseur,String categorie,int qteunite,double qtepoid , double prixunitaire , double remise , double prixfournisseur , double versment , double poidapres , double poidabats , double transport, double charges , double Prixterunitaire ,DateTime date , int mort )
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("INSERT INTO kottas (idkottas,   nomkottas,idfournisseur,categorie, qteunite, qtepoid , prixunitaire , remise , prixfournisseur , versment , poidapres , poidabats , transport, charges ,Prixterunitaire ,  date)VALUES ('"+idkottas+"' , +N'"+nomkottas+"', '"+idfournisseur+"', N'"+categorie+ "', '" + qteunite + "','" + qtepoid + "','" + prixunitaire + "','" + remise + "','" + prixfournisseur + "','" + versment + "' , '" + poidapres + "', '" + poidabats + "', '" + transport + "','" + charges + "','" + Prixterunitaire + "','" + date + "');", Connexion.conn);
+                SqlCommand sql = new SqlCommand("INSERT INTO kottas (idkottas,   nomkottas,idfournisseur,categorie, qteunite, qtepoid , prixunitaire , remise , prixfournisseur , versment , poidapres , poidabats , transport, charges ,Prixterunitaire ,  date , mort)VALUES ('"+idkottas+"' , +N'"+nomkottas+"', '"+idfournisseur+"', N'"+categorie+ "', '" + qteunite + "','" + qtepoid + "','" + prixunitaire + "','" + remise + "','" + prixfournisseur + "','" + versment + "' , '" + poidapres + "', '" + poidabats + "', '" + transport + "','" + charges + "','" + Prixterunitaire + "','" + date + "' , '"+mort+"');", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -112,7 +112,9 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                     list.Add(dr[13].ToString());
                     list.Add(dr[14].ToString());
                     list.Add(dr[15].ToString());
-                  
+                    list.Add(dr[16].ToString());
+
+
 
 
                 }
@@ -147,12 +149,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 Connexion.conn.Close();
             }
         }
-        public static void Modifier_kottas(int idkottas, String nomkottas, int idfournisseur, String categorie, int qteunite, double qtepoid, double prixunitaire, double remise, double prixfournisseur, double versment, double poidapres, double poidabats, double transport, double charges, double Prixterunitaire, DateTime date)
+        public static void Modifier_kottas(int idkottas, String nomkottas, int idfournisseur, String categorie, int qteunite, double qtepoid, double prixunitaire, double remise, double prixfournisseur, double versment, double poidapres, double poidabats, double transport, double charges, double Prixterunitaire, DateTime date, int mort)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  kottas set    nomkottas ='"+nomkottas+"',idfournisseur ='"+idfournisseur+"',categorie ='"+categorie+"', qteunite ='"+qteunite+"', qtepoid ='"+qtepoid+"' , prixunitaire ='"+prixunitaire+"' , remise ='"+remise+"', prixfournisseur ='"+prixfournisseur+"' , versment ='"+versment+"', poidapres ='"+poidapres+"', poidabats ='"+poidabats+"' , transport ='"+transport+"', charges ='"+charges+"' ,Prixterunitaire = '"+Prixterunitaire+"',  date ='"+date+"'  where idkottas = '"+idkottas+"';", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update  kottas set    nomkottas ='"+nomkottas+"',idfournisseur ='"+idfournisseur+"',categorie ='"+categorie+"', qteunite ='"+qteunite+"', qtepoid ='"+qtepoid+"' , prixunitaire ='"+prixunitaire+"' , remise ='"+remise+"', prixfournisseur ='"+prixfournisseur+"' , versment ='"+versment+"', poidapres ='"+poidapres+"', poidabats ='"+poidabats+"' , transport ='"+transport+"', charges ='"+charges+"' ,Prixterunitaire = '"+Prixterunitaire+"',  date ='"+date+"' ? mort='"+mort+"' where idkottas = '"+idkottas+"';", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -190,6 +192,50 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Connexion.conn.Close();
+            }
+        }
+        public static void Voire_les_versement(BunifuDataGridView bunifuDataGridView, String txt , int id)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select * from Versement where Versement.idvente = '"+id+"' and Versement.type = 'Achats'", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                bunifuDataGridView.Rows.Clear();
+                while (dr.Read())
+                {
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3]);
+
+                }
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
+        public static double Totale_des_versment(int id )
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select sum(Versement.montant) from Versement where Versement.idvente = '"+id+"' and Versement.type = 'Achats'", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                double totale = 0;
+                while (dr.Read())
+                {
+                    totale = int.Parse(dr[0].ToString());
+
+                }
+                Connexion.conn.Close();
+                return totale;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+                return 0;
             }
         }
     }

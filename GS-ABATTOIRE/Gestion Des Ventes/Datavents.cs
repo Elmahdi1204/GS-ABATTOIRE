@@ -32,6 +32,27 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 Connexion.conn.Close();
             }
         }
+        public static void List_des_ensembles(BunifuDataGridView bunifuDataGridView, String txt)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur - versment, date, prixfournisseur + transport + charges + (Prixterunitaire * qteunite), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas ), 0), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  (select sum(Produit_achet.qteunit)- (select sum(Produits_vendu.qteunit) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas)<> 0 and  Fournisseurs.nomfournisseur LIKE N'%" + txt + "%'  order by Kottas.date desc ; ", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                bunifuDataGridView.Rows.Clear();
+                while (dr.Read())
+                {
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], DateTime.Parse(dr[6].ToString()).ToString("dd-MM | HH:mm"), dr[7], dr[8], dr[9]);
+
+                }
+                Connexion.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+            }
+        }
         public static void Get_specfic_ensmble(BunifuDataGridView bunifuDataGridView, String txt , int idkotta)
         {
             try

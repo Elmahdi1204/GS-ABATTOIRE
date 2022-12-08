@@ -117,17 +117,72 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAmMAAAG+CAYAAADfgAMRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAgzSURBVHhe7dixbcNAFAVBhi5DoUOXohIUqgxWTuooXqIC
+        xHUwAzwc8CtY3AIAwD+w7/ttbDUzMzOzr+93JthpHP7GAAC4zn2m2DvGjkIDAOA660wxMQYAEBBjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAh
+        MQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJj
+        AAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYA
+        EBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEBJjAAAhMQYAEPqIsft5AwDgCtu2PWeK
+        ncbtMXb8kJmZmZnZF3eE2Hh/ZoYBANBYlhcprkX9CgDKSQAAAABJRU5ErkJggg==
+</value>
   </data>
-  <data name="update-arrows (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\update-arrows (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="payment-method" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\payment-method.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="supp.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="supp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAVdJREFUeF7t
+        2E8rBVEcxvGJLPwrNrwASxuRV0DJVnkRtjbKSkqR92Fhw44t2RFrSrKwodjY8zz3N6PmdDd3bsoZ3099
+        m3PP/Kl7unWbUwAAAAAAAADAL1tU1+omyXM+13qjak2tJ3nO51plSM2qhYb5Xj8jS/PqRX2q94b5Xj/D
+        z8rOldqJYV921WUM8/KklmLYl2X1HMO87Kt7ta22GuZ7H5SflZ1BtaGO1HGDTtSX2lQD6t+ZUF4AH7Pl
+        v7DT8tirVixAty8xqfZiWOM5n6u0dgHm1EcMazzncxUWQLEA5TFbLIBiAcpjhQVQLEAMa1q5AOPKX2Kq
+        8ynMqMcY1njO5yrTyvf6GVl7Uysx/NHt5SadW1WvMczbobpVvez3jak7ddD5lLkR5R0d/8T9jp9uhqb5
+        Gl97oYZVK/ht0HsD5yrdDk87U742281QAAAAAAAAAH9VUXwDr615qn5ntmoAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

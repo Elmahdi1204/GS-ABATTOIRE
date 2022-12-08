@@ -64,7 +64,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             // TODO: cette ligne de code charge les données dans la table 'abattoireDataSet1.Clients'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.clientsTableAdapter.Fill(this.abattoireDataSet1.Clients);
 
-            Gestion_Des_Achats.DataAchats.List_des_ensembles(bunifuDataGridView3, bunifuTextBox11.Text);
+            Datavents.List_des_ensembles(bunifuDataGridView3, bunifuTextBox11.Text);
 
         }
 
@@ -326,8 +326,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
                 bunifuTextBox10.Clear();
                 bunifuTextBox11.Clear();
-              
-                
+                Datavents.List_des_ensembles(bunifuDataGridView3, bunifuTextBox11.Text);
+
                 bunifuTextBox3.Text = "0";
                 bunifuDropdown1.Text = "Selectioner un client";
                
