@@ -154,7 +154,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  kottas set    nomkottas ='"+nomkottas+"',idfournisseur ='"+idfournisseur+"',categorie ='"+categorie+"', qteunite ='"+qteunite+"', qtepoid ='"+qtepoid+"' , prixunitaire ='"+prixunitaire+"' , remise ='"+remise+"', prixfournisseur ='"+prixfournisseur+"' , versment ='"+versment+"', poidapres ='"+poidapres+"', poidabats ='"+poidabats+"' , transport ='"+transport+"', charges ='"+charges+"' ,Prixterunitaire = '"+Prixterunitaire+"',  date ='"+date+"' ? mort='"+mort+"' where idkottas = '"+idkottas+"';", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update  kottas set    nomkottas ='"+nomkottas+"',idfournisseur ='"+idfournisseur+"',categorie ='"+categorie+"', qteunite ='"+qteunite+"', qtepoid ='"+qtepoid+"' , prixunitaire ='"+prixunitaire+"' , remise ='"+remise+"', prixfournisseur ='"+prixfournisseur+"' , versment ='"+versment+"', poidapres ='"+poidapres+"', poidabats ='"+poidabats+"' , transport ='"+transport+"', charges ='"+charges+"' ,Prixterunitaire = '"+Prixterunitaire+"',  date ='"+date+"' , mort='"+mort+"' where idkottas = '"+idkottas+"';", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
