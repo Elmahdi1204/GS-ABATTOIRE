@@ -41,16 +41,16 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             bunifuTextBox15.Text = data[7];
             bunifuTextBox16.Text = data[8];
             bunifuTextBox11.Text = data[9];
-            bunifuTextBox19.Text = (DataAchats.Totale_des_versment(int.Parse(data[0])) + double.Parse(data[9]) ).ToString();
-            bunifuTextBox12.Text= (double.Parse(data[8]) - double.Parse(data[9])).ToString();
+                bunifuTextBox19.Text = (DataAchats.Totale_des_versment(id) + double.Parse(data[9]) ).ToString();
+
+            bunifuTextBox12.Text= (double.Parse(bunifuTextBox16.Text)  -(DataAchats.Totale_des_versment(id) + double.Parse(data[9]))  ).ToString();
             bunifuTextBox2.Text = data[10];
             bunifuTextBox1.Text = data[11];
             bunifuTextBox13.Text = data[12];
             bunifuTextBox14.Text = data[13];
             bunifuTextBox4.Text = data[14];
 
-            bunifuTextBox3.Text = (double.Parse(data[4]) * double.Parse(data[14])).ToString();
-            double prixteriache = double.Parse(data[4]) * double.Parse(data[14]);
+           double prixteriache = double.Parse(data[4]) * double.Parse(data[14]);
             double autre = double.Parse(data[8]) + double.Parse(data[12]) + double.Parse(data[13]);
             double prixtotale = prixteriache + autre;
 
@@ -61,7 +61,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
 
 
-
+            
 
 
 
@@ -417,6 +417,19 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             Voirelesversement voirelesversement = new Voirelesversement(int.Parse(data[0]));
             voirelesversement.ShowDialog();
+        }
+
+        private void bunifuTextBox6_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox7.Text = (double.Parse(bunifuTextBox18.Text) - double.Parse(bunifuTextBox6.Text)).ToString();
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

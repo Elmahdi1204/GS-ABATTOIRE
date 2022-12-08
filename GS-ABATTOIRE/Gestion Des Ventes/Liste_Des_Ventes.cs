@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GS_ABATTOIRE.Gestion_Des_Versement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,8 +84,13 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
                 if (colname == "Credit")
                 {
+                    if(credit != "0")
+                    {
+
+                    
                     Gestion_Des_Versement.Versement versement = new Gestion_Des_Versement.Versement("Vents", int.Parse(id), nom, credit);
                     versement.ShowDialog();
+                    }
                 }
 
 
@@ -97,6 +103,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                         {
                             Datavents.Delete_vente(int.Parse(id));
                             Datavents.Delete_produit_vendu(int.Parse(id));
+                            DataVersement.Supprimer_Versement_vents(int.Parse(id));
+                            
                         }
 
 

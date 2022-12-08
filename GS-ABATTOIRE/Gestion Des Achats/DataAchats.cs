@@ -69,7 +69,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur - versment, date, prixfournisseur + transport + charges + (Prixterunitaire * qteunite), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas ), 0), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and Fournisseurs.nomfournisseur LIKE N'%"+txt+"%'  order by Kottas.date desc ; ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, (versment +isnull( ( select sum(Versement.montant) from Versement where Versement.type ='Achats' and Versement.idvente = kottas.idkottas ), 0)), prixfournisseur - (versment +isnull( ( select sum(Versement.montant) from Versement where Versement.type ='Achats' and Versement.idvente = kottas.idkottas ), 0)), date, prixfournisseur + transport + charges + (Prixterunitaire * qteunite), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas ), 0), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  Fournisseurs.nomfournisseur LIKE N'%" + txt+"%'  order by Kottas.date desc ; ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
@@ -81,7 +81,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Connexion.conn.Close();
             }
         }
@@ -220,12 +220,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select sum(Versement.montant) from Versement where Versement.idvente = '"+id+"' and Versement.type = 'Achats'", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select isnull(sum(Versement.montant), 0) from Versement where Versement.idvente = '"+id+"' and Versement.type = 'Achats'", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 double totale = 0;
                 while (dr.Read())
                 {
-                    totale = int.Parse(dr[0].ToString());
+                    totale = double.Parse(dr[0].ToString());
 
                 }
                 Connexion.conn.Close();
@@ -233,7 +233,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Connexion.conn.Close();
                 return 0;
             }

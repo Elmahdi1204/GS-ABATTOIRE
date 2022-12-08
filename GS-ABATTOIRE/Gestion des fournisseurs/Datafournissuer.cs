@@ -69,12 +69,12 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("Select * from Fournisseurs  ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select * , (select sum(kottas.prixfournisseur - versment) from Kottas where kottas.idfournisseur = Fournisseurs.idfournisseur) - isnull((select sum(montant) from Versement  , Kottas where Kottas.idfournisseur = Fournisseurs.idfournisseur and Versement.idvente = kottas.idkottas and Versement.type = 'Achats' ) ,0 )  , (select count(kottas.idkottas) from kottas  where kottas.idfournisseur = Fournisseurs.idfournisseur) from Fournisseurs where nomfournisseur LIKE '%"+txt+"%' order by nomfournisseur   desc;", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
                 {
-                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3] , dr[4] , dr[5], dr[6], dr[7], dr[8]);
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3] , dr[4] , dr[5], dr[6], dr[7], dr[8] , dr[9] , dr[10]);
 
                 }
                 Connexion.conn.Close();

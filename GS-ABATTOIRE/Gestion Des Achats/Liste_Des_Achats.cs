@@ -45,16 +45,19 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             try
             {
+                int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+                bunifuButton22.PerformClick();
                 int id = int.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 Modifier_Ensemble modifier_Ensemble = new Modifier_Ensemble(id);
                 modifier_Ensemble.ShowDialog();
                 DataAchats.List_des_ensembles(bunifuDataGridView1, bunifuTextBox1.Text);
 
-
+                bunifuButton22.PerformClick();
+                bunifuDataGridView1.Rows[index].Selected = true;
             }
             catch(Exception x)
             {
-                MessageBox.Show(x.Message);
+             
             }
         }
 

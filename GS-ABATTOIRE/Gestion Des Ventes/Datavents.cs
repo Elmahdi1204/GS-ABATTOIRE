@@ -37,7 +37,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur - versment, date, prixfournisseur + transport + charges + (Prixterunitaire * qteunite), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas ), 0), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  (select sum(Produit_achet.qteunit)- (select sum(Produits_vendu.qteunit) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas)<> 0 and  Fournisseurs.nomfournisseur LIKE N'%" + txt + "%'  order by Kottas.date desc ; ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select idkottas, nomkottas, nomfournisseur, prixfournisseur, versment, prixfournisseur - versment, date, prixfournisseur + transport + charges + (Prixterunitaire * qteunite), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas ), 0), isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  (select sum(Produit_achet.qteunit)- (select isnull(sum(Produits_vendu.qteunit) , 0) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas)<> 0 and  Fournisseurs.nomfournisseur LIKE N'%" + txt + "%'  order by Kottas.date desc ; ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
@@ -154,7 +154,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select idvent , nomkottas , nomclient , vents.remise , vents.prixtotal , vents.versment , vents.prixtotal- vents.versment , vents.date from Vents , clients , Kottas where  Clients.idclient = Vents.idclient and Kottas.idkottas = Vents.idkotta and nomclient LIKE N'%"+txt+"%' order by vents.date desc", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select idvent , nomkottas , nomclient , vents.remise , vents.prixtotal , (vents.versment + (select isnull( sum(Versement.montant), 0) from Versement where Versement.type='Vents' and Versement.idvente = Vents.idvent )) , vents.prixtotal- (vents.versment + (select isnull( sum(Versement.montant), 0) from Versement where Versement.type='Vents' and Versement.idvente = Vents.idvent )) , vents.date from Vents , clients , Kottas where  Clients.idclient = Vents.idclient and Kottas.idkottas = Vents.idkotta  and nomclient LIKE N'%" + txt+"%' order by vents.date desc", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
