@@ -56,6 +56,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod = new System.Windows.Forms.DataGridViewImageColumn();
             this.supp = new System.Windows.Forms.DataGridViewImageColumn();
             this.bunifuPanel2.SuspendLayout();
@@ -115,6 +116,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.Column7,
             this.Column9,
             this.Column8,
+            this.Column10,
             this.mod,
             this.supp});
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -520,6 +522,12 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "N° des Achats";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
             // mod
             // 
             this.mod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -582,6 +590,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewImageColumn mod;
         private System.Windows.Forms.DataGridViewImageColumn supp;
     }

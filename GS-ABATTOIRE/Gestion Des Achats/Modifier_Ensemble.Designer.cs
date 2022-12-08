@@ -86,6 +86,10 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties42 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties43 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties44 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties49 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties50 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -139,10 +143,6 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties98 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties99 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties100 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -187,6 +187,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuTextBox14 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox13 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.bunifuTextBox19 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuTextBox6 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox18 = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -212,8 +214,6 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.fournisseursBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abattoireDataSet = new GS_ABATTOIRE.AbattoireDataSet();
             this.fournisseursTableAdapter = new GS_ABATTOIRE.AbattoireDataSetTableAdapters.FournisseursTableAdapter();
-            this.bunifuTextBox19 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.bunifuPanel5.SuspendLayout();
@@ -1806,6 +1806,92 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuPanel7.Size = new System.Drawing.Size(782, 608);
             this.bunifuPanel7.TabIndex = 5;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(30, 457);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(120, 18);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Versement totale";
+            // 
+            // bunifuTextBox19
+            // 
+            this.bunifuTextBox19.AcceptsReturn = false;
+            this.bunifuTextBox19.AcceptsTab = false;
+            this.bunifuTextBox19.AnimationSpeed = 200;
+            this.bunifuTextBox19.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBox19.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBox19.AutoSizeHeight = true;
+            this.bunifuTextBox19.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBox19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox19.BackgroundImage")));
+            this.bunifuTextBox19.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.bunifuTextBox19.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuTextBox19.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuTextBox19.BorderColorIdle = System.Drawing.Color.Silver;
+            this.bunifuTextBox19.BorderRadius = 20;
+            this.bunifuTextBox19.BorderThickness = 1;
+            this.bunifuTextBox19.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBox19.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox19.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextBox19.DefaultText = "";
+            this.bunifuTextBox19.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBox19.HideSelection = true;
+            this.bunifuTextBox19.IconLeft = null;
+            this.bunifuTextBox19.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox19.IconPadding = 10;
+            this.bunifuTextBox19.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox19.IconRight")));
+            this.bunifuTextBox19.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBox19.Lines = new string[0];
+            this.bunifuTextBox19.Location = new System.Drawing.Point(19, 469);
+            this.bunifuTextBox19.MaxLength = 32767;
+            this.bunifuTextBox19.MinimumSize = new System.Drawing.Size(1, 1);
+            this.bunifuTextBox19.Modified = false;
+            this.bunifuTextBox19.Multiline = false;
+            this.bunifuTextBox19.Name = "bunifuTextBox19";
+            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties45.FillColor = System.Drawing.Color.Empty;
+            stateProperties45.ForeColor = System.Drawing.Color.Empty;
+            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox19.OnActiveState = stateProperties45;
+            stateProperties46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties46.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties46.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuTextBox19.OnDisabledState = stateProperties46;
+            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties47.FillColor = System.Drawing.Color.Empty;
+            stateProperties47.ForeColor = System.Drawing.Color.Empty;
+            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox19.OnHoverState = stateProperties47;
+            stateProperties48.BorderColor = System.Drawing.Color.Silver;
+            stateProperties48.FillColor = System.Drawing.Color.White;
+            stateProperties48.ForeColor = System.Drawing.Color.Empty;
+            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.bunifuTextBox19.OnIdleState = stateProperties48;
+            this.bunifuTextBox19.Padding = new System.Windows.Forms.Padding(3);
+            this.bunifuTextBox19.PasswordChar = '\0';
+            this.bunifuTextBox19.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bunifuTextBox19.PlaceholderText = "Versement Totale ";
+            this.bunifuTextBox19.ReadOnly = false;
+            this.bunifuTextBox19.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBox19.SelectedText = "";
+            this.bunifuTextBox19.SelectionLength = 0;
+            this.bunifuTextBox19.SelectionStart = 0;
+            this.bunifuTextBox19.ShortcutsEnabled = true;
+            this.bunifuTextBox19.Size = new System.Drawing.Size(233, 46);
+            this.bunifuTextBox19.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBox19.TabIndex = 28;
+            this.bunifuTextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox19.TextMarginBottom = 0;
+            this.bunifuTextBox19.TextMarginLeft = 3;
+            this.bunifuTextBox19.TextMarginTop = 1;
+            this.bunifuTextBox19.TextPlaceholder = "Versement Totale ";
+            this.bunifuTextBox19.UseSystemPasswordChar = false;
+            this.bunifuTextBox19.WordWrap = true;
+            // 
             // bunifuButton22
             // 
             this.bunifuButton22.AllowAnimations = true;
@@ -1970,6 +2056,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuTextBox6.TextPlaceholder = "Mort";
             this.bunifuTextBox6.UseSystemPasswordChar = false;
             this.bunifuTextBox6.WordWrap = true;
+            this.bunifuTextBox6.TextChanged += new System.EventHandler(this.bunifuTextBox6_TextChanged);
             // 
             // bunifuTextBox18
             // 
@@ -3062,92 +3149,6 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             // fournisseursTableAdapter
             // 
             this.fournisseursTableAdapter.ClearBeforeFill = true;
-            // 
-            // bunifuTextBox19
-            // 
-            this.bunifuTextBox19.AcceptsReturn = false;
-            this.bunifuTextBox19.AcceptsTab = false;
-            this.bunifuTextBox19.AnimationSpeed = 200;
-            this.bunifuTextBox19.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox19.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox19.AutoSizeHeight = true;
-            this.bunifuTextBox19.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox19.BackgroundImage")));
-            this.bunifuTextBox19.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox19.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox19.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox19.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox19.BorderRadius = 20;
-            this.bunifuTextBox19.BorderThickness = 1;
-            this.bunifuTextBox19.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox19.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox19.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTextBox19.DefaultText = "";
-            this.bunifuTextBox19.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox19.HideSelection = true;
-            this.bunifuTextBox19.IconLeft = null;
-            this.bunifuTextBox19.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox19.IconPadding = 10;
-            this.bunifuTextBox19.IconRight = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox19.IconRight")));
-            this.bunifuTextBox19.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox19.Lines = new string[0];
-            this.bunifuTextBox19.Location = new System.Drawing.Point(19, 469);
-            this.bunifuTextBox19.MaxLength = 32767;
-            this.bunifuTextBox19.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox19.Modified = false;
-            this.bunifuTextBox19.Multiline = false;
-            this.bunifuTextBox19.Name = "bunifuTextBox19";
-            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties45.FillColor = System.Drawing.Color.Empty;
-            stateProperties45.ForeColor = System.Drawing.Color.Empty;
-            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox19.OnActiveState = stateProperties45;
-            stateProperties46.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties46.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties46.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox19.OnDisabledState = stateProperties46;
-            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties47.FillColor = System.Drawing.Color.Empty;
-            stateProperties47.ForeColor = System.Drawing.Color.Empty;
-            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox19.OnHoverState = stateProperties47;
-            stateProperties48.BorderColor = System.Drawing.Color.Silver;
-            stateProperties48.FillColor = System.Drawing.Color.White;
-            stateProperties48.ForeColor = System.Drawing.Color.Empty;
-            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox19.OnIdleState = stateProperties48;
-            this.bunifuTextBox19.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBox19.PasswordChar = '\0';
-            this.bunifuTextBox19.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox19.PlaceholderText = "Versement Totale ";
-            this.bunifuTextBox19.ReadOnly = false;
-            this.bunifuTextBox19.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox19.SelectedText = "";
-            this.bunifuTextBox19.SelectionLength = 0;
-            this.bunifuTextBox19.SelectionStart = 0;
-            this.bunifuTextBox19.ShortcutsEnabled = true;
-            this.bunifuTextBox19.Size = new System.Drawing.Size(233, 46);
-            this.bunifuTextBox19.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox19.TabIndex = 28;
-            this.bunifuTextBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox19.TextMarginBottom = 0;
-            this.bunifuTextBox19.TextMarginLeft = 3;
-            this.bunifuTextBox19.TextMarginTop = 1;
-            this.bunifuTextBox19.TextPlaceholder = "Versement Totale ";
-            this.bunifuTextBox19.UseSystemPasswordChar = false;
-            this.bunifuTextBox19.WordWrap = true;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(30, 457);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(120, 18);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "Versement totale";
             // 
             // Modifier_Ensemble
             // 

@@ -41,6 +41,11 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,13 +56,9 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod = new System.Windows.Forms.DataGridViewImageColumn();
             this.supp = new System.Windows.Forms.DataGridViewImageColumn();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -116,6 +117,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Column9,
             this.Column10,
             this.Column8,
+            this.Column11,
             this.mod,
             this.supp});
             this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -163,103 +165,6 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.FillWeight = 60F;
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 49;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nom";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "N°Téléphone";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Adresse";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "NIS";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "NIF";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "N°RC";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "N°Article";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "N°ccp";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Crédit";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // mod
-            // 
-            this.mod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.mod.FillWeight = 40F;
-            this.mod.HeaderText = "";
-            this.mod.Image = ((System.Drawing.Image)(resources.GetObject("mod.Image")));
-            this.mod.MinimumWidth = 6;
-            this.mod.Name = "mod";
-            this.mod.ReadOnly = true;
-            this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.mod.Width = 17;
-            // 
-            // supp
-            // 
-            this.supp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.supp.FillWeight = 40F;
-            this.supp.HeaderText = "";
-            this.supp.Image = ((System.Drawing.Image)(resources.GetObject("supp.Image")));
-            this.supp.MinimumWidth = 6;
-            this.supp.Name = "supp";
-            this.supp.ReadOnly = true;
-            this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 17;
             // 
             // bunifuPanel1
             // 
@@ -552,6 +457,109 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Column1.FillWeight = 60F;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 49;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nom";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "N°Téléphone";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Adresse";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "NIS";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "NIF";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "N°RC";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "N°Article";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "N°ccp";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Crédit";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Vents";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // mod
+            // 
+            this.mod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.mod.FillWeight = 40F;
+            this.mod.HeaderText = "";
+            this.mod.Image = ((System.Drawing.Image)(resources.GetObject("mod.Image")));
+            this.mod.MinimumWidth = 6;
+            this.mod.Name = "mod";
+            this.mod.ReadOnly = true;
+            this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.mod.Width = 17;
+            // 
+            // supp
+            // 
+            this.supp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.supp.FillWeight = 40F;
+            this.supp.HeaderText = "";
+            this.supp.Image = ((System.Drawing.Image)(resources.GetObject("supp.Image")));
+            this.supp.MinimumWidth = 6;
+            this.supp.Name = "supp";
+            this.supp.ReadOnly = true;
+            this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.supp.Width = 17;
+            // 
             // Liste_des_clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,6 +596,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewImageColumn mod;
         private System.Windows.Forms.DataGridViewImageColumn supp;
     }

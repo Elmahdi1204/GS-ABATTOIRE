@@ -48,12 +48,12 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("Select * from Clients  ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select *  , (select sum(Vents.prixtotal - versment) from Vents where Vents.idclient = Clients.idclient ) -(select isnull(sum(Versement.montant) , 0) from Versement , Vents where Vents.idvent = Versement.idvente and Versement.type = 'Vents' and Vents.idclient = Clients.idclient) , (select count (Vents.idvent) from Vents where Vents.idclient = Clients.idclient) from Clients where Clients.nomclient LIKE '%" + txt + "%' order by nomclient desc;", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())
                 {
-                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], dr[6], dr[7] , dr[8]);
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], dr[6], dr[7], dr[8], dr[9] , dr[10]) ;
 
                 }
                 Connexion.conn.Close();
