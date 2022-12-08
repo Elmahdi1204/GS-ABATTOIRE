@@ -158,6 +158,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AbattoireDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Auth\DataLogin.cs" />
+    <Compile Include="Auth\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connexion.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -319,6 +326,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Auth\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
