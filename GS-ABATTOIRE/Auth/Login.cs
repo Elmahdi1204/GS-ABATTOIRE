@@ -21,7 +21,9 @@ namespace GS_ABATTOIRE.Auth
 
         private void Login_Load(object sender, EventArgs e)
         {
-          
+            bunifuTextBox1.Text = "admin";
+            bunifuTextBox2.Text = "admin";
+            bunifuButton21.PerformClick();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace GS_ABATTOIRE.Auth
             }
             if (DataLogin.log(bunifuTextBox1.Text, bunifuTextBox2.Text))
             {
+
                 Form1 F = new Form1();
                 F.ShowDialog();
             }
