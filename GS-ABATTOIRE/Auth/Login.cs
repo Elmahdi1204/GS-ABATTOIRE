@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GS_ABATTOIRE.Gestion_Des_Charges;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,9 +30,30 @@ namespace GS_ABATTOIRE.Auth
 
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
-            Form1 F = new Form1();
-            F.ShowDialog();
-            
+
+            if (bunifuTextBox1.Text=="")
+            {
+                MessageBox.Show("entrez votre nom  ","",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            if (bunifuTextBox2.Text == "")
+            {
+                MessageBox.Show("entrez Votre mot de passe ", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            if (DataLogin.log(bunifuTextBox1.Text, bunifuTextBox2.Text))
+            {
+                MessageBox.Show("connexion a réussi", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Form1 F = new Form1();
+                F.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("connexion a échoué", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+
         }
     }
 }
