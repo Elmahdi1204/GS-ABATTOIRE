@@ -166,6 +166,14 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Connexion.cs" />
+    <Compile Include="Dashboard\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\DataDashboard.cs" />
+    <Compile Include="Dashboard\outils.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +295,12 @@
       <DependentUpon>Ajouter_Vente.cs</DependentUpon>
     </Compile>
     <Compile Include="Gestion Des Ventes\Datavents.cs" />
+    <Compile Include="Gestion Des Ventes\Details_vents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Ventes\Details_vents.Designer.cs">
+      <DependentUpon>Details_vents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion Des Ventes\Liste_Des_Ventes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -328,6 +342,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -386,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Ventes\Ajouter_Vente.resx">
       <DependentUpon>Ajouter_Vente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Ventes\Details_vents.resx">
+      <DependentUpon>Details_vents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Ventes\Liste_Des_Ventes.resx">
       <DependentUpon>Liste_Des_Ventes.cs</DependentUpon>

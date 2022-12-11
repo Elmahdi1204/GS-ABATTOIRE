@@ -21,6 +21,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             this.type = type;
             bunifuTextBox1.Text = Nom;
             bunifuTextBox2.Text = credit;
+            bunifuDatePicker1.Value = DateTime.Now;
 
         }
 

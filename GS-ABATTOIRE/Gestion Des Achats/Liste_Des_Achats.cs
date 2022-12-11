@@ -72,8 +72,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 String credit = bunifuDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 double mntvente = int.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString());
-
-                if (colname == "Credit")
+                
+                if (colname == "Credit" && credit != "0")
                 {
                     Gestion_Des_Versement.Versement versement = new Gestion_Des_Versement.Versement("Achats" , int.Parse(id)  ,nom , credit  );
                     versement.ShowDialog();

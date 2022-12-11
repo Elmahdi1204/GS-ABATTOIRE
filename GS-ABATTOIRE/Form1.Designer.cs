@@ -54,14 +54,15 @@ namespace GS_ABATTOIRE
             this.bunifuButton26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.list_des_versment1 = new GS_ABATTOIRE.Gestion_Des_Versement.List_des_versment();
+            this.liste_Des_Charges1 = new GS_ABATTOIRE.Gestion_Des_Charges.Liste_Des_Charges();
             this.liste_Des_Stocks1 = new GS_ABATTOIRE.Gestion_Des_Stocks.Liste_Des_Stocks();
             this.liste_Des_Ventes1 = new GS_ABATTOIRE.Gestion_Des_Ventes.Liste_Des_Ventes();
             this.liste_Des_Achats1 = new GS_ABATTOIRE.Gestion_Des_Achats.Liste_Des_Achats();
             this.liste_Des_Produits1 = new GS_ABATTOIRE.Gestion_Des_Projets.Liste_Des_Produits();
             this.liste_des_fournisseur1 = new GS_ABATTOIRE.Gestion_des_fournisseurs.Liste_des_fournisseur();
             this.liste_des_clients1 = new GS_ABATTOIRE.Gestion_des_clients.Liste_des_clients();
-            this.liste_Des_Charges1 = new GS_ABATTOIRE.Gestion_Des_Charges.Liste_Des_Charges();
-            this.list_des_versment1 = new GS_ABATTOIRE.Gestion_Des_Versement.List_des_versment();
+            this.dashboard1 = new GS_ABATTOIRE.Dashboard.Dashboard();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -763,6 +764,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton21.TextMarginLeft = 0;
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
             // bunifuButton27
             // 
@@ -1067,6 +1069,22 @@ namespace GS_ABATTOIRE
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // list_des_versment1
+            // 
+            this.list_des_versment1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.list_des_versment1.Location = new System.Drawing.Point(209, 0);
+            this.list_des_versment1.Name = "list_des_versment1";
+            this.list_des_versment1.Size = new System.Drawing.Size(1026, 689);
+            this.list_des_versment1.TabIndex = 9;
+            // 
+            // liste_Des_Charges1
+            // 
+            this.liste_Des_Charges1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.liste_Des_Charges1.Location = new System.Drawing.Point(209, 0);
+            this.liste_Des_Charges1.Name = "liste_Des_Charges1";
+            this.liste_Des_Charges1.Size = new System.Drawing.Size(1026, 689);
+            this.liste_Des_Charges1.TabIndex = 8;
+            // 
             // liste_Des_Stocks1
             // 
             this.liste_Des_Stocks1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1116,27 +1134,20 @@ namespace GS_ABATTOIRE
             this.liste_des_clients1.Size = new System.Drawing.Size(1026, 689);
             this.liste_des_clients1.TabIndex = 2;
             // 
-            // liste_Des_Charges1
+            // dashboard1
             // 
-            this.liste_Des_Charges1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.liste_Des_Charges1.Location = new System.Drawing.Point(209, 0);
-            this.liste_Des_Charges1.Name = "liste_Des_Charges1";
-            this.liste_Des_Charges1.Size = new System.Drawing.Size(1026, 689);
-            this.liste_Des_Charges1.TabIndex = 8;
-            // 
-            // list_des_versment1
-            // 
-            this.list_des_versment1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.list_des_versment1.Location = new System.Drawing.Point(209, 0);
-            this.list_des_versment1.Name = "list_des_versment1";
-            this.list_des_versment1.Size = new System.Drawing.Size(1026, 689);
-            this.list_des_versment1.TabIndex = 9;
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(209, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1026, 689);
+            this.dashboard1.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 689);
+            this.Controls.Add(this.dashboard1);
             this.Controls.Add(this.list_des_versment1);
             this.Controls.Add(this.liste_Des_Charges1);
             this.Controls.Add(this.liste_Des_Stocks1);
@@ -1182,6 +1193,7 @@ namespace GS_ABATTOIRE
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton26;
         private Gestion_Des_Charges.Liste_Des_Charges liste_Des_Charges1;
         private Gestion_Des_Versement.List_des_versment list_des_versment1;
+        private Dashboard.Dashboard dashboard1;
     }
 }
 
