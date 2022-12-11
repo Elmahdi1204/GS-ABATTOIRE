@@ -283,8 +283,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             try
             {
                 bunifuTextBox16.Text = (double.Parse(bunifuTextBox10.Text) - double.Parse(bunifuTextBox15.Text)).ToString();
-                bunifuTextBox11.Text = bunifuTextBox16.Text;
-                bunifuTextBox12.Text = (double.Parse(bunifuTextBox16.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
+             
+                
 
                 prixtotale = (double.Parse(bunifuTextBox16.Text) + double.Parse(bunifuTextBox13.Text) + double.Parse(bunifuTextBox14.Text) + double.Parse(bunifuTextBox3.Text));
 

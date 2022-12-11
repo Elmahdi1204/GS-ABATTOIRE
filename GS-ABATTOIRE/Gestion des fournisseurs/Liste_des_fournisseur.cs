@@ -44,6 +44,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             try
             {
                 int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+                bunifuButton22.PerformClick();
                 String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
                 String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -55,6 +56,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                 String numregistre = bunifuDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 String numarticl = bunifuDataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
                 String ccp = bunifuDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                String Vent = bunifuDataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
 
 
 
@@ -67,6 +69,10 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                     modifier_Fournisseur.ShowDialog();
 
                 }
+                if (Vent =="0")
+                {
+
+                
                 if (colname == "supp")
                 {
                     DialogResult dialog = MessageBox.Show("Vous etes sur ?", "Supprimer un client", MessageBoxButtons.YesNo);
@@ -76,6 +82,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
                     }
 
 
+                }
                 }
                 bunifuButton22.PerformClick();
                 bunifuDataGridView1.Rows[index].Selected = true;
