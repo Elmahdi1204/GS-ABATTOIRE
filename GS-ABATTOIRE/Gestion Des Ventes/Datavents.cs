@@ -249,5 +249,28 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 Connexion.conn.Close();
             }
         }
+        public static double Totale_des_versment(int id)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select isnull(sum(Versement.montant), 0) from Versement where Versement.idvente = '" + id + "' and Versement.type = 'Vents'", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                double totale = 0;
+                while (dr.Read())
+                {
+                    totale = double.Parse(dr[0].ToString());
+
+                }
+                Connexion.conn.Close();
+                return totale;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+                return 0;
+            }
+        }
     }
 }

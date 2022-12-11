@@ -39,6 +39,7 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -46,7 +47,6 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,6 +71,18 @@
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(333, 273);
             this.bunifuPanel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(251, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "DA";
             // 
             // bunifuButton21
             // 
@@ -186,7 +198,7 @@
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(260, 32);
             this.bunifuDatePicker1.TabIndex = 2;
-            this.bunifuDatePicker1.Value = new System.DateTime(2022, 12, 4, 11, 12, 0, 0);
+            this.bunifuDatePicker1.Value = new System.DateTime(2022, 12, 10, 0, 0, 0, 0);
             // 
             // bunifuTextBox2
             // 
@@ -377,18 +389,6 @@
             this.label1.Size = new System.Drawing.Size(167, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ajouter Versement";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(251, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "DA";
             // 
             // Versement
             // 

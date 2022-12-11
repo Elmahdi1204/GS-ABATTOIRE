@@ -1875,7 +1875,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuTextBox19.PasswordChar = '\0';
             this.bunifuTextBox19.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox19.PlaceholderText = "Versement Totale ";
-            this.bunifuTextBox19.ReadOnly = false;
+            this.bunifuTextBox19.ReadOnly = true;
             this.bunifuTextBox19.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuTextBox19.SelectedText = "";
             this.bunifuTextBox19.SelectionLength = 0;
@@ -2920,7 +2920,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuTextBox9.PasswordChar = '\0';
             this.bunifuTextBox9.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.bunifuTextBox9.PlaceholderText = "Prix Unitaire";
-            this.bunifuTextBox9.ReadOnly = false;
+            this.bunifuTextBox9.ReadOnly = true;
             this.bunifuTextBox9.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.bunifuTextBox9.SelectedText = "";
             this.bunifuTextBox9.SelectionLength = 0;
