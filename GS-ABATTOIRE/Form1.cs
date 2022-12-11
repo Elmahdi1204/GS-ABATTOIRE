@@ -80,7 +80,7 @@ namespace GS_ABATTOIRE
         {
             liste_Utilisateur1.Show();
             liste_Utilisateur1.BringToFront();
-
+        }
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
             dashboard1.Show();
