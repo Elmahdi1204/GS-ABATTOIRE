@@ -191,6 +191,7 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\DataDashboard.cs" />
+    <Compile Include="Dashboard\DataDashboard2.cs" />
     <Compile Include="Dashboard\outils.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

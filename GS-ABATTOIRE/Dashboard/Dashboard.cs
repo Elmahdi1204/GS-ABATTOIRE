@@ -25,6 +25,17 @@ namespace GS_ABATTOIRE.Dashboard
           totalecredit.Text = $"{ DataDashboard.totale_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ###.##}";
             double c = DataDashboard.totale_vents(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)) - DataDashboard.totale_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
             Caisse.Text = $"{ c:### ### ###.##}";
+            nbfacturecredit.Text = ""+ DataDashboard.Count_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
+            benifice.Text = $"{ DataDashboard.totale_benifice(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ###.##}";
+            ensmbleencours.Text = "" + DataDashboard2.Ensmbles_encours(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
+            Ensmblefinis.Text = "" + DataDashboard2.Ensmbles_finis(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
+            nbachat.Text = "" + DataDashboard2.Count_achats(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
+            totaleachat.Text = $"{ DataDashboard2.totale_achats(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ###.##}";
+            nbcredit.Text = "" + DataDashboard2.Count_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
+            credittotale.Text = $"{ DataDashboard2.totale_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ###.##}";
+            Money_out.Text = $"{ DataDashboard2.totale_money_out(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ###.##}";
+            tempreel.Text = $"{ DataDashboard2.benifice_temp_reel(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ###.##}";
+
 
         }
     }
