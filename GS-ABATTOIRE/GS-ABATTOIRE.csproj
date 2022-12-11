@@ -158,7 +158,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AbattoireDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Auth\Ajouter_Utilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\Ajouter_Utilisateur.Designer.cs">
+      <DependentUpon>Ajouter_Utilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\Change_Motdepasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\Change_Motdepasse.Designer.cs">
+      <DependentUpon>Change_Motdepasse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Auth\DataLogin.cs" />
+    <Compile Include="Auth\Liste_Utilisateur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Auth\Liste_Utilisateur.Designer.cs">
+      <DependentUpon>Liste_Utilisateur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Auth\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -340,6 +358,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Auth\Ajouter_Utilisateur.resx">
+      <DependentUpon>Ajouter_Utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth\Change_Motdepasse.resx">
+      <DependentUpon>Change_Motdepasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth\Liste_Utilisateur.resx">
+      <DependentUpon>Liste_Utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

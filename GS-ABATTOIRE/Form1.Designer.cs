@@ -62,6 +62,8 @@ namespace GS_ABATTOIRE
             this.liste_Des_Produits1 = new GS_ABATTOIRE.Gestion_Des_Projets.Liste_Des_Produits();
             this.liste_des_fournisseur1 = new GS_ABATTOIRE.Gestion_des_fournisseurs.Liste_des_fournisseur();
             this.liste_des_clients1 = new GS_ABATTOIRE.Gestion_des_clients.Liste_des_clients();
+            this.liste_Utilisateur1 = new GS_ABATTOIRE.Auth.Liste_Utilisateur();
+
             this.dashboard1 = new GS_ABATTOIRE.Dashboard.Dashboard();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -137,7 +139,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton210.BackColor1 = System.Drawing.Color.DodgerBlue;
             this.bunifuButton210.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton210.BackgroundImage")));
             this.bunifuButton210.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton210.ButtonText = "bunifuButton210";
+            this.bunifuButton210.ButtonText = "Utilisateur";
             this.bunifuButton210.ButtonTextMarginLeft = 0;
             this.bunifuButton210.ColorContrastOnClick = 45;
             this.bunifuButton210.ColorContrastOnHover = 45;
@@ -213,6 +215,7 @@ namespace GS_ABATTOIRE
             this.bunifuButton210.TextMarginLeft = 0;
             this.bunifuButton210.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton210.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton210.Click += new System.EventHandler(this.bunifuButton210_Click);
             // 
             // bunifuButton29
             // 
@@ -1142,12 +1145,24 @@ namespace GS_ABATTOIRE
             this.dashboard1.Size = new System.Drawing.Size(1026, 689);
             this.dashboard1.TabIndex = 10;
             // 
+            // liste_Utilisateur1
+            // 
+            this.liste_Utilisateur1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.liste_Utilisateur1.Location = new System.Drawing.Point(209, 0);
+            this.liste_Utilisateur1.Name = "liste_Utilisateur1";
+            this.liste_Utilisateur1.Size = new System.Drawing.Size(1026, 689);
+            this.liste_Utilisateur1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 689);
+
+            this.Controls.Add(this.liste_Utilisateur1);
+
             this.Controls.Add(this.dashboard1);
+
             this.Controls.Add(this.list_des_versment1);
             this.Controls.Add(this.liste_Des_Charges1);
             this.Controls.Add(this.liste_Des_Stocks1);
@@ -1193,7 +1208,11 @@ namespace GS_ABATTOIRE
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton26;
         private Gestion_Des_Charges.Liste_Des_Charges liste_Des_Charges1;
         private Gestion_Des_Versement.List_des_versment list_des_versment1;
+
+        private Auth.Liste_Utilisateur liste_Utilisateur1;
+
         private Dashboard.Dashboard dashboard1;
+
     }
 }
 

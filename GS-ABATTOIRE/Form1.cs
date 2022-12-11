@@ -75,10 +75,17 @@ namespace GS_ABATTOIRE
             list_des_versment1.BringToFront();
         }
 
+
+        private void bunifuButton210_Click(object sender, EventArgs e)
+        {
+            liste_Utilisateur1.Show();
+            liste_Utilisateur1.BringToFront();
+
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
             dashboard1.Show();
             dashboard1.BringToFront();
+
         }
     }
 }
