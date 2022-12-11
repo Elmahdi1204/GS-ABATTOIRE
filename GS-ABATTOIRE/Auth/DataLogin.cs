@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bunifu.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -45,7 +46,7 @@ namespace GS_ABATTOIRE.Auth
         {
             try {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("insert into Utilisateur Values('"+nom+"','"+mot_de_passe+"','"+type+"')",Connexion.conn);
+                SqlCommand sql = new SqlCommand("insert into Utilisateur  Values('" + nom+"','"+mot_de_passe+"','"+type+"')",Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -70,7 +71,43 @@ namespace GS_ABATTOIRE.Auth
             }
             catch(Exception ex)
             {
-                MessageBox.Show("error", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public static void change_Mpass_user(String nom,String mot_de_passe)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("Update Utilisateur set Passeword='" + mot_de_passe + "' where Username='" + nom + "';", Connexion.conn);
+                sql.ExecuteNonQuery();
+                Connexion.conn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message,"error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
+        public static void Liste_Utilisateur(BunifuDataGridView bunifuDataGridView, string text)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select * from Utilisateur ",Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+                bunifuDataGridView.Rows.Clear();
+                while (dr.Read())
+                {
+                    bunifuDataGridView.Rows.Add(dr[0], dr[1], dr[2]);
+                }
+                Connexion.conn.Close();
+            }
+            catch(Exception ex )
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 

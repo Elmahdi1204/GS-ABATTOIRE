@@ -16,6 +16,7 @@ namespace GS_ABATTOIRE.Auth
         public Login()
         {
             InitializeComponent();
+            bunifuTextBox2.PasswordChar = '*';
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace GS_ABATTOIRE.Auth
             }
             if (DataLogin.log(bunifuTextBox1.Text, bunifuTextBox2.Text))
             {
-              
+
                 Form1 F = new Form1();
                 F.ShowDialog();
             }
@@ -56,6 +57,14 @@ namespace GS_ABATTOIRE.Auth
 
 
 
+        }
+
+        private void Login_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue==13)
+            {
+                bunifuButton21.PerformClick();
+            }
         }
     }
 }

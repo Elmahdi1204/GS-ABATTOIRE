@@ -40,16 +40,16 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod = new System.Windows.Forms.DataGridViewImageColumn();
             this.sup = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuButton22 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -71,6 +71,7 @@
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(1188, 618);
             this.bunifuPanel2.TabIndex = 1;
+            this.bunifuPanel2.Click += new System.EventHandler(this.bunifuPanel2_Click);
             // 
             // bunifuDataGridView1
             // 
@@ -142,6 +143,52 @@
             this.bunifuDataGridView1.Size = new System.Drawing.Size(1188, 618);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nom Utilisateur";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mot De Passe";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Type";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // mod
+            // 
+            this.mod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.mod.HeaderText = "";
+            this.mod.Image = ((System.Drawing.Image)(resources.GetObject("mod.Image")));
+            this.mod.MinimumWidth = 6;
+            this.mod.Name = "mod";
+            this.mod.ReadOnly = true;
+            this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.mod.Width = 21;
+            // 
+            // sup
+            // 
+            this.sup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.sup.HeaderText = "";
+            this.sup.Image = ((System.Drawing.Image)(resources.GetObject("sup.Image")));
+            this.sup.MinimumWidth = 6;
+            this.sup.Name = "sup";
+            this.sup.ReadOnly = true;
+            this.sup.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.sup.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.sup.Width = 21;
             // 
             // bunifuPanel1
             // 
@@ -250,6 +297,7 @@
             this.bunifuButton22.TextMarginLeft = 0;
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click);
             // 
             // bunifuTextBox1
             // 
@@ -427,51 +475,6 @@
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
             this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nom Utilisateur";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mot De Passe";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Type";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // mod
-            // 
-            this.mod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.mod.HeaderText = "";
-            this.mod.Image = ((System.Drawing.Image)(resources.GetObject("mod.Image")));
-            this.mod.MinimumWidth = 6;
-            this.mod.Name = "mod";
-            this.mod.ReadOnly = true;
-            this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.mod.Width = 21;
-            // 
-            // sup
-            // 
-            this.sup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.sup.HeaderText = "";
-            this.sup.Image = ((System.Drawing.Image)(resources.GetObject("sup.Image")));
-            this.sup.MinimumWidth = 6;
-            this.sup.Name = "sup";
-            this.sup.ReadOnly = true;
-            this.sup.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.sup.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.sup.Width = 21;
-            // 
             // Liste_Utilisateur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +483,7 @@
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "Liste_Utilisateur";
             this.Size = new System.Drawing.Size(1188, 718);
+            this.Load += new System.EventHandler(this.Liste_Utilisateur_Load);
             this.bunifuPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
