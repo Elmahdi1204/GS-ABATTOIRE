@@ -48,7 +48,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select *  , (select sum(Vents.prixtotal - versment) from Vents where Vents.idclient = Clients.idclient ) -(select isnull(sum(Versement.montant) , 0) from Versement , Vents where Vents.idvent = Versement.idvente and Versement.type = 'Vents' and Vents.idclient = Clients.idclient) , (select count (Vents.idvent) from Vents where Vents.idclient = Clients.idclient) from Clients where Clients.nomclient LIKE '%" + txt + "%' order by nomclient desc;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select *  , isnull((select sum(Vents.prixtotal - versment) from Vents where Vents.idclient = Clients.idclient ) -(select isnull(sum(Versement.montant) , 0) from Versement , Vents where Vents.idvent = Versement.idvente and Versement.type = 'Vents' and Vents.idclient = Clients.idclient) , 0) , (select count (Vents.idvent) from Vents where Vents.idclient = Clients.idclient) from Clients where Clients.nomclient LIKE '%" + txt + "%' order by nomclient desc;", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())

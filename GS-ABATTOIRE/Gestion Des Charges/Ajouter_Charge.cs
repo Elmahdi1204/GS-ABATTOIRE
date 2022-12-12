@@ -15,6 +15,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
         public Ajouter_Charge()
         {
             InitializeComponent();
+            bunifuDatePicker1.Value = new DateTime(bunifuDatePicker1.Value.Year, bunifuDatePicker1.Value.Month, bunifuDatePicker1.Value.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second);
         }
 
         private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
@@ -35,6 +36,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Charges
                 MessageBox.Show("charge ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+        }
+
+        private void Ajouter_Charge_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

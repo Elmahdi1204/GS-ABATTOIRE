@@ -110,5 +110,29 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 bunifuButton21.PerformClick();
             }
         }
+
+        private void bunifuDataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow row in bunifuDataGridView1.Rows)
+            {
+
+                double credit = Convert.ToDouble(row.Cells[5].Value);
+
+
+
+                if (credit > 0 && bunifuToggleSwitch1.Checked == true)
+                {
+
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                }
+
+
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.White;
+                }
+
+            }
+        }
     }
 }

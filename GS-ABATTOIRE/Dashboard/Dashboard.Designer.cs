@@ -35,6 +35,9 @@ namespace GS_ABATTOIRE.Dashboard
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuDatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -78,6 +81,24 @@ namespace GS_ABATTOIRE.Dashboard
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.Ensmblefinis = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel14 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.Money_out = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel15 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.tempreel = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel16 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.ensmbleencours = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuShadowPanel8 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -95,45 +116,26 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.nbachat = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.Ensmblefinis = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel14 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.Money_out = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel15 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.tempreel = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel16 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.ensmbleencours = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuShadowPanel21 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label25 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.revenuglobale = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel23 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label19 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.profitnet = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel22 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.totaledescharges = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.bunifuShadowPanel9.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -152,6 +154,16 @@ namespace GS_ABATTOIRE.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.bunifuPanel5.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.bunifuShadowPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.bunifuShadowPanel14.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.bunifuShadowPanel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.bunifuShadowPanel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.bunifuShadowPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -161,16 +173,6 @@ namespace GS_ABATTOIRE.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.bunifuShadowPanel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.tableLayoutPanel7.SuspendLayout();
-            this.bunifuShadowPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.bunifuShadowPanel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.bunifuShadowPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.bunifuShadowPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.bunifuPanel6.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.bunifuShadowPanel21.SuspendLayout();
@@ -179,6 +181,7 @@ namespace GS_ABATTOIRE.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.bunifuShadowPanel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPanel2
@@ -248,6 +251,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuDatePicker2.Name = "bunifuDatePicker2";
             this.bunifuDatePicker2.Size = new System.Drawing.Size(199, 32);
             this.bunifuDatePicker2.TabIndex = 6;
+            this.bunifuDatePicker2.ValueChanged += new System.EventHandler(this.bunifuDatePicker2_ValueChanged);
             // 
             // bunifuDatePicker1
             // 
@@ -363,6 +367,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton25.TextMarginLeft = 0;
             this.bunifuButton25.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton25.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton25.Click += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuButton24
             // 
@@ -453,6 +458,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton24.TextMarginLeft = 0;
             this.bunifuButton24.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton24.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton24.Click += new System.EventHandler(this.bunifuButton24_Click);
             // 
             // bunifuButton23
             // 
@@ -543,6 +549,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton23.TextMarginLeft = 0;
             this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton23.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton23.Click += new System.EventHandler(this.bunifuButton23_Click);
             // 
             // bunifuButton22
             // 
@@ -633,6 +640,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton22.TextMarginLeft = 0;
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click);
             // 
             // bunifuButton21
             // 
@@ -723,6 +731,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton21.TextMarginLeft = 0;
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
             // bunifuPanel3
             // 
@@ -766,6 +775,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel9.BorderColor = System.Drawing.Color.Silver;
             this.bunifuShadowPanel9.BorderRadius = 20;
             this.bunifuShadowPanel9.BorderThickness = 1;
+            this.bunifuShadowPanel9.Controls.Add(this.chart1);
             this.bunifuShadowPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuShadowPanel9.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel9.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -1260,9 +1270,267 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 297F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1540, 297);
             this.tableLayoutPanel5.TabIndex = 10;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel7.ColumnCount = 2;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.83333F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.16667F));
+            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel6, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel14, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel15, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel16, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(788, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(749, 291);
+            this.tableLayoutPanel7.TabIndex = 11;
+            // 
+            // bunifuShadowPanel6
+            // 
+            this.bunifuShadowPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShadowPanel6.BorderRadius = 20;
+            this.bunifuShadowPanel6.BorderThickness = 1;
+            this.bunifuShadowPanel6.Controls.Add(this.pictureBox11);
+            this.bunifuShadowPanel6.Controls.Add(this.Ensmblefinis);
+            this.bunifuShadowPanel6.Controls.Add(this.label16);
+            this.bunifuShadowPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel6.Location = new System.Drawing.Point(368, 3);
+            this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
+            this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel6.ShadowDept = 2;
+            this.bunifuShadowPanel6.ShadowDepth = 0;
+            this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel6.Size = new System.Drawing.Size(378, 139);
+            this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel6.TabIndex = 2;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(-3, 25);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(100, 87);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 2;
+            this.pictureBox11.TabStop = false;
+            // 
+            // Ensmblefinis
+            // 
+            this.Ensmblefinis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Ensmblefinis.AutoSize = true;
+            this.Ensmblefinis.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ensmblefinis.Location = new System.Drawing.Point(106, 98);
+            this.Ensmblefinis.Name = "Ensmblefinis";
+            this.Ensmblefinis.Size = new System.Drawing.Size(209, 27);
+            this.Ensmblefinis.TabIndex = 1;
+            this.Ensmblefinis.Text = "Nombre des paiment ";
+            this.Ensmblefinis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label16
+            // 
+            this.label16.AutoEllipsis = true;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(106, 25);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(154, 27);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Ensembles finis";
+            // 
+            // bunifuShadowPanel14
+            // 
+            this.bunifuShadowPanel14.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel14.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShadowPanel14.BorderRadius = 20;
+            this.bunifuShadowPanel14.BorderThickness = 1;
+            this.bunifuShadowPanel14.Controls.Add(this.flowLayoutPanel1);
+            this.bunifuShadowPanel14.Controls.Add(this.pictureBox12);
+            this.bunifuShadowPanel14.Controls.Add(this.Money_out);
+            this.bunifuShadowPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuShadowPanel14.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel14.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel14.Location = new System.Drawing.Point(3, 148);
+            this.bunifuShadowPanel14.Name = "bunifuShadowPanel14";
+            this.bunifuShadowPanel14.PanelColor = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel14.PanelColor2 = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel14.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel14.ShadowDept = 2;
+            this.bunifuShadowPanel14.ShadowDepth = 0;
+            this.bunifuShadowPanel14.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel14.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel14.Size = new System.Drawing.Size(359, 140);
+            this.bunifuShadowPanel14.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel14.TabIndex = 3;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label18);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 25);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(257, 49);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // label18
+            // 
+            this.label18.AutoEllipsis = true;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(241, 54);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Benifice des ensmble en stock";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Location = new System.Drawing.Point(-3, 25);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(100, 87);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 2;
+            this.pictureBox12.TabStop = false;
+            // 
+            // Money_out
+            // 
+            this.Money_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Money_out.AutoSize = true;
+            this.Money_out.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Money_out.Location = new System.Drawing.Point(103, 93);
+            this.Money_out.Name = "Money_out";
+            this.Money_out.Size = new System.Drawing.Size(209, 27);
+            this.Money_out.TabIndex = 1;
+            this.Money_out.Text = "Nombre des paiment ";
+            this.Money_out.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // bunifuShadowPanel15
+            // 
+            this.bunifuShadowPanel15.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel15.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShadowPanel15.BorderRadius = 20;
+            this.bunifuShadowPanel15.BorderThickness = 1;
+            this.bunifuShadowPanel15.Controls.Add(this.pictureBox13);
+            this.bunifuShadowPanel15.Controls.Add(this.tempreel);
+            this.bunifuShadowPanel15.Controls.Add(this.label20);
+            this.bunifuShadowPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuShadowPanel15.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel15.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel15.Location = new System.Drawing.Point(368, 148);
+            this.bunifuShadowPanel15.Name = "bunifuShadowPanel15";
+            this.bunifuShadowPanel15.PanelColor = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel15.PanelColor2 = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel15.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel15.ShadowDept = 2;
+            this.bunifuShadowPanel15.ShadowDepth = 0;
+            this.bunifuShadowPanel15.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel15.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel15.Size = new System.Drawing.Size(378, 140);
+            this.bunifuShadowPanel15.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel15.TabIndex = 4;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Location = new System.Drawing.Point(-3, 25);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(100, 87);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 2;
+            this.pictureBox13.TabStop = false;
+            // 
+            // tempreel
+            // 
+            this.tempreel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tempreel.AutoSize = true;
+            this.tempreel.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempreel.Location = new System.Drawing.Point(103, 93);
+            this.tempreel.Name = "tempreel";
+            this.tempreel.Size = new System.Drawing.Size(209, 27);
+            this.tempreel.TabIndex = 1;
+            this.tempreel.Text = "Nombre des paiment ";
+            this.tempreel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label20
+            // 
+            this.label20.AutoEllipsis = true;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(106, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(211, 27);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Benifice en temp reel";
+            // 
+            // bunifuShadowPanel16
+            // 
+            this.bunifuShadowPanel16.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel16.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuShadowPanel16.BorderRadius = 20;
+            this.bunifuShadowPanel16.BorderThickness = 1;
+            this.bunifuShadowPanel16.Controls.Add(this.pictureBox14);
+            this.bunifuShadowPanel16.Controls.Add(this.ensmbleencours);
+            this.bunifuShadowPanel16.Controls.Add(this.label22);
+            this.bunifuShadowPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuShadowPanel16.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel16.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel16.Location = new System.Drawing.Point(3, 3);
+            this.bunifuShadowPanel16.Name = "bunifuShadowPanel16";
+            this.bunifuShadowPanel16.PanelColor = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel16.PanelColor2 = System.Drawing.Color.Snow;
+            this.bunifuShadowPanel16.ShadowColor = System.Drawing.Color.DarkGray;
+            this.bunifuShadowPanel16.ShadowDept = 2;
+            this.bunifuShadowPanel16.ShadowDepth = 0;
+            this.bunifuShadowPanel16.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel16.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel16.Size = new System.Drawing.Size(359, 139);
+            this.bunifuShadowPanel16.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel16.TabIndex = 1;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
+            this.pictureBox14.Location = new System.Drawing.Point(0, 25);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(100, 87);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 2;
+            this.pictureBox14.TabStop = false;
+            // 
+            // ensmbleencours
+            // 
+            this.ensmbleencours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ensmbleencours.AutoEllipsis = true;
+            this.ensmbleencours.AutoSize = true;
+            this.ensmbleencours.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ensmbleencours.Location = new System.Drawing.Point(106, 92);
+            this.ensmbleencours.Name = "ensmbleencours";
+            this.ensmbleencours.Size = new System.Drawing.Size(209, 27);
+            this.ensmbleencours.TabIndex = 1;
+            this.ensmbleencours.Text = "Nombre des paiment ";
+            this.ensmbleencours.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label22
+            // 
+            this.label22.AutoEllipsis = true;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(106, 25);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(180, 27);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Ensmbles en stock";
             // 
             // tableLayoutPanel6
             // 
@@ -1516,264 +1784,6 @@ namespace GS_ABATTOIRE.Dashboard
             this.label14.TabIndex = 0;
             this.label14.Text = "Operation d\'achats";
             // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.83333F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.16667F));
-            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel6, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel14, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel15, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.bunifuShadowPanel16, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(788, 3);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(749, 291);
-            this.tableLayoutPanel7.TabIndex = 11;
-            // 
-            // bunifuShadowPanel6
-            // 
-            this.bunifuShadowPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShadowPanel6.BorderRadius = 20;
-            this.bunifuShadowPanel6.BorderThickness = 1;
-            this.bunifuShadowPanel6.Controls.Add(this.pictureBox11);
-            this.bunifuShadowPanel6.Controls.Add(this.Ensmblefinis);
-            this.bunifuShadowPanel6.Controls.Add(this.label16);
-            this.bunifuShadowPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel6.Location = new System.Drawing.Point(368, 3);
-            this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
-            this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel6.ShadowDept = 2;
-            this.bunifuShadowPanel6.ShadowDepth = 0;
-            this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel6.Size = new System.Drawing.Size(378, 139);
-            this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel6.TabIndex = 2;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(-3, 25);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(100, 87);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 2;
-            this.pictureBox11.TabStop = false;
-            // 
-            // Ensmblefinis
-            // 
-            this.Ensmblefinis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Ensmblefinis.AutoSize = true;
-            this.Ensmblefinis.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ensmblefinis.Location = new System.Drawing.Point(106, 98);
-            this.Ensmblefinis.Name = "Ensmblefinis";
-            this.Ensmblefinis.Size = new System.Drawing.Size(209, 27);
-            this.Ensmblefinis.TabIndex = 1;
-            this.Ensmblefinis.Text = "Nombre des paiment ";
-            this.Ensmblefinis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label16
-            // 
-            this.label16.AutoEllipsis = true;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(106, 25);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(154, 27);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Ensembles finis";
-            // 
-            // bunifuShadowPanel14
-            // 
-            this.bunifuShadowPanel14.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel14.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShadowPanel14.BorderRadius = 20;
-            this.bunifuShadowPanel14.BorderThickness = 1;
-            this.bunifuShadowPanel14.Controls.Add(this.flowLayoutPanel1);
-            this.bunifuShadowPanel14.Controls.Add(this.pictureBox12);
-            this.bunifuShadowPanel14.Controls.Add(this.Money_out);
-            this.bunifuShadowPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel14.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel14.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel14.Location = new System.Drawing.Point(3, 148);
-            this.bunifuShadowPanel14.Name = "bunifuShadowPanel14";
-            this.bunifuShadowPanel14.PanelColor = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel14.PanelColor2 = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel14.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel14.ShadowDept = 2;
-            this.bunifuShadowPanel14.ShadowDepth = 0;
-            this.bunifuShadowPanel14.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel14.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel14.Size = new System.Drawing.Size(359, 140);
-            this.bunifuShadowPanel14.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel14.TabIndex = 3;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Location = new System.Drawing.Point(-3, 25);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(100, 87);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 2;
-            this.pictureBox12.TabStop = false;
-            // 
-            // Money_out
-            // 
-            this.Money_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Money_out.AutoSize = true;
-            this.Money_out.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Money_out.Location = new System.Drawing.Point(103, 93);
-            this.Money_out.Name = "Money_out";
-            this.Money_out.Size = new System.Drawing.Size(209, 27);
-            this.Money_out.TabIndex = 1;
-            this.Money_out.Text = "Nombre des paiment ";
-            this.Money_out.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // bunifuShadowPanel15
-            // 
-            this.bunifuShadowPanel15.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel15.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShadowPanel15.BorderRadius = 20;
-            this.bunifuShadowPanel15.BorderThickness = 1;
-            this.bunifuShadowPanel15.Controls.Add(this.pictureBox13);
-            this.bunifuShadowPanel15.Controls.Add(this.tempreel);
-            this.bunifuShadowPanel15.Controls.Add(this.label20);
-            this.bunifuShadowPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel15.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel15.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel15.Location = new System.Drawing.Point(368, 148);
-            this.bunifuShadowPanel15.Name = "bunifuShadowPanel15";
-            this.bunifuShadowPanel15.PanelColor = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel15.PanelColor2 = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel15.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel15.ShadowDept = 2;
-            this.bunifuShadowPanel15.ShadowDepth = 0;
-            this.bunifuShadowPanel15.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel15.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel15.Size = new System.Drawing.Size(378, 140);
-            this.bunifuShadowPanel15.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel15.TabIndex = 4;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Location = new System.Drawing.Point(-3, 25);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(100, 87);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 2;
-            this.pictureBox13.TabStop = false;
-            // 
-            // tempreel
-            // 
-            this.tempreel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tempreel.AutoSize = true;
-            this.tempreel.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tempreel.Location = new System.Drawing.Point(103, 93);
-            this.tempreel.Name = "tempreel";
-            this.tempreel.Size = new System.Drawing.Size(209, 27);
-            this.tempreel.TabIndex = 1;
-            this.tempreel.Text = "Nombre des paiment ";
-            this.tempreel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label20
-            // 
-            this.label20.AutoEllipsis = true;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(106, 25);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(211, 27);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Benifice en temp reel";
-            // 
-            // bunifuShadowPanel16
-            // 
-            this.bunifuShadowPanel16.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel16.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuShadowPanel16.BorderRadius = 20;
-            this.bunifuShadowPanel16.BorderThickness = 1;
-            this.bunifuShadowPanel16.Controls.Add(this.pictureBox14);
-            this.bunifuShadowPanel16.Controls.Add(this.ensmbleencours);
-            this.bunifuShadowPanel16.Controls.Add(this.label22);
-            this.bunifuShadowPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuShadowPanel16.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel16.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel16.Location = new System.Drawing.Point(3, 3);
-            this.bunifuShadowPanel16.Name = "bunifuShadowPanel16";
-            this.bunifuShadowPanel16.PanelColor = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel16.PanelColor2 = System.Drawing.Color.Snow;
-            this.bunifuShadowPanel16.ShadowColor = System.Drawing.Color.DarkGray;
-            this.bunifuShadowPanel16.ShadowDept = 2;
-            this.bunifuShadowPanel16.ShadowDepth = 0;
-            this.bunifuShadowPanel16.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel16.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel16.Size = new System.Drawing.Size(359, 139);
-            this.bunifuShadowPanel16.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel16.TabIndex = 1;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(0, 25);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(100, 87);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 2;
-            this.pictureBox14.TabStop = false;
-            // 
-            // ensmbleencours
-            // 
-            this.ensmbleencours.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.ensmbleencours.AutoEllipsis = true;
-            this.ensmbleencours.AutoSize = true;
-            this.ensmbleencours.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ensmbleencours.Location = new System.Drawing.Point(106, 92);
-            this.ensmbleencours.Name = "ensmbleencours";
-            this.ensmbleencours.Size = new System.Drawing.Size(209, 27);
-            this.ensmbleencours.TabIndex = 1;
-            this.ensmbleencours.Text = "Nombre des paiment ";
-            this.ensmbleencours.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label22
-            // 
-            this.label22.AutoEllipsis = true;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(106, 25);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(180, 27);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Ensmbles en stock";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label18);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(103, 25);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(257, 49);
-            this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // label18
-            // 
-            this.label18.AutoEllipsis = true;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(241, 54);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Benifice des ensmble en stock";
-            // 
             // bunifuPanel6
             // 
             this.bunifuPanel6.AutoScroll = true;
@@ -1817,7 +1827,6 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel21.BorderColor = System.Drawing.Color.Silver;
             this.bunifuShadowPanel21.BorderRadius = 20;
             this.bunifuShadowPanel21.BorderThickness = 1;
-            this.bunifuShadowPanel21.Controls.Add(this.label25);
             this.bunifuShadowPanel21.Controls.Add(this.pictureBox15);
             this.bunifuShadowPanel21.Controls.Add(this.revenuglobale);
             this.bunifuShadowPanel21.Controls.Add(this.label27);
@@ -1837,20 +1846,9 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel21.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel21.TabIndex = 2;
             // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(459, 86);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(37, 27);
-            this.label25.TabIndex = 4;
-            this.label25.Text = "DA";
-            // 
             // pictureBox15
             // 
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
             this.pictureBox15.Location = new System.Drawing.Point(0, 25);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(100, 87);
@@ -1886,7 +1884,6 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel23.BorderColor = System.Drawing.Color.Silver;
             this.bunifuShadowPanel23.BorderRadius = 20;
             this.bunifuShadowPanel23.BorderThickness = 1;
-            this.bunifuShadowPanel23.Controls.Add(this.label19);
             this.bunifuShadowPanel23.Controls.Add(this.pictureBox16);
             this.bunifuShadowPanel23.Controls.Add(this.profitnet);
             this.bunifuShadowPanel23.Controls.Add(this.label21);
@@ -1906,20 +1903,9 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel23.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel23.TabIndex = 4;
             // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(476, 87);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 27);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "DA";
-            // 
             // pictureBox16
             // 
+            this.pictureBox16.Image = global::GS_ABATTOIRE.Properties.Resources.financial_profit;
             this.pictureBox16.Location = new System.Drawing.Point(0, 25);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(100, 87);
@@ -1955,7 +1941,6 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel22.BorderColor = System.Drawing.Color.Silver;
             this.bunifuShadowPanel22.BorderRadius = 20;
             this.bunifuShadowPanel22.BorderThickness = 1;
-            this.bunifuShadowPanel22.Controls.Add(this.label5);
             this.bunifuShadowPanel22.Controls.Add(this.pictureBox17);
             this.bunifuShadowPanel22.Controls.Add(this.totaledescharges);
             this.bunifuShadowPanel22.Controls.Add(this.label24);
@@ -1975,20 +1960,9 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel22.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel22.TabIndex = 3;
             // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(452, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 27);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "DA";
-            // 
             // pictureBox17
             // 
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
             this.pictureBox17.Location = new System.Drawing.Point(0, 25);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(100, 87);
@@ -2018,6 +1992,23 @@ namespace GS_ABATTOIRE.Dashboard
             this.label24.TabIndex = 1;
             this.label24.Text = "Total des charges";
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(10, 10);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(737, 265);
+            this.chart1.TabIndex = 9;
+            this.chart1.Text = "chart1";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2035,6 +2026,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.bunifuShadowPanel9.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.bunifuShadowPanel2.PerformLayout();
@@ -2059,6 +2051,21 @@ namespace GS_ABATTOIRE.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.bunifuPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.bunifuShadowPanel6.ResumeLayout(false);
+            this.bunifuShadowPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.bunifuShadowPanel14.ResumeLayout(false);
+            this.bunifuShadowPanel14.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.bunifuShadowPanel15.ResumeLayout(false);
+            this.bunifuShadowPanel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.bunifuShadowPanel16.ResumeLayout(false);
+            this.bunifuShadowPanel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.bunifuShadowPanel8.ResumeLayout(false);
             this.bunifuShadowPanel8.PerformLayout();
@@ -2072,21 +2079,6 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel13.ResumeLayout(false);
             this.bunifuShadowPanel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.bunifuShadowPanel6.ResumeLayout(false);
-            this.bunifuShadowPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.bunifuShadowPanel14.ResumeLayout(false);
-            this.bunifuShadowPanel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.bunifuShadowPanel15.ResumeLayout(false);
-            this.bunifuShadowPanel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.bunifuShadowPanel16.ResumeLayout(false);
-            this.bunifuShadowPanel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.bunifuPanel6.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.bunifuShadowPanel21.ResumeLayout(false);
@@ -2098,6 +2090,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel22.ResumeLayout(false);
             this.bunifuShadowPanel22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2185,19 +2178,17 @@ namespace GS_ABATTOIRE.Dashboard
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel21;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label revenuglobale;
         private System.Windows.Forms.Label label27;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel23;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label profitnet;
         private System.Windows.Forms.Label label21;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel22;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Label totaledescharges;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

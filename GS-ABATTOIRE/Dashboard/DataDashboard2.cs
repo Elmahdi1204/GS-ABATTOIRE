@@ -88,7 +88,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select sum (prixfournisseur + transport + charges + (Prixterunitaire*qteunite)) from kottas   where date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select isnull( sum (prixfournisseur + transport + charges + (Prixterunitaire*qteunite)),0) from kottas   where date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 double count = 0;
 
@@ -184,8 +184,8 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select sum(vents.prixtotal)-(select sum(prixfournisseur + transport + charges + (Prixterunitaire * qteunite))  from Kottas where  date between '" + date1 + "' and '" + date2 + "') from Vents where date between '" + date1 + "' and '" + date2 + "'", Connexion.conn);
-                SqlDataReader dr = sql.ExecuteReader();
+                    SqlCommand sql = new SqlCommand("select isnull(sum(vents.prixtotal), 0)- (select isnull( sum(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) , 0)  from Kottas where  date between '" + date1 + "' and '" + date2 + "') from Vents where date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
+                    SqlDataReader dr = sql.ExecuteReader();
                 double count = 0;
 
                 while (dr.Read())
@@ -208,7 +208,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select sum(Charge.Montant) from Charge where  date between '" + date1 + "' and '" + date2 + "'", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select isnull( sum(Charge.Montant) , 0 )from Charge where  date between '" + date1 + "' and '" + date2 + "'", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 double count = 0;
 
