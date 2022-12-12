@@ -63,6 +63,15 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supp = new System.Windows.Forms.DataGridViewImageColumn();
             this.bunifuPanel11 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Ensmble = new System.Windows.Forms.Label();
+            this.Numfact = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Date = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Nom = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuButton23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuTextBox9 = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -70,21 +79,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuTextBox5 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox4 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox7 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Nom = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Date = new System.Windows.Forms.Label();
-            this.Numfact = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Ensmble = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuPanel6.SuspendLayout();
             this.bunifuPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).BeginInit();
             this.bunifuPanel11.SuspendLayout();
-            this.bunifuPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.bunifuPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel6
@@ -252,6 +252,106 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuPanel11.Size = new System.Drawing.Size(626, 121);
             this.bunifuPanel11.TabIndex = 5;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Controls.Add(this.label5);
+            this.flowLayoutPanel1.Controls.Add(this.Ensmble);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(333, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(12);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(293, 121);
+            this.flowLayoutPanel1.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(183, 22);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Numero d\'ensemble :";
+            // 
+            // Ensmble
+            // 
+            this.Ensmble.AutoSize = true;
+            this.Ensmble.BackColor = System.Drawing.Color.Transparent;
+            this.Ensmble.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ensmble.Location = new System.Drawing.Point(204, 12);
+            this.Ensmble.Name = "Ensmble";
+            this.Ensmble.Size = new System.Drawing.Size(59, 22);
+            this.Ensmble.TabIndex = 7;
+            this.Ensmble.Text = "label4";
+            // 
+            // Numfact
+            // 
+            this.Numfact.AutoSize = true;
+            this.Numfact.BackColor = System.Drawing.Color.Transparent;
+            this.Numfact.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Numfact.Location = new System.Drawing.Point(141, 13);
+            this.Numfact.Name = "Numfact";
+            this.Numfact.Size = new System.Drawing.Size(59, 22);
+            this.Numfact.TabIndex = 5;
+            this.Numfact.Text = "label4";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 22);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Num facture :";
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.BackColor = System.Drawing.Color.Transparent;
+            this.Date.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Location = new System.Drawing.Point(78, 77);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(59, 22);
+            this.Date.TabIndex = 3;
+            this.Date.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Date :";
+            // 
+            // Nom
+            // 
+            this.Nom.AutoSize = true;
+            this.Nom.BackColor = System.Drawing.Color.Transparent;
+            this.Nom.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nom.Location = new System.Drawing.Point(87, 45);
+            this.Nom.Name = "Nom";
+            this.Nom.Size = new System.Drawing.Size(57, 22);
+            this.Nom.TabIndex = 1;
+            this.Nom.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Client :";
+            // 
             // bunifuPanel7
             // 
             this.bunifuPanel7.BackgroundColor = System.Drawing.Color.White;
@@ -361,6 +461,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuButton23.TextMarginLeft = 0;
             this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton23.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton23.Click += new System.EventHandler(this.bunifuButton23_Click);
             // 
             // bunifuTextBox9
             // 
@@ -737,106 +838,6 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuTextBox7.UseSystemPasswordChar = false;
             this.bunifuTextBox7.WordWrap = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Client :";
-            // 
-            // Nom
-            // 
-            this.Nom.AutoSize = true;
-            this.Nom.BackColor = System.Drawing.Color.Transparent;
-            this.Nom.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nom.Location = new System.Drawing.Point(87, 45);
-            this.Nom.Name = "Nom";
-            this.Nom.Size = new System.Drawing.Size(57, 22);
-            this.Nom.TabIndex = 1;
-            this.Nom.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 22);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Date :";
-            // 
-            // Date
-            // 
-            this.Date.AutoSize = true;
-            this.Date.BackColor = System.Drawing.Color.Transparent;
-            this.Date.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date.Location = new System.Drawing.Point(78, 77);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(59, 22);
-            this.Date.TabIndex = 3;
-            this.Date.Text = "label4";
-            // 
-            // Numfact
-            // 
-            this.Numfact.AutoSize = true;
-            this.Numfact.BackColor = System.Drawing.Color.Transparent;
-            this.Numfact.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numfact.Location = new System.Drawing.Point(141, 13);
-            this.Numfact.Name = "Numfact";
-            this.Numfact.Size = new System.Drawing.Size(59, 22);
-            this.Numfact.TabIndex = 5;
-            this.Numfact.Text = "label4";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 22);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Num facture :";
-            // 
-            // Ensmble
-            // 
-            this.Ensmble.AutoSize = true;
-            this.Ensmble.BackColor = System.Drawing.Color.Transparent;
-            this.Ensmble.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ensmble.Location = new System.Drawing.Point(204, 12);
-            this.Ensmble.Name = "Ensmble";
-            this.Ensmble.Size = new System.Drawing.Size(59, 22);
-            this.Ensmble.TabIndex = 7;
-            this.Ensmble.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(183, 22);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Numero d\'ensemble :";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Controls.Add(this.label5);
-            this.flowLayoutPanel1.Controls.Add(this.Ensmble);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(333, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(12);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(293, 121);
-            this.flowLayoutPanel1.TabIndex = 8;
-            // 
             // Details_vents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -851,9 +852,9 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView2)).EndInit();
             this.bunifuPanel11.ResumeLayout(false);
             this.bunifuPanel11.PerformLayout();
-            this.bunifuPanel7.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.bunifuPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GS_ABATTOIRE.Facture;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -312,6 +313,34 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     Datavents.Ajouter_produit_vendu(idproduit , idvent, int.Parse(id), qte , prix);
 
                 }
+                List<Facture.objet> list = new List<Facture.objet>();
+                list.Clear();
+
+                foreach (DataGridViewRow row in bunifuDataGridView1.Rows)
+                {
+
+
+                    list.Add(new Facture.objet
+                    {
+                        idproduit = "" + row.Cells[0].Value.ToString(),
+                        nomproduit = row.Cells[1].Value.ToString(),
+                        prix = row.Cells[2].Value.ToString(),
+                        qnt = row.Cells[3].Value.ToString(),
+                        prixqnt = (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())).ToString(),
+
+
+
+                    });
+
+
+
+
+
+                }
+                
+                    Facture.Facture imp = new Facture.Facture( 5, list);
+                    imp.ShowDialog();
+                
                 bunifuDataGridView2.Rows.Clear();
                 MessageBox.Show("Ajouter avec succes");
                 bunifuDataGridView1.Rows.Clear();

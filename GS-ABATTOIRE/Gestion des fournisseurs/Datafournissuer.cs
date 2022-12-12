@@ -69,7 +69,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select * , (select sum(kottas.prixfournisseur - versment) from Kottas where kottas.idfournisseur = Fournisseurs.idfournisseur) - isnull((select sum(montant) from Versement  , Kottas where Kottas.idfournisseur = Fournisseurs.idfournisseur and Versement.idvente = kottas.idkottas and Versement.type = 'Achats' ) ,0 )  , (select count(kottas.idkottas) from kottas  where kottas.idfournisseur = Fournisseurs.idfournisseur) from Fournisseurs where nomfournisseur LIKE '%"+txt+"%' order by nomfournisseur   desc;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select * , isnull ((select sum(kottas.prixfournisseur - versment) from Kottas where kottas.idfournisseur = Fournisseurs.idfournisseur) - isnull((select sum(montant) from Versement  , Kottas where Kottas.idfournisseur = Fournisseurs.idfournisseur and Versement.idvente = kottas.idkottas and Versement.type = 'Achats' ) ,0 ) , 0 ) , (select count(kottas.idkottas) from kottas  where kottas.idfournisseur = Fournisseurs.idfournisseur) from Fournisseurs where nomfournisseur LIKE '%"+txt+"%' order by nomfournisseur   desc;", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 bunifuDataGridView.Rows.Clear();
                 while (dr.Read())

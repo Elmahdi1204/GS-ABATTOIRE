@@ -40,5 +40,36 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         {
 
         }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
+            List<Facture.objet> list = new List<Facture.objet>();
+            list.Clear();
+
+            foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
+            {
+
+
+                list.Add(new Facture.objet
+                {
+                    idproduit = "" + row.Cells[0].Value.ToString(),
+                    nomproduit = row.Cells[1].Value.ToString(),
+                    prix = row.Cells[2].Value.ToString(),
+                    qnt = row.Cells[3].Value.ToString(),
+                    prixqnt = (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())).ToString(),
+
+
+
+                });
+
+
+
+
+
+            }
+
+            Facture.Facture imp = new Facture.Facture(5, list);
+            imp.ShowDialog();
+        }
     }
 }
