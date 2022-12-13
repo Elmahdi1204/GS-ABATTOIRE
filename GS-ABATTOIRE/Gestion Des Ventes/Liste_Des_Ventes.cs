@@ -80,7 +80,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 String credit = bunifuDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-              
+             
 
                 if (colname == "Credit")
                 {

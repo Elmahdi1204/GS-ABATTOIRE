@@ -316,10 +316,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 List<Facture.objet> list = new List<Facture.objet>();
                 list.Clear();
 
-                foreach (DataGridViewRow row in bunifuDataGridView1.Rows)
+                foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
                 {
 
 
+                    
+                    
                     list.Add(new Facture.objet
                     {
                         idproduit = "" + row.Cells[0].Value.ToString(),
@@ -338,7 +340,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
                 }
                 
-                    Facture.Facture imp = new Facture.Facture( 5, list);
+                    Facture.Facture imp = new Facture.Facture( idvent, list , 9);
                     imp.ShowDialog();
                 
                 bunifuDataGridView2.Rows.Clear();

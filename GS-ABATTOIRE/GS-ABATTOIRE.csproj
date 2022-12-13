@@ -353,6 +353,12 @@
     <Compile Include="Gestion Des Ventes\Liste_Des_Ventes.Designer.cs">
       <DependentUpon>Liste_Des_Ventes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Ventes\modifie_ventes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Ventes\modifie_ventes.Designer.cs">
+      <DependentUpon>modifie_ventes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion Des Versement\DataVersement.cs" />
     <Compile Include="Gestion Des Versement\List_des_versment.cs">
       <SubType>UserControl</SubType>
@@ -468,6 +474,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Ventes\Liste_Des_Ventes.resx">
       <DependentUpon>Liste_Des_Ventes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Ventes\modifie_ventes.resx">
+      <DependentUpon>modifie_ventes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Versement\List_des_versment.resx">
       <DependentUpon>List_des_versment.cs</DependentUpon>
