@@ -68,8 +68,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
             }
 
-            Facture.Facture imp = new Facture.Facture(5, list);
+            Facture.Facture imp = new Facture.Facture(int.Parse(data[0]), list , double.Parse(bunifuTextBox1.Text));
             imp.ShowDialog();
+        }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            modifie_ventes modifie_Ventes = new modifie_ventes(int.Parse(data[0]));
+            modifie_Ventes.ShowDialog();
         }
     }
 }
