@@ -37,5 +37,42 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         { 
 
         }
+
+        private void bunifuDataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                bunifuTextBox7.Text = totale().ToString();
+                bunifuTextBox4.Text = (double.Parse(bunifuTextBox7.Text) - double.Parse(bunifuTextBox5.Text)).ToString();
+                bunifuTextBox8.Text = bunifuTextBox4.Text;
+
+                bunifuTextBox9.Text = (double.Parse(bunifuTextBox4.Text) - double.Parse(bunifuTextBox8.Text)).ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void bunifuDataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        double totale()
+        {
+            double tot = 0;
+
+
+            for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
+            {
+                double qnt = double.Parse(bunifuDataGridView2.Rows[i].Cells[2].Value.ToString());
+                double prix = double.Parse(bunifuDataGridView2.Rows[i].Cells[3].Value.ToString());
+
+                tot = tot + (prix * qnt);
+
+            }
+
+            return tot;
+        }
     }
 }

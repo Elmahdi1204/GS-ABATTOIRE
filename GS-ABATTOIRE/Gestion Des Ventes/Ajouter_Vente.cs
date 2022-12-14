@@ -66,6 +66,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.clientsTableAdapter.Fill(this.abattoireDataSet1.Clients);
 
             Datavents.List_des_ensembles(bunifuDataGridView3, bunifuTextBox11.Text);
+            bunifuDropdown2.SelectedIndex = 0;
 
         }
 
@@ -295,7 +296,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
         private void bunifuButton23_Click(object sender, EventArgs e)
         {
-            if (bunifuDropdown1.Text == "Selectioner un client" ||  bunifuTextBox7.Text == "" || bunifuTextBox8.Text == "" || bunifuTextBox4.Text == "" || bunifuTextBox5.Text == "" || bunifuTextBox9.Text == "")
+            if (bunifuTextBox12.Text =="" || bunifuDropdown1.Text == "Selectioner un client" ||  bunifuTextBox7.Text == "" || bunifuTextBox8.Text == "" || bunifuTextBox4.Text == "" || bunifuTextBox5.Text == "" || bunifuTextBox9.Text == "")
             {
                 MessageBox.Show("Esseyer remplir toutes les zones.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
@@ -340,9 +341,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
                 }
                 
-                    Facture.Facture imp = new Facture.Facture( idvent, list , 9);
+                    Facture.Facture imp = new Facture.Facture( idvent, list , int.Parse(bunifuTextBox12.Text), bunifuDropdown2.Text);
                     imp.ShowDialog();
-                
+                Facture.bonclient impp = new Facture.bonclient(idvent, list);
+                impp.Show();
+
                 bunifuDataGridView2.Rows.Clear();
                 MessageBox.Show("Ajouter avec succes");
                 bunifuDataGridView1.Rows.Clear();

@@ -83,8 +83,12 @@ namespace GS_ABATTOIRE
         }
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
-            dashboard1.Show();
-            dashboard1.BringToFront();
+            if (Connexion.Type =="Admin")
+            {
+                dashboard1.Show();
+                dashboard1.BringToFront();
+            }
+           
 
         }
     }

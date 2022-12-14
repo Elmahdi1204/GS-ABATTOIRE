@@ -38,38 +38,45 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
         private void Details_vents_Load(object sender, EventArgs e)
         {
-
+            bunifuDropdown1.SelectedIndex = 0;
         }
 
         private void bunifuButton23_Click(object sender, EventArgs e)
         {
-            List<Facture.objet> list = new List<Facture.objet>();
-            list.Clear();
-
-            foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
+            if (bunifuTextBox1.Text != "")
             {
 
 
-                list.Add(new Facture.objet
+                List<Facture.objet> list = new List<Facture.objet>();
+                list.Clear();
+
+                foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
                 {
-                    idproduit = "" + row.Cells[0].Value.ToString(),
-                    nomproduit = row.Cells[1].Value.ToString(),
-                    prix = row.Cells[2].Value.ToString(),
-                    qnt = row.Cells[3].Value.ToString(),
-                    prixqnt = (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())).ToString(),
+
+
+                    list.Add(new Facture.objet
+                    {
+                        idproduit = "" + row.Cells[0].Value.ToString(),
+                        nomproduit = row.Cells[1].Value.ToString(),
+                        prix = row.Cells[2].Value.ToString(),
+                        qnt = row.Cells[3].Value.ToString(),
+                        prixqnt = (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())).ToString(),
 
 
 
-                });
+                    });
 
 
 
 
 
+                }
+
+                Facture.Facture imp = new Facture.Facture(int.Parse(data[0]), list, double.Parse(bunifuTextBox1.Text) , bunifuDropdown1.Text);
+                imp.Show();
+                Facture.bonclient impp = new Facture.bonclient(int.Parse(data[0]), list);
+                impp.Show();
             }
-
-            Facture.Facture imp = new Facture.Facture(int.Parse(data[0]), list , double.Parse(bunifuTextBox1.Text));
-            imp.ShowDialog();
         }
 
         private void bunifuButton21_Click(object sender, EventArgs e)

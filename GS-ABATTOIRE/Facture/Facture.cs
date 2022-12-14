@@ -1,4 +1,5 @@
-﻿using GS_ABATTOIRE.Gestion_Des_Ventes;
+﻿using GS_ABATTOIRE.Gestion_des_clients;
+using GS_ABATTOIRE.Gestion_Des_Ventes;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,8 @@ namespace GS_ABATTOIRE.Facture
     public partial class Facture : Form
     {
         List<String> data = new List<string>();
-        public Facture( int idvent , List<objet> list , double tva)
+        List<String> dataclient = new List<string>();
+        public Facture( int idvent , List<objet> list , double tva , string methode)
         {
             InitializeComponent();
 
@@ -23,6 +25,7 @@ namespace GS_ABATTOIRE.Facture
             double prix = double.Parse(data[4]);
             double prixtva = double.Parse(data[4]) * (tva / 100);
             double totale = prix + prixtva;
+            dataclient = Dataclients.Getclient(int.Parse(data[2]));
 
 
 
@@ -34,12 +37,16 @@ namespace GS_ABATTOIRE.Facture
             parameters.Add(new ReportParameter("prixtva", ""+prixtva));
             parameters.Add(new ReportParameter("prixavectva", ""+totale));
             parameters.Add(new ReportParameter("tva", "" + tva));
+            parameters.Add(new ReportParameter("method", "" + methode));
+            parameters.Add(new ReportParameter("nomclient", "" + dataclient[1]));
+            parameters.Add(new ReportParameter("adress", "" + dataclient[3]));
+            parameters.Add(new ReportParameter("nis", "" + dataclient[4]));
+            parameters.Add(new ReportParameter("nif", "" + dataclient[5]));
+            parameters.Add(new ReportParameter("rc", "" + dataclient[6]));
+            parameters.Add(new ReportParameter("art", "" + dataclient[7]));
+            parameters.Add(new ReportParameter("rip", "" + dataclient[8]));
 
-            /* parameters.Add(new ReportParameter("prix", $"{ double.Parse(totale):### ### ###.##}"));
-             parameters.Add(new ReportParameter("versment", $"{ double.Parse(versment):### ### ###.##}"));
-             parameters.Add(new ReportParameter("count", count.ToString()));
-             parameters.Add(new ReportParameter("url", new Uri(@"C:\logs\logo.png").AbsoluteUri));
-             parameters.Add(new ReportParameter("tele", new Uri(@"C:\logs\num.png").AbsoluteUri));*/
+
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             reportViewer1.LocalReport.SetParameters(parameters);
             ReportDataSource ds = new ReportDataSource();

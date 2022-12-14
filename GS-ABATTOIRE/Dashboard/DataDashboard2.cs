@@ -112,7 +112,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select count(idkottas)  from Kottas where prixfournisseur - (Kottas.versment)-(select sum(Versement.montant) from Versement where Versement.type = 'Achats' and Versement.idvente = Kottas.idkottas )  <>0 and  date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select count(idkottas)  from Kottas where prixfournisseur - (Kottas.versment)-(select isnull(sum(Versement.montant),0) from Versement where Versement.type = 'Achats' and Versement.idvente = Kottas.idkottas )  <>0  ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 int count = 0;
 
@@ -136,7 +136,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select isnull( sum(prixfournisseur -kottas.versment  ) - (select sum(Versement.montant) from Versement where Versement.type ='Achats' ) , 0) from Kottas      where date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select isnull( sum(prixfournisseur -kottas.versment  ) - (select sum(Versement.montant) from Versement where Versement.type ='Achats'  ) , 0) from Kottas     ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 double count = 0;
 
