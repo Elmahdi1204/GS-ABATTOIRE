@@ -26,6 +26,12 @@ namespace GS_ABATTOIRE.Auth
                 {
 
                     con = true;
+                    while (dr.Read())
+                    {
+                        Connexion.Type = dr[2].ToString();
+                    }
+
+                  
                    
 
                 }
@@ -36,7 +42,7 @@ namespace GS_ABATTOIRE.Auth
             catch (Exception ex)
 
             {
-                MessageBox.Show("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show( ex.Message , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Connexion.conn.Close();
                 return false;
                     

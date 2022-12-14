@@ -86,6 +86,42 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                 return "";
             }
         }
+        public static List<String> Getclient(int id)
+        {
+            List<String> list = new List<String>();
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("Select * from Clients where idclient ='" + id + "'  ;", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    list.Add(dr[0].ToString());
+                    list.Add(dr[1].ToString());
+                    list.Add(dr[2].ToString());
+                    list.Add(dr[3].ToString());
+                    list.Add(dr[4].ToString());
+                    list.Add(dr[5].ToString());
+                    list.Add(dr[6].ToString());
+                    list.Add(dr[7].ToString());
+                    list.Add(dr[8].ToString());
+
+
+
+
+                }
+                Connexion.conn.Close();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+                return list;
+            }
+        }
+
         public static void Supprimer_clients(int id)
         {
             try

@@ -258,20 +258,6 @@
         4/YZu35izczMzMyW2hWv433MdAUAgIpt+wUg52Ai3na4agAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuPanel10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAArAAAABLCAYAAACIjrRFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHISURBVHhe7dixjcMwFAVBhS7D4YUuxSU4dBmqXDrqxOQ6
-        4AIzwAOBX8GCGwAAJJ3n+RzbzczMzMwW3M/M1ts4vMYAAGBl75mvfwF7VS0AAKxsn/kqYAEASBCwAACk
-        CFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqA
-        BQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgA
-        AFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAg
-        RcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIE
-        LAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcAC
-        AJAiYAEASBGwAACkCFgAAFIELAAAKf8C9n3fAABgTcdxfGe+3sbtM3b9xJqZmZmZLbUrXsf7mOkKAAAV
-        2/YLP/mbPkQjxE4AAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -302,6 +288,20 @@
   <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="bunifuPanel10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAArAAAABLCAYAAACIjrRFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHISURBVHhe7dixjcMwFAVBhS7D4YUuxSU4dBmqXDrqxOQ6
+        4AIzwAOBX8GCGwAAJJ3n+RzbzczMzMwW3M/M1ts4vMYAAGBl75mvfwF7VS0AAKxsn/kqYAEASBCwAACk
+        CFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqA
+        BQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgA
+        AFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAg
+        RcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIE
+        LAAAKQIWAIAUAQsAQIqABQAgRcACAJAiYAEASBGwAACkCFgAAFIELAAAKQIWAIAUAQsAQIqABQAgRcAC
+        AJAiYAEASBGwAACkCFgAAFIELAAAKf8C9n3fAABgTcdxfGe+3sbtM3b9xJqZmZmZLbUrXsf7mOkKAAAV
+        2/YLP/mbPkQjxE4AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="bunifuButton24.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACsAAAAnCAYAAACWn7G7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -604,6 +604,9 @@
   <metadata name="clientsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>167, 17</value>
   </metadata>
+  <metadata name="abattoireDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="bunifuPanel7.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABFcAAADeCAYAAAD4ru/+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -737,9 +740,6 @@
         XqIF0Y8jBoPBVL+4wGKx1nOFYXgv/+T3ZaZ3bbwB4CVB8ASkqLwg+3sohwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="abattoireDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="clientsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>332, 17</value>
   </metadata>

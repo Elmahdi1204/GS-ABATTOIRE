@@ -9,6 +9,8 @@ namespace GS_ABATTOIRE
 {
     class Connexion
     {
+        public static string Type=" " ;
+
         public static SqlConnection conn = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=Abattoire;Integrated Security=True");
     }
 }
