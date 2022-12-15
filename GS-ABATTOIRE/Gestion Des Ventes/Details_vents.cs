@@ -22,7 +22,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             bunifuTextBox5.Text = data[3];
             bunifuTextBox4.Text = data[4];
             bunifuTextBox8.Text = (Datavents.Totale_des_versment(idvent) + double.Parse(data[5])).ToString();
-            bunifuTextBox9.Text = (double.Parse(data[4]) -Datavents.Totale_des_versment(idvent) + double.Parse(data[5])).ToString();
+            bunifuTextBox9.Text = (double.Parse(data[4]) - Datavents.Totale_des_versment(idvent) - double.Parse(data[5])).ToString();
             Date.Text = data[6];
             Nom.Text = Dataclients.Get_specifice_client(int.Parse(data[2]));
             Numfact.Text = data[0];

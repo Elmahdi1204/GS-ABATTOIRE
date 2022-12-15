@@ -296,7 +296,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
         private void bunifuButton23_Click(object sender, EventArgs e)
         {
-            if (bunifuTextBox12.Text =="" || bunifuDropdown1.Text == "Selectioner un client" ||  bunifuTextBox7.Text == "" || bunifuTextBox8.Text == "" || bunifuTextBox4.Text == "" || bunifuTextBox5.Text == "" || bunifuTextBox9.Text == "")
+            if (bunifuTextBox12.Text =="" || bunifuDropdown1.Text == "Selectioner un client" ||  bunifuTextBox7.Text == "" || bunifuTextBox8.Text == "" || bunifuTextBox4.Text == "" || bunifuTextBox5.Text == "" || bunifuTextBox9.Text == "" || bunifuDataGridView2.Rows.Count ==0)
             {
                 MessageBox.Show("Esseyer remplir toutes les zones.", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
