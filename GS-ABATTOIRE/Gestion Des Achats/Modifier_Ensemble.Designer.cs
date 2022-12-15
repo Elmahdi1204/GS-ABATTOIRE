@@ -2559,6 +2559,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuTextBox16.TextPlaceholder = " Prix Aprés Remise";
             this.bunifuTextBox16.UseSystemPasswordChar = false;
             this.bunifuTextBox16.WordWrap = true;
+            this.bunifuTextBox16.TextChanged += new System.EventHandler(this.bunifuTextBox16_TextChanged);
             // 
             // bunifuTextBox15
             // 

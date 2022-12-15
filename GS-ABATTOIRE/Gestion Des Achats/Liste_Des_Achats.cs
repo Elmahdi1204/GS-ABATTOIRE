@@ -15,6 +15,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         public Liste_Des_Achats()
         {
             InitializeComponent();
+            if (Connexion.Type != "Admin")
+            {
+                bunifuDataGridView1.Columns[9].Visible = false;
+
+            }
         }
 
         private void bunifuButton21_Click(object sender, EventArgs e)

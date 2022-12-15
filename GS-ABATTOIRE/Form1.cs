@@ -15,6 +15,12 @@ namespace GS_ABATTOIRE
         public Form1()
         {
             InitializeComponent();
+            if(Connexion.Type != "Admin")
+            {
+                bunifuButton21.Visible = false;
+                bunifuButton210.Visible = false;
+
+            }
         }
 
         private void bunifuButton24_Click(object sender, EventArgs e)
@@ -83,8 +89,9 @@ namespace GS_ABATTOIRE
         }
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
-            if (Connexion.Type =="Admin")
+            if (Connexion.Type =="Admin".Trim())
             {
+
                 dashboard1.Show();
                 dashboard1.BringToFront();
             }

@@ -204,12 +204,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             }
         }
       
-        public static void Modifier_vents(int idkottas, String nomkottas, int idfournisseur, String categorie, int qteunite, double qtepoid, double prixunitaire, double remise, double prixfournisseur, double versment, double poidapres, double poidabats, double transport, double charges, double Prixterunitaire, DateTime date)
+        public static void Modifier_vents(int idvent, int idclient, double remise, double prixtotale, double versment, DateTime date)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update  kottas set    nomkottas ='" + nomkottas + "',idfournisseur ='" + idfournisseur + "',categorie ='" + categorie + "', qteunite ='" + qteunite + "', qtepoid ='" + qtepoid + "' , prixunitaire ='" + prixunitaire + "' , remise ='" + remise + "', prixfournisseur ='" + prixfournisseur + "' , versment ='" + versment + "', poidapres ='" + poidapres + "', poidabats ='" + poidabats + "' , transport ='" + transport + "', charges ='" + charges + "' ,Prixterunitaire = '" + Prixterunitaire + "',  date ='" + date + "'  where idkottas = '" + idkottas + "';", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update   Vents set  idclient = '" + idclient + "' , remise=N'" + remise + "' ,prixtotal='" + prixtotale + "' , versment ='" + versment + "' ,date ='" + date + "' where idvent ='"+idvent+"';", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
