@@ -25,6 +25,7 @@ namespace GS_ABATTOIRE.Facture
             double prix = double.Parse(data[4]);
             double prixtva = double.Parse(data[4]) * (tva / 100);
             double totale = prix + prixtva;
+         
             dataclient = Dataclients.Getclient(int.Parse(data[2]));
 
 
@@ -33,9 +34,9 @@ namespace GS_ABATTOIRE.Facture
 
 
             ReportParameterCollection parameters = new ReportParameterCollection();
-          parameters.Add(new ReportParameter("prix", ""+prix));
-            parameters.Add(new ReportParameter("prixtva", ""+prixtva));
-            parameters.Add(new ReportParameter("prixavectva", ""+totale));
+          parameters.Add(new ReportParameter("prix", $"{ prix:### ### ##0.00} "));
+            parameters.Add(new ReportParameter("prixtva", $"{ prixtva:### ### ##0.00} "));
+            parameters.Add(new ReportParameter("prixavectva", $"{ totale:### ### ##0.00} "));
             parameters.Add(new ReportParameter("tva", "" + tva));
             parameters.Add(new ReportParameter("method", "" + methode));
             parameters.Add(new ReportParameter("nomclient", "" + dataclient[1]));
@@ -45,6 +46,9 @@ namespace GS_ABATTOIRE.Facture
             parameters.Add(new ReportParameter("rc", "" + dataclient[6]));
             parameters.Add(new ReportParameter("art", "" + dataclient[7]));
             parameters.Add(new ReportParameter("rip", "" + dataclient[8]));
+            parameters.Add(new ReportParameter("totalecar", NumberToWords(((int)totale))));
+            parameters.Add(new ReportParameter("numf", ""+data[0]));
+            parameters.Add(new ReportParameter("date", ""+DateTime.Parse( data[6]).ToString("dd/MM/yyyy")));
 
 
             this.reportViewer1.LocalReport.EnableExternalImages = true;
@@ -73,6 +77,55 @@ namespace GS_ABATTOIRE.Facture
             this.reportViewer1.RefreshReport();
            
         }
+        public static string NumberToWords(int number)
+        {
+            if (number == 0)
+                return "zero";
+
+            if (number < 0)
+                return "minus " + NumberToWords(Math.Abs(number));
+
+            string words = "";
+
+            if ((number / 1000000) > 0)
+            {
+                words += NumberToWords(number / 1000000) + " million ";
+                number %= 1000000;
+            }
+
+            if ((number / 1000) > 0)
+            {
+                words += NumberToWords(number / 1000) + " Mille ";
+                number %= 1000;
+            }
+
+            if ((number / 100) > 0)
+            {
+                words += NumberToWords(number / 100) + " Cent ";
+                number %= 100;
+            }
+
+            if (number > 0)
+            {
+                if (words != "")
+                    words += "et ";
+
+                var unitsMap = new[] { "zero", "un", "deux", "trois", "quatre", "cenque", "six", "sept", "huit", "neuf", "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize", "dix-sept", "dix-huit", "dix-neuf" };
+                var tensMap = new[] { "zero", "dix", "vingt", "trente", "quarente", "cinquante", "soixante", "soixante-dix", "quatre-vingts", "quatre-vingts-dix" };
+
+                if (number < 20)
+                    words += unitsMap[number];
+                else
+                {
+                    words += tensMap[number / 10];
+                    if ((number % 10) > 0)
+                        words += "-" + unitsMap[number % 10];
+                }
+            }
+
+            return words;
+        }
     }
+
 
 }
