@@ -327,9 +327,9 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     {
                         idproduit = "" + row.Cells[0].Value.ToString(),
                         nomproduit = row.Cells[1].Value.ToString(),
-                        prix = row.Cells[2].Value.ToString(),
+                        prix = $"{ double.Parse(row.Cells[2].Value.ToString()):### ### ##0.00} " ,
                         qnt = row.Cells[3].Value.ToString(),
-                        prixqnt = (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())).ToString(),
+                        prixqnt = $"{ (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())):### ### ##0.00} ",
 
 
 
@@ -344,7 +344,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     Facture.Facture imp = new Facture.Facture( idvent, list , int.Parse(bunifuTextBox12.Text), bunifuDropdown2.Text);
                     imp.ShowDialog();
                 Facture.bonclient impp = new Facture.bonclient(idvent, list);
-                impp.Show();
+                impp.ShowDialog();
 
                 bunifuDataGridView2.Rows.Clear();
                 MessageBox.Show("Ajouter avec succes");

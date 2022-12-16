@@ -94,6 +94,7 @@ namespace GS_ABATTOIRE
 
                 dashboard1.Show();
                 dashboard1.BringToFront();
+                
             }
            
 

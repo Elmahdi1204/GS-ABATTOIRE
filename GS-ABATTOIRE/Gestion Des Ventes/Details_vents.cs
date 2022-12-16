@@ -14,9 +14,21 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
     public partial class Details_vents : Form
     {
         List<String> data = new List<string>();
+        int idvent = 0;
         public Details_vents(int idvent )
         {
             InitializeComponent();
+            this.idvent = idvent;
+
+
+
+
+
+        }
+
+        private void Details_vents_Load(object sender, EventArgs e)
+        {
+            bunifuDropdown1.SelectedIndex = 0;
             data = Datavents.Getvents(idvent);
             bunifuTextBox7.Text = (double.Parse(data[3]) + double.Parse(data[4])).ToString();
             bunifuTextBox5.Text = data[3];
@@ -28,17 +40,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             Numfact.Text = data[0];
             Ensmble.Text = data[1];
             Datavents.Get_produit_vendu(bunifuDataGridView2, int.Parse(data[0]));
-            
 
-
-
-
-
-        }
-
-        private void Details_vents_Load(object sender, EventArgs e)
-        {
-            bunifuDropdown1.SelectedIndex = 0;
         }
 
         private void bunifuButton23_Click(object sender, EventArgs e)
@@ -58,11 +60,9 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     {
                         idproduit = "" + row.Cells[0].Value.ToString(),
                         nomproduit = row.Cells[1].Value.ToString(),
-                        prix = row.Cells[2].Value.ToString(),
+                        prix = $"{ double.Parse(row.Cells[2].Value.ToString()):### ### ##0.00} DA",
                         qnt = row.Cells[3].Value.ToString(),
-                        prixqnt = (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())).ToString(),
-
-
+                        prixqnt = $"{ (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())):### ### ##0.00} DA",
 
                     });
 
@@ -83,6 +83,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         {
             modifie_ventes modifie_Ventes = new modifie_ventes(int.Parse(data[0]));
             modifie_Ventes.ShowDialog();
+            bunifuButton22.PerformClick();
         }
     }
 }
