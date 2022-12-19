@@ -149,7 +149,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     }
                     else
                     {
-                        if (int.Parse(bunifuTextBox3.Text) > qnt)
+                        if (Double.Parse(bunifuTextBox3.Text) > qnt)
                         {
 
                             MessageBox.Show("Quantité indisponibles", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
@@ -170,9 +170,9 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 bunifuTextBox7.Text = totale().ToString();
             
     }
-            catch
+            catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
 
 

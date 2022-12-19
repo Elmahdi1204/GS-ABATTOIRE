@@ -1009,7 +1009,7 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 49;
+            this.dataGridViewTextBoxColumn2.Width = 57;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1067,12 +1067,14 @@
             // M
             // 
             this.M.HeaderText = "Montant vente";
+            this.M.MinimumWidth = 6;
             this.M.Name = "M";
             this.M.ReadOnly = true;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Benifice";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
@@ -1405,7 +1407,7 @@
             this.supp.Name = "supp";
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 17;
+            this.supp.Width = 21;
             // 
             // bunifuPanel11
             // 
