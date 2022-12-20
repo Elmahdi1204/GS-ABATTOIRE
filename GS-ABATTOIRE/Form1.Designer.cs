@@ -63,7 +63,6 @@ namespace GS_ABATTOIRE
             this.liste_des_fournisseur1 = new GS_ABATTOIRE.Gestion_des_fournisseurs.Liste_des_fournisseur();
             this.liste_des_clients1 = new GS_ABATTOIRE.Gestion_des_clients.Liste_des_clients();
             this.liste_Utilisateur1 = new GS_ABATTOIRE.Auth.Liste_Utilisateur();
-
             this.dashboard1 = new GS_ABATTOIRE.Dashboard.Dashboard();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -1065,10 +1064,12 @@ namespace GS_ABATTOIRE
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(179, 109);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -1137,14 +1138,6 @@ namespace GS_ABATTOIRE
             this.liste_des_clients1.Size = new System.Drawing.Size(1026, 689);
             this.liste_des_clients1.TabIndex = 2;
             // 
-            // dashboard1
-            // 
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(209, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1026, 689);
-            this.dashboard1.TabIndex = 10;
-            // 
             // liste_Utilisateur1
             // 
             this.liste_Utilisateur1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1153,16 +1146,22 @@ namespace GS_ABATTOIRE
             this.liste_Utilisateur1.Size = new System.Drawing.Size(1026, 689);
             this.liste_Utilisateur1.TabIndex = 10;
             // 
+            // dashboard1
+            // 
+            this.dashboard1.AutoScroll = true;
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(209, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1026, 689);
+            this.dashboard1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 689);
-
             this.Controls.Add(this.liste_Utilisateur1);
-
             this.Controls.Add(this.dashboard1);
-
             this.Controls.Add(this.list_des_versment1);
             this.Controls.Add(this.liste_Des_Charges1);
             this.Controls.Add(this.liste_Des_Stocks1);
