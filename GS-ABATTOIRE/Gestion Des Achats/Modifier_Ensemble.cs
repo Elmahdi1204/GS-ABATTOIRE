@@ -133,14 +133,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 else
                 {
 
-                    if (verifierqte(int.Parse(qte.Text)))
+                    if (verifierqte(double.Parse(qte.Text)))
                     {
 
 
 
                         if (verifier(id.Text))
                         {
-                            double qnteancien = double.Parse(bunifuDataGridView2.Rows[getindex(int.Parse(qte.Text))].Cells[2].Value.ToString());
+                            double qnteancien = double.Parse(bunifuDataGridView2.Rows[getindex(int.Parse(id.Text))].Cells[2].Value.ToString());
                             double qtenv = double.Parse(qte.Text) + qnteancien;
                             bunifuDataGridView2.Rows.RemoveAt(getindex(int.Parse(id.Text)));
                             bunifuDataGridView2.Rows.Add(id.Text, nom.Text, qtenv, categorie);
@@ -176,13 +176,13 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             }
 
         }
-        bool verifierqte(int qnte)
+        bool verifierqte(double qnte)
         {
             bool done = true;
             if (categorie == "Les abats")
             {
 
-                if (qnte > int.Parse(qteabats.Text))
+                if (qnte > double.Parse(qteabats.Text))
                 {
 
                     done = false;
@@ -191,7 +191,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             }
             if (categorie == "Poulet , Dende")
             {
-                if (qnte > int.Parse(Qtepoulet.Text))
+                if (qnte > double.Parse(Qtepoulet.Text))
                 {
 
                     done = false;
@@ -401,10 +401,10 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
                     int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());
-                    double qte = double.Parse(bunifuDataGridView2.Rows[i].Cells[2].Value.ToString());
+                    string qte =bunifuDataGridView2.Rows[i].Cells[2].Value.ToString();
 
 
-                    DataAchats.Ajouter_produitachete(idproduit, int.Parse(data[0]), qte);
+                    DataAchats.Ajouter_produitachete(idproduit, int.Parse(data[0]), qte.Replace(",","."));
 
                 }
                 MessageBox.Show("Ensemble modifier avec success.", "Modifier Ensemble", MessageBoxButtons.OK, MessageBoxIcon.Information);

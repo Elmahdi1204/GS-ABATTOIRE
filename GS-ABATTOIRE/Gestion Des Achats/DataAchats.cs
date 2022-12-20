@@ -11,7 +11,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 {
     class DataAchats
     {
-        public static void Ajouter_kottas(int idkottas,String  nomkottas, int idfournisseur,String categorie,int qteunite,double qtepoid , double prixunitaire , double remise , double prixfournisseur , double versment , double poidapres , double poidabats , double transport, double charges , double Prixterunitaire ,DateTime date , int mort )
+        public static void Ajouter_kottas(int idkottas,String  nomkottas, int idfournisseur,String categorie,int qteunite,String qtepoid , double prixunitaire , double remise , double prixfournisseur , double versment , string poidapres , string poidabats , double transport, double charges , double Prixterunitaire ,DateTime date , int mort )
         {
             try
             {
@@ -26,7 +26,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 Connexion.conn.Close();
             }
         }
-        public static void Ajouter_produitachete(int idproduit , int idkotta , double qte )
+        public static void Ajouter_produitachete(int idproduit , int idkotta , string qte )
         {
             try
             {

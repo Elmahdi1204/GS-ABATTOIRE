@@ -92,7 +92,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
                 }
                 else{
 
-                    if (verifierqte(int.Parse(qte.Text)))
+                    if (verifierqte(double.Parse(qte.Text)))
                     {
 
                    
@@ -136,13 +136,13 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
 
         }
-       bool verifierqte(int qnte)
+       bool verifierqte(double qnte)
         {
             bool done = true;
             if (categorie == "Les abats")
             {
 
-                if (qnte >int.Parse(qteabats.Text))
+                if (qnte >double.Parse(qteabats.Text))
                 {
 
                     done = false;
@@ -151,7 +151,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             }
             if (categorie == "Poulet , Dende")
             {
-                if (qnte > int.Parse(Qtepoulet.Text))
+                if (qnte > double.Parse(Qtepoulet.Text))
                 {
 
                     done = false;
@@ -204,7 +204,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             try
             {
-                bunifuTextBox10.Text = (double.Parse(bunifuTextBox8.Text) * double.Parse(bunifuTextBox9.Text)).ToString();
+                bunifuTextBox10.Text = ((int)Math.Ceiling( double.Parse(bunifuTextBox8.Text) * double.Parse(bunifuTextBox9.Text))).ToString();
                 bunifuTextBox16.Text = (double.Parse(bunifuTextBox10.Text) - double.Parse(bunifuTextBox15.Text)).ToString();
                 bunifuTextBox11.Text = bunifuTextBox16.Text;
                 bunifuTextBox12.Text = (double.Parse(bunifuTextBox16.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
@@ -402,14 +402,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             else
             {
                 int idkottas = DataAchats.Get_lastid() + 1;
-                DataAchats.Ajouter_kottas(idkottas, "Ensemble - " +bunifuDropdown2.Text+ " - " + idkottas + " - " + DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), double.Parse(bunifuTextBox8.Text), double.Parse(bunifuTextBox9.Text), double.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), double.Parse(bunifuTextBox11.Text), double.Parse(bunifuTextBox2.Text), double.Parse(bunifuTextBox1.Text), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), DateTime.Now , int.Parse(bunifuTextBox6.Text));
+                DataAchats.Ajouter_kottas(idkottas, "Ensemble - " +bunifuDropdown2.Text+ " - " + idkottas + " - " + DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), bunifuTextBox8.Text.Replace(",","."),(int)Math.Ceiling( double.Parse(bunifuTextBox9.Text)),(int)Math.Ceiling( double.Parse(bunifuTextBox15.Text)),(int)Math.Ceiling( double.Parse(bunifuTextBox16.Text)),(int)Math.Ceiling( double.Parse(bunifuTextBox11.Text)), bunifuTextBox2.Text.Replace(",", "."), bunifuTextBox1.Text.Replace(",","."), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), DateTime.Now , int.Parse(bunifuTextBox6.Text));
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
                     int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());
-                    double qte = double.Parse(bunifuDataGridView2.Rows[i].Cells[2].Value.ToString());
+                    String qte = bunifuDataGridView2.Rows[i].Cells[2].Value.ToString();
 
 
-                    DataAchats.Ajouter_produitachete(idproduit, idkottas, qte);
+                    DataAchats.Ajouter_produitachete(idproduit, idkottas, qte.Replace(",","."));
 
                 }
                 bunifuDataGridView2.Rows.Clear();
