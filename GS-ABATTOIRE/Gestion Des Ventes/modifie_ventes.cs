@@ -88,11 +88,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
                     int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());
-                    double qte = double.Parse(bunifuDataGridView2.Rows[i].Cells[2].Value.ToString());
+                    string qte =bunifuDataGridView2.Rows[i].Cells[2].Value.ToString();
                     double prix = double.Parse(bunifuDataGridView2.Rows[i].Cells[3].Value.ToString());
 
 
-                    Datavents.Ajouter_produit_vendu(idproduit, int.Parse(data[0]), int.Parse(data[1]), qte, prix);
+                    Datavents.Ajouter_produit_vendu(idproduit, int.Parse(data[0]), int.Parse(data[1]), qte.Replace(",","."), prix);
 
                 }
                 MessageBox.Show("Vente modifier avec success.", "Modifier avec sucess", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);

@@ -90,7 +90,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             }
         }
 
-        public static void Ajouter_produit_vendu(int idproduit, int idvent , int idkotta, double qte, double prix)
+        public static void Ajouter_produit_vendu(int idproduit, int idvent , int idkotta, string qte, double prix)
         {
             try
             {
