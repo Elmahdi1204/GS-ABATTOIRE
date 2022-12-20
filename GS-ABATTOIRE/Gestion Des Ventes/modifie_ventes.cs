@@ -72,7 +72,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
             }
 
-            return tot;
+            return (int)Math.Ceiling(tot); ;
         }
 
         private void bunifuButton23_Click(object sender, EventArgs e)

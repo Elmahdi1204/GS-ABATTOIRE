@@ -244,7 +244,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.Padding = new System.Windows.Forms.Padding(10);
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(501, 865);
+            this.bunifuPanel1.Size = new System.Drawing.Size(501, 966);
             this.bunifuPanel1.TabIndex = 1;
             this.bunifuPanel1.Visible = false;
             // 
@@ -313,7 +313,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuDataGridView1.RowHeadersWidth = 47;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(481, 498);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(481, 599);
             this.bunifuDataGridView1.TabIndex = 2;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
@@ -450,7 +450,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuPanel2.Controls.Add(this.nom);
             this.bunifuPanel2.Controls.Add(this.id);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel2.Location = new System.Drawing.Point(10, 592);
+            this.bunifuPanel2.Location = new System.Drawing.Point(10, 693);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.Padding = new System.Windows.Forms.Padding(10);
             this.bunifuPanel2.ShowBorders = true;
@@ -970,11 +970,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuPanel4.BorderThickness = 1;
             this.bunifuPanel4.Controls.Add(this.bunifuDataGridView2);
             this.bunifuPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel4.Location = new System.Drawing.Point(501, 686);
+            this.bunifuPanel4.Location = new System.Drawing.Point(501, 666);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.Padding = new System.Windows.Forms.Padding(10);
             this.bunifuPanel4.ShowBorders = true;
-            this.bunifuPanel4.Size = new System.Drawing.Size(1044, 179);
+            this.bunifuPanel4.Size = new System.Drawing.Size(1044, 300);
             this.bunifuPanel4.TabIndex = 2;
             // 
             // bunifuDataGridView2
@@ -1044,7 +1044,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuDataGridView2.RowHeadersWidth = 47;
             this.bunifuDataGridView2.RowTemplate.Height = 40;
             this.bunifuDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView2.Size = new System.Drawing.Size(1024, 159);
+            this.bunifuDataGridView2.Size = new System.Drawing.Size(1024, 280);
             this.bunifuDataGridView2.TabIndex = 0;
             this.bunifuDataGridView2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView2_CellContentClick);
@@ -1102,7 +1102,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuPanel6.Controls.Add(this.bunifuTextBox17);
             this.bunifuPanel6.Controls.Add(this.label3);
             this.bunifuPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel6.Location = new System.Drawing.Point(501, 608);
+            this.bunifuPanel6.Location = new System.Drawing.Point(501, 588);
             this.bunifuPanel6.Name = "bunifuPanel6";
             this.bunifuPanel6.ShowBorders = true;
             this.bunifuPanel6.Size = new System.Drawing.Size(1044, 78);
@@ -1390,7 +1390,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuPanel8.Location = new System.Drawing.Point(1283, 0);
             this.bunifuPanel8.Name = "bunifuPanel8";
             this.bunifuPanel8.ShowBorders = true;
-            this.bunifuPanel8.Size = new System.Drawing.Size(262, 608);
+            this.bunifuPanel8.Size = new System.Drawing.Size(262, 588);
             this.bunifuPanel8.TabIndex = 4;
             // 
             // label14
@@ -1803,7 +1803,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             this.bunifuPanel7.Location = new System.Drawing.Point(501, 0);
             this.bunifuPanel7.Name = "bunifuPanel7";
             this.bunifuPanel7.ShowBorders = true;
-            this.bunifuPanel7.Size = new System.Drawing.Size(782, 608);
+            this.bunifuPanel7.Size = new System.Drawing.Size(782, 588);
             this.bunifuPanel7.TabIndex = 5;
             // 
             // label16
@@ -3155,7 +3155,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1545, 865);
+            this.ClientSize = new System.Drawing.Size(1545, 966);
             this.Controls.Add(this.bunifuPanel7);
             this.Controls.Add(this.bunifuPanel8);
             this.Controls.Add(this.bunifuPanel6);

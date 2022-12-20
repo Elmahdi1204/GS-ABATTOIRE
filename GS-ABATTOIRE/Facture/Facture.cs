@@ -21,7 +21,7 @@ namespace GS_ABATTOIRE.Facture
         {
             InitializeComponent();
             string notice = "";
-            if (methode =="Atterm")
+            if (methode == "Atterm ")
             {
                 notice = "Délais de Paiements: 20 Jours";
             }

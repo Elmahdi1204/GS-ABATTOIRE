@@ -228,7 +228,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
             }
 
-            return tot;
+            return (int)Math.Ceiling(tot); ;
         }
 
         private void bunifuDataGridView2_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -317,7 +317,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 }
                 List<Facture.objet> list = new List<Facture.objet>();
                 list.Clear();
-                int k = 0;
+                int k = 1;
                 foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
                 {
 

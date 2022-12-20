@@ -51,7 +51,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
                 List<Facture.objet> list = new List<Facture.objet>();
                 list.Clear();
-                int i = 0;
+                int i = 1;
                 foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
                 {
 
