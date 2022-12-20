@@ -17,9 +17,14 @@ namespace GS_ABATTOIRE.Facture
     {
         List<String> data = new List<string>();
         List<String> dataclient = new List<string>();
-        public Facture( int idvent , List<objet> list , double tva , string methode)
+        public Facture( int idvent , List<objet> list , double tva , string methode , String dest )
         {
             InitializeComponent();
+            string notice = "";
+            if (methode =="Atterm")
+            {
+                notice = "Délais de Paiements: 20 Jours";
+            }
 
             data = Datavents.Getvents(idvent);
             double prix = double.Parse(data[4]);
@@ -44,6 +49,9 @@ namespace GS_ABATTOIRE.Facture
             parameters.Add(new ReportParameter("totalecar", NumberToWords(((int)totale))));
             parameters.Add(new ReportParameter("numf", ""+data[0]));
             parameters.Add(new ReportParameter("date", ""+DateTime.Parse( data[6]).ToString("dd/MM/yyyy")));
+            parameters.Add(new ReportParameter("dest", "" +dest));
+            parameters.Add(new ReportParameter("notice", "" + notice));
+
 
 
             this.reportViewer1.LocalReport.EnableExternalImages = true;

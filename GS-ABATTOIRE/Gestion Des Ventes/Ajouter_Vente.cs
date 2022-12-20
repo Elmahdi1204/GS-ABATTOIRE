@@ -67,6 +67,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
             Datavents.List_des_ensembles(bunifuDataGridView3, bunifuTextBox11.Text);
             bunifuDropdown2.SelectedIndex = 0;
+            bunifuDropdown3.SelectedIndex = 0;
 
         }
 
@@ -149,7 +150,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     }
                     else
                     {
-                        if (Double.Parse(bunifuTextBox3.Text) > qnt)
+                        if (float.Parse(bunifuTextBox3.Text) > qnt)
                         {
 
                             MessageBox.Show("Quantité indisponibles", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
@@ -303,20 +304,20 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             else
             {
                 int idvent = Datavents.Get_lastid() + 1;
-                Datavents.Ajouter_vents(idvent, int.Parse(id), int.Parse(bunifuDropdown1.SelectedValue.ToString()) , double.Parse(bunifuTextBox5.Text) , double.Parse(bunifuTextBox4.Text)   , double.Parse(bunifuTextBox8.Text) , bunifuDatePicker1.Value) ;
+                Datavents.Ajouter_vents(idvent, int.Parse(id), int.Parse(bunifuDropdown1.SelectedValue.ToString()) , float.Parse(bunifuTextBox5.Text) , double.Parse(bunifuTextBox4.Text.Replace(',' , '.'))   , double.Parse(bunifuTextBox8.Text) , bunifuDatePicker1.Value) ;
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
                     int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());
-                    double qte = double.Parse(bunifuDataGridView2.Rows[i].Cells[2].Value.ToString());
+                    string qte = bunifuDataGridView2.Rows[i].Cells[2].Value.ToString();
                     double prix = double.Parse(bunifuDataGridView2.Rows[i].Cells[3].Value.ToString());
 
 
-                    Datavents.Ajouter_produit_vendu(idproduit , idvent, int.Parse(id), qte , prix);
+                    Datavents.Ajouter_produit_vendu(idproduit , idvent, int.Parse(id), qte.Replace(",",".") , prix);
 
                 }
                 List<Facture.objet> list = new List<Facture.objet>();
                 list.Clear();
-
+                int k = 0;
                 foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
                 {
 
@@ -325,7 +326,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     
                     list.Add(new Facture.objet
                     {
-                        idproduit = "" + row.Cells[0].Value.ToString(),
+                        idproduit = "" + k,
                         nomproduit = row.Cells[1].Value.ToString(),
                         prix = $"{ double.Parse(row.Cells[2].Value.ToString()):### ### ##0.00} " ,
                         qnt = row.Cells[3].Value.ToString(),
@@ -334,15 +335,18 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
 
                     });
-
+                    k++;
 
 
 
 
                 }
-                
-                    Facture.Facture imp = new Facture.Facture( idvent, list , int.Parse(bunifuTextBox12.Text), bunifuDropdown2.Text);
+                if (bunifuDropdown3.SelectedIndex == 1)
+                {
+                    Facture.Facture imp = new Facture.Facture(idvent, list, int.Parse(bunifuTextBox12.Text), bunifuDropdown2.Text, bunifuTextBox13.Text);
                     imp.ShowDialog();
+                }
+                   
                 Facture.bonclient impp = new Facture.bonclient(idvent, list);
                 impp.ShowDialog();
 

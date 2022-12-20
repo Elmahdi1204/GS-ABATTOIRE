@@ -20,7 +20,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             InitializeComponent();
             this.idvent = idvent;
 
-
+            bunifuDropdown3.SelectedIndex = 0;
 
 
 
@@ -51,14 +51,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
                 List<Facture.objet> list = new List<Facture.objet>();
                 list.Clear();
-
+                int i = 0;
                 foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
                 {
 
 
                     list.Add(new Facture.objet
                     {
-                        idproduit = "" + row.Cells[0].Value.ToString(),
+                        idproduit = "" + i,
                         nomproduit = row.Cells[1].Value.ToString(),
                         prix = $"{ double.Parse(row.Cells[2].Value.ToString()):### ### ##0.00} DA",
                         qnt = row.Cells[3].Value.ToString(),
@@ -66,14 +66,18 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
                     });
 
-
+                    i++;
 
 
 
                 }
+                if(bunifuDropdown3.SelectedIndex ==1 )
+                {
+                    Facture.Facture imp = new Facture.Facture(int.Parse(data[0]), list, double.Parse(bunifuTextBox1.Text), bunifuDropdown1.Text, bunifuTextBox13.Text);
+                    imp.Show();
+                }
 
-                Facture.Facture imp = new Facture.Facture(int.Parse(data[0]), list, double.Parse(bunifuTextBox1.Text) , bunifuDropdown1.Text);
-                imp.Show();
+              
                 Facture.bonclient impp = new Facture.bonclient(int.Parse(data[0]), list);
                 impp.Show();
             }

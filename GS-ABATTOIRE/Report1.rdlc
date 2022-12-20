@@ -1023,6 +1023,10 @@
                           <Value>Déstination:</Value>
                           <Style />
                         </TextRun>
+                        <TextRun>
+                          <Value>=Parameters!dest.Value</Value>
+                          <Style />
+                        </TextRun>
                       </TextRuns>
                       <Style />
                     </Paragraph>
@@ -1445,7 +1449,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Délais de Paiements: 20 Jours</Value>
+                      <Value>=Parameters!notice.Value</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -1455,7 +1459,7 @@
               <rd:DefaultName>Textbox12</rd:DefaultName>
               <Top>0.44715cm</Top>
               <Left>1.01665cm</Left>
-              <Height>0.91148cm</Height>
+              <Height>1.23475cm</Height>
               <Width>6.36292cm</Width>
               <Style>
                 <Border>
@@ -1702,11 +1706,23 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="dest">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="notice">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>4</NumberOfRows>
+      <NumberOfRows>5</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -1782,6 +1798,16 @@
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>totalecar</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>dest</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>4</RowIndex>
+          <ParameterName>notice</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
