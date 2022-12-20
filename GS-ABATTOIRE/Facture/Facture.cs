@@ -27,7 +27,6 @@ namespace GS_ABATTOIRE.Facture
             double totale = prix + prixtva;
          
             dataclient = Dataclients.Getclient(int.Parse(data[2]));
-
             ReportParameterCollection parameters = new ReportParameterCollection();
             parameters.Add(new ReportParameter("prix", $"{ prix:### ### ##0.00} "));
             parameters.Add(new ReportParameter("prixtva", $"{ prixtva:### ### ##0.00} "));

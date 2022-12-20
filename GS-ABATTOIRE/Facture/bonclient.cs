@@ -28,34 +28,21 @@ namespace GS_ABATTOIRE.Facture
             dataclient = Dataclients.Getclient(int.Parse(data[2]));
 
             ReportParameterCollection parameters = new ReportParameterCollection();
-            parameters.Add(new ReportParameter("totale", "" + totale));
-            parameters.Add(new ReportParameter("versment", "" + versment));
-            parameters.Add(new ReportParameter("rest", "" + rest));
+            parameters.Add(new ReportParameter("totale", $"{totale:### ### ##0.00}"));
+            parameters.Add(new ReportParameter("versment", $"{versment:### ### ##0.00}"));
+            parameters.Add(new ReportParameter("rest", $"{rest:### ### ##0.00}"));
             parameters.Add(new ReportParameter("nom", "" + dataclient[1]));
             parameters.Add(new ReportParameter("date", "" + data[6]));
-
-
-
-
+            parameters.Add(new ReportParameter("numf", "" + data[0]));
 
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             reportViewer1.LocalReport.SetParameters(parameters);
             ReportDataSource ds = new ReportDataSource();
             ds.Name = "DataSet1";
             ds.Value = list;
-
-
-
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(ds);
-
-
-
-
             reportViewer1.RefreshReport();
-
-
-
         }
 
         private void bonclient_Load(object sender, EventArgs e)
