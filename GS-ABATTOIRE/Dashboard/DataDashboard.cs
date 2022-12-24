@@ -63,7 +63,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select count(idvent)  from Vents where prixtotal - (Vents.versment)-(select sum(Versement.montant) from Versement where Versement.type = 'Vents' and Vents.idvent = Versement.idvente )  <>0  ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select count(idvent)  from Vents where prixtotal - (Vents.versment)-(select isnull(sum(Versement.montant) ,0) from Versement where Versement.type = 'Vents' and Vents.idvent = Versement.idvente )  <>0  ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 int count = 0;
 
@@ -87,7 +87,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                    SqlCommand sql = new SqlCommand("select isnull( sum(prixtotal -versment  ) - (select sum(Versement.montant) from Versement where Versement.type ='Vents' ) , 0) from vents   ", Connexion.conn);
+                    SqlCommand sql = new SqlCommand("select  isnull(sum(prixtotal -versment  ),0) - (select isnull(sum(Versement.montant) , 0) from Versement where Versement.type ='Vents' )  from vents   ", Connexion.conn);
                     SqlDataReader dr = sql.ExecuteReader();
                 double count = 0;
 
