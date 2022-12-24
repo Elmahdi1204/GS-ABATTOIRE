@@ -60,8 +60,8 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                     {
                         idproduit = "" + i,
                         nomproduit = row.Cells[1].Value.ToString(),
-                        prix = $"{ double.Parse(row.Cells[2].Value.ToString()):### ### ##0.00} DA",
-                        qnt = row.Cells[3].Value.ToString(),
+                        prix = $"{ double.Parse(row.Cells[3].Value.ToString()):### ### ##0.00} DA",
+                        qnt = row.Cells[2].Value.ToString(),
                         prixqnt = $"{ (double.Parse(row.Cells[2].Value.ToString()) * double.Parse(row.Cells[3].Value.ToString())):### ### ##0.00} DA",
 
                     });
