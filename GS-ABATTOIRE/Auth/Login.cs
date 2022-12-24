@@ -21,9 +21,7 @@ namespace GS_ABATTOIRE.Auth
 
         private void Login_Load(object sender, EventArgs e)
         {
-            bunifuTextBox1.Text = "admin";
-            bunifuTextBox2.Text = "admin";
-            bunifuButton21.PerformClick();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -51,7 +49,7 @@ namespace GS_ABATTOIRE.Auth
             }
             else
             {
-                MessageBox.Show("connexion a échoué", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Connexion a échoué", "Connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -59,12 +57,26 @@ namespace GS_ABATTOIRE.Auth
 
         }
 
-        private void Login_KeyDown(object sender, KeyEventArgs e)
+        private void bunifuButton21_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue==13)
-            {
+           
+                if (e.KeyCode == Keys.Enter)
+                {
                 bunifuButton21.PerformClick();
-            }
+                MessageBox.Show("abababab");
+                }
+
+         
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuPanel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

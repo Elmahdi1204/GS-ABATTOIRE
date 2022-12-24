@@ -87,7 +87,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.Padding = new System.Windows.Forms.Padding(8);
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(911, 476);
+            this.bunifuPanel2.Size = new System.Drawing.Size(1143, 476);
             this.bunifuPanel2.TabIndex = 3;
             this.bunifuPanel2.Click += new System.EventHandler(this.bunifuPanel2_Click);
             // 
@@ -168,7 +168,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuDataGridView1.RowHeadersWidth = 51;
             this.bunifuDataGridView1.RowTemplate.Height = 40;
             this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(895, 460);
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(1127, 460);
             this.bunifuDataGridView1.TabIndex = 0;
             this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
@@ -182,7 +182,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 49;
+            this.Column1.Width = 57;
             // 
             // Column2
             // 
@@ -229,12 +229,14 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             // Column9
             // 
             this.Column9.HeaderText = "N°Article";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "N°ccp";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
@@ -248,6 +250,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             // Column11
             // 
             this.Column11.HeaderText = "Vents";
+            this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             // 
@@ -262,7 +265,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.mod.ReadOnly = true;
             this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.mod.Width = 17;
+            this.mod.Width = 21;
             // 
             // supp
             // 
@@ -275,7 +278,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.supp.ReadOnly = true;
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 17;
+            this.supp.Width = 21;
             // 
             // bunifuPanel1
             // 
@@ -296,7 +299,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.Padding = new System.Windows.Forms.Padding(8);
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(911, 81);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1143, 81);
             this.bunifuPanel1.TabIndex = 2;
             // 
             // bunifuPanel3
@@ -310,7 +313,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuPanel3.Controls.Add(this.label3);
             this.bunifuPanel3.Controls.Add(this.bunifuToggleSwitch1);
             this.bunifuPanel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuPanel3.Location = new System.Drawing.Point(624, 8);
+            this.bunifuPanel3.Location = new System.Drawing.Point(856, 8);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(279, 65);
@@ -320,10 +323,10 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(63, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(219, 22);
+            this.label3.Size = new System.Drawing.Size(232, 24);
             this.label3.TabIndex = 7;
             this.label3.Text = "Voir les client avec credits ";
             // 
@@ -417,7 +420,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuButton22.IdleIconLeftImage = null;
             this.bunifuButton22.IdleIconRightImage = null;
             this.bunifuButton22.IndicateFocus = false;
-            this.bunifuButton22.Location = new System.Drawing.Point(503, 37);
+            this.bunifuButton22.Location = new System.Drawing.Point(672, 22);
             this.bunifuButton22.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuButton22.Name = "bunifuButton22";
             this.bunifuButton22.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -452,7 +455,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuButton22.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton22.OnPressedState.IconLeftImage = null;
             this.bunifuButton22.OnPressedState.IconRightImage = null;
-            this.bunifuButton22.Size = new System.Drawing.Size(43, 39);
+            this.bunifuButton22.Size = new System.Drawing.Size(51, 48);
             this.bunifuButton22.TabIndex = 3;
             this.bunifuButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton22.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -520,7 +523,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuButton21.IdleIconLeftImage = null;
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(304, 37);
+            this.bunifuButton21.Location = new System.Drawing.Point(391, 22);
             this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -555,7 +558,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuButton21.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton21.OnPressedState.IconLeftImage = null;
             this.bunifuButton21.OnPressedState.IconRightImage = null;
-            this.bunifuButton21.Size = new System.Drawing.Size(195, 39);
+            this.bunifuButton21.Size = new System.Drawing.Size(260, 48);
             this.bunifuButton21.TabIndex = 1;
             this.bunifuButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton21.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -592,7 +595,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(105, 37);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(111, 22);
             this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -629,7 +632,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(195, 39);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(260, 48);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 0;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -647,7 +650,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "Liste_des_clients";
-            this.Size = new System.Drawing.Size(911, 557);
+            this.Size = new System.Drawing.Size(1143, 557);
             this.Load += new System.EventHandler(this.Liste_des_clients_Load);
             this.bunifuPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();

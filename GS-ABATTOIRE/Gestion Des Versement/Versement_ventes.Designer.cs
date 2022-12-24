@@ -157,11 +157,12 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 49;
+            this.Column1.Width = 57;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "Ensemble";
+            this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
@@ -175,6 +176,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             // Column9
             // 
             this.Column9.HeaderText = "Montant ";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
@@ -196,7 +198,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             this.supp.ReadOnly = true;
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 17;
+            this.supp.Width = 21;
             // 
             // bunifuPanel1
             // 
@@ -265,7 +267,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             this.bunifuButton22.IdleIconLeftImage = global::GS_ABATTOIRE.Properties.Resources.update_arrows__1_;
             this.bunifuButton22.IdleIconRightImage = null;
             this.bunifuButton22.IndicateFocus = false;
-            this.bunifuButton22.Location = new System.Drawing.Point(313, 37);
+            this.bunifuButton22.Location = new System.Drawing.Point(426, 23);
             this.bunifuButton22.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuButton22.Name = "bunifuButton22";
             this.bunifuButton22.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -300,7 +302,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             this.bunifuButton22.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton22.OnPressedState.IconLeftImage = null;
             this.bunifuButton22.OnPressedState.IconRightImage = null;
-            this.bunifuButton22.Size = new System.Drawing.Size(43, 39);
+            this.bunifuButton22.Size = new System.Drawing.Size(52, 48);
             this.bunifuButton22.TabIndex = 3;
             this.bunifuButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton22.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -349,7 +351,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             this.bunifuTextBox1.IconRight = null;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(105, 37);
+            this.bunifuTextBox1.Location = new System.Drawing.Point(149, 23);
             this.bunifuTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox1.MaxLength = 32767;
             this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -386,7 +388,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Versement
             this.bunifuTextBox1.SelectionLength = 0;
             this.bunifuTextBox1.SelectionStart = 0;
             this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(195, 39);
+            this.bunifuTextBox1.Size = new System.Drawing.Size(260, 48);
             this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox1.TabIndex = 0;
             this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;

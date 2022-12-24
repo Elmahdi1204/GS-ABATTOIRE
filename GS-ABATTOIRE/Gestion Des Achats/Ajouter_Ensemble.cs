@@ -296,6 +296,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             {
 
             }
+            try
+            {
+                bunifuTextBox19.Text = (((double.Parse(bunifuTextBox8.Text) - double.Parse(bunifuTextBox2.Text)) / double.Parse(bunifuTextBox7.Text))*1000).ToString();
+            }
+            catch { }
         }
 
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
@@ -439,7 +444,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
         private void bunifuTextBox7_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void bunifuTextBox10_TextChanged(object sender, EventArgs e)
@@ -449,7 +454,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
 
         private void bunifuTextBox5_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void bunifuTextBox6_TextChanged(object sender, EventArgs e)
@@ -463,6 +468,26 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             {
 
             }
+        }
+
+        private void bunifuTextBox18_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+
+        private void bunifuTextBox19_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bunifuTextBox17_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox18.Text = (double.Parse(bunifuTextBox17.Text) / double.Parse(bunifuTextBox5.Text)).ToString();
+            }
+            catch { }
         }
     }
     

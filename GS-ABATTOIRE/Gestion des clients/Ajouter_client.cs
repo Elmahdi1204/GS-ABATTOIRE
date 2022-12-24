@@ -31,5 +31,14 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                 this.Close();
             }
         }
+
+        private void bunifuButton21_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                bunifuButton21.PerformClick();
+
+            }
+        }
     }
 }

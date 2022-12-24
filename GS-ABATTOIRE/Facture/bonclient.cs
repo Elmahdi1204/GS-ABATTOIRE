@@ -24,16 +24,24 @@ namespace GS_ABATTOIRE.Facture
             double totale = double.Parse(data[4]);
             double versment = double.Parse(data[5]);
             double rest = totale - versment;
+            double remis = double.Parse(data[3]);
+
+            double totale2 = remis + totale;
 
             dataclient = Dataclients.Getclient(int.Parse(data[2]));
 
             ReportParameterCollection parameters = new ReportParameterCollection();
+
             parameters.Add(new ReportParameter("totale", $"{totale:### ### ##0.00}"));
+            parameters.Add(new ReportParameter("t", $"{totale2:### ### ##0.00}"));
             parameters.Add(new ReportParameter("versment", $"{versment:### ### ##0.00}"));
             parameters.Add(new ReportParameter("rest", $"{rest:### ### ##0.00}"));
             parameters.Add(new ReportParameter("nom", "" + dataclient[1]));
             parameters.Add(new ReportParameter("date", "" + data[6]));
             parameters.Add(new ReportParameter("numf", "" + data[0]));
+            parameters.Add(new ReportParameter("remis", $"{remis:### ### ##0.00}"));
+            parameters.Add(new ReportParameter("credit", $"{double.Parse(dataclient[9]):### ### ##0.00}"));
+
 
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             reportViewer1.LocalReport.SetParameters(parameters);

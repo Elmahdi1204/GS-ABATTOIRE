@@ -320,10 +320,6 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 int k = 1;
                 foreach (DataGridViewRow row in bunifuDataGridView2.Rows)
                 {
-
-
-                    
-                    
                     list.Add(new Facture.objet
                     {
                         idproduit = "" + k,
