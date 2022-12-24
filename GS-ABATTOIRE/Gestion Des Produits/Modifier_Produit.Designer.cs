@@ -106,7 +106,7 @@
             this.bunifuDropdown1.Location = new System.Drawing.Point(28, 104);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.Size = new System.Drawing.Size(260, 46);
-            this.bunifuDropdown1.TabIndex = 3;
+            this.bunifuDropdown1.TabIndex = 1;
             this.bunifuDropdown1.Text = null;
             this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.bunifuDropdown1.TextLeftMargin = 5;
@@ -193,7 +193,7 @@
             this.bunifuButton21.OnPressedState.IconLeftImage = null;
             this.bunifuButton21.OnPressedState.IconRightImage = null;
             this.bunifuButton21.Size = new System.Drawing.Size(260, 48);
-            this.bunifuButton21.TabIndex = 1;
+            this.bunifuButton21.TabIndex = 2;
             this.bunifuButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton21.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton21.TextMarginLeft = 0;
@@ -308,10 +308,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(103, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(102, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 33);
+            this.label1.Size = new System.Drawing.Size(214, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Modifier Produit";
             // 

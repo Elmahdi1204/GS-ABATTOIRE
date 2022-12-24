@@ -195,6 +195,7 @@
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
             this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
+            this.bunifuButton21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuButton21_KeyDown);
             // 
             // bunifuTextBox2
             // 
@@ -362,6 +363,7 @@
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(312, 396);
             this.bunifuPanel3.TabIndex = 0;
+            this.bunifuPanel3.Click += new System.EventHandler(this.bunifuPanel3_Click);
             // 
             // label1
             // 
@@ -394,6 +396,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(942, 536);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 

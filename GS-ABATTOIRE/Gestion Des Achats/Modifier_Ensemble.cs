@@ -436,5 +436,23 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
 
         }
+
+        private void bunifuTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox20.Text = (((double.Parse(bunifuTextBox8.Text) - double.Parse(bunifuTextBox2.Text)) / double.Parse(bunifuTextBox7.Text)) * 1000).ToString();
+            }
+            catch { }
+        }
+
+        private void bunifuTextBox17_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox21.Text = (double.Parse(bunifuTextBox17.Text) / double.Parse(bunifuTextBox18.Text)).ToString();
+            }
+            catch { }
+        }
     }
 }

@@ -177,7 +177,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox8.ShortcutsEnabled = true;
             this.bunifuTextBox8.Size = new System.Drawing.Size(206, 40);
             this.bunifuTextBox8.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox8.TabIndex = 27;
+            this.bunifuTextBox8.TabIndex = 26;
             this.bunifuTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox8.TextMarginBottom = 0;
             this.bunifuTextBox8.TextMarginLeft = 3;
@@ -253,7 +253,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox7.ShortcutsEnabled = true;
             this.bunifuTextBox7.Size = new System.Drawing.Size(206, 40);
             this.bunifuTextBox7.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox7.TabIndex = 26;
+            this.bunifuTextBox7.TabIndex = 25;
             this.bunifuTextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox7.TextMarginBottom = 0;
             this.bunifuTextBox7.TextMarginLeft = 3;
@@ -329,7 +329,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox6.ShortcutsEnabled = true;
             this.bunifuTextBox6.Size = new System.Drawing.Size(206, 40);
             this.bunifuTextBox6.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox6.TabIndex = 25;
+            this.bunifuTextBox6.TabIndex = 24;
             this.bunifuTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox6.TextMarginBottom = 0;
             this.bunifuTextBox6.TextMarginLeft = 3;
@@ -405,7 +405,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox5.ShortcutsEnabled = true;
             this.bunifuTextBox5.Size = new System.Drawing.Size(206, 40);
             this.bunifuTextBox5.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox5.TabIndex = 24;
+            this.bunifuTextBox5.TabIndex = 23;
             this.bunifuTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox5.TextMarginBottom = 0;
             this.bunifuTextBox5.TextMarginLeft = 3;
@@ -481,7 +481,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox4.ShortcutsEnabled = true;
             this.bunifuTextBox4.Size = new System.Drawing.Size(206, 40);
             this.bunifuTextBox4.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox4.TabIndex = 23;
+            this.bunifuTextBox4.TabIndex = 22;
             this.bunifuTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox4.TextMarginBottom = 0;
             this.bunifuTextBox4.TextMarginLeft = 3;
@@ -573,7 +573,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuButton21.OnPressedState.IconLeftImage = null;
             this.bunifuButton21.OnPressedState.IconRightImage = null;
             this.bunifuButton21.Size = new System.Drawing.Size(206, 39);
-            this.bunifuButton21.TabIndex = 22;
+            this.bunifuButton21.TabIndex = 27;
             this.bunifuButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton21.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton21.TextMarginLeft = 0;
@@ -609,7 +609,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox3.IconRight = null;
             this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox3.Lines = new string[0];
-            this.bunifuTextBox3.Location = new System.Drawing.Point(63, 144);
+            this.bunifuTextBox3.Location = new System.Drawing.Point(63, 89);
             this.bunifuTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox3.MaxLength = 32767;
             this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
@@ -648,7 +648,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox3.ShortcutsEnabled = true;
             this.bunifuTextBox3.Size = new System.Drawing.Size(206, 39);
             this.bunifuTextBox3.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox3.TabIndex = 21;
+            this.bunifuTextBox3.TabIndex = 20;
             this.bunifuTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox3.TextMarginBottom = 0;
             this.bunifuTextBox3.TextMarginLeft = 3;
@@ -685,7 +685,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox2.IconRight = null;
             this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(63, 93);
+            this.bunifuTextBox2.Location = new System.Drawing.Point(63, 144);
             this.bunifuTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox2.MaxLength = 32767;
             this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
@@ -724,7 +724,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.bunifuTextBox2.ShortcutsEnabled = true;
             this.bunifuTextBox2.Size = new System.Drawing.Size(206, 39);
             this.bunifuTextBox2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox2.TabIndex = 20;
+            this.bunifuTextBox2.TabIndex = 21;
             this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox2.TextMarginBottom = 0;
             this.bunifuTextBox2.TextMarginLeft = 3;
@@ -816,7 +816,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.Idf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Idf.Location = new System.Drawing.Point(128, 6);
             this.Idf.Name = "Idf";
-            this.Idf.Size = new System.Drawing.Size(63, 16);
+            this.Idf.Size = new System.Drawing.Size(70, 18);
             this.Idf.TabIndex = 18;
             this.Idf.Text = "Paiment :";
             // 
@@ -827,7 +827,7 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
+            this.label3.Size = new System.Drawing.Size(116, 18);
             this.label3.TabIndex = 17;
             this.label3.Text = "Fournisseur N° :";
             // 
@@ -866,10 +866,10 @@ namespace GS_ABATTOIRE.Gestion_des_fournisseurs
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(96, 2);
+            this.label1.Location = new System.Drawing.Point(96, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 24);
+            this.label1.Size = new System.Drawing.Size(209, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Modifier Fournisseur";
             // 

@@ -533,7 +533,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox4.IconRight = null;
             this.bunifuTextBox4.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox4.Lines = new string[0];
-            this.bunifuTextBox4.Location = new System.Drawing.Point(40, 110);
+            this.bunifuTextBox4.Location = new System.Drawing.Point(40, 165);
             this.bunifuTextBox4.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox4.MaxLength = 32767;
             this.bunifuTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
@@ -572,7 +572,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox4.ShortcutsEnabled = true;
             this.bunifuTextBox4.Size = new System.Drawing.Size(206, 40);
             this.bunifuTextBox4.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox4.TabIndex = 18;
+            this.bunifuTextBox4.TabIndex = 19;
             this.bunifuTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox4.TextMarginBottom = 0;
             this.bunifuTextBox4.TextMarginLeft = 3;
@@ -609,7 +609,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox3.IconRight = null;
             this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox3.Lines = new string[0];
-            this.bunifuTextBox3.Location = new System.Drawing.Point(40, 166);
+            this.bunifuTextBox3.Location = new System.Drawing.Point(40, 112);
             this.bunifuTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuTextBox3.MaxLength = 32767;
             this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
@@ -648,7 +648,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox3.ShortcutsEnabled = true;
             this.bunifuTextBox3.Size = new System.Drawing.Size(206, 40);
             this.bunifuTextBox3.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox3.TabIndex = 19;
+            this.bunifuTextBox3.TabIndex = 18;
             this.bunifuTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.bunifuTextBox3.TextMarginBottom = 0;
             this.bunifuTextBox3.TextMarginLeft = 3;
@@ -816,7 +816,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Idclient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Idclient.Location = new System.Drawing.Point(92, 15);
             this.Idclient.Name = "Idclient";
-            this.Idclient.Size = new System.Drawing.Size(63, 16);
+            this.Idclient.Size = new System.Drawing.Size(70, 18);
             this.Idclient.TabIndex = 16;
             this.Idclient.Text = "Paiment :";
             // 
@@ -827,7 +827,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(74, 18);
             this.label3.TabIndex = 15;
             this.label3.Text = "Client N° :";
             // 
@@ -866,10 +866,10 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 9);
+            this.label1.Location = new System.Drawing.Point(100, 31);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.Size = new System.Drawing.Size(175, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Modifier Client";
             // 
