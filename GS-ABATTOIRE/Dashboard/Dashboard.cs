@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GS_ABATTOIRE.Sortie_de_caisse;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,7 @@ namespace GS_ABATTOIRE.Dashboard
           NbfacuterV.Text =""+  DataDashboard.Count_vents(bunifuDatePicker1.Value  ,  bunifuDatePicker2.Value.AddHours(24));
          totalev.Text = $"{ DataDashboard.totale_vents(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ##0.##} DA";
           totalecredit.Text = $"{ DataDashboard.totale_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ##0.##} DA";
-           double c = DataDashboard.totale_vents(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)) - DataDashboard.totale_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
+           double c = DataDashboard.totale_vents(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)) - DataDashboard.totale_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)) - Data.Sortie_de_caisse(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24) );
             Caisse.Text = $"{ c:### ### ##0.##} DA";
             nbfacturecredit.Text = ""+ DataDashboard.Count_credit(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24));
             benifice.Text = $"{ DataDashboard.totale_benifice(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)):### ### ##0.##} DA";
@@ -134,6 +135,29 @@ namespace GS_ABATTOIRE.Dashboard
 
             }
            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_DockChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_DoubleClick(object sender, EventArgs e)
+        {
+            Retire retire = new Retire();
+            retire.ShowDialog();
+
+        }
+
+        private void bunifuShadowPanel2_DoubleClick(object sender, EventArgs e)
+        {
+            Clotture_de_lacaisse clotture_ = new Clotture_de_lacaisse();
+            clotture_.ShowDialog();
         }
     }
 }
