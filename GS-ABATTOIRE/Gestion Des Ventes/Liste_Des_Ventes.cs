@@ -73,9 +73,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
-            {
-                int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+            {               
                 bunifuButton21.PerformClick();
+
+                int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+
                 String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
                 String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
