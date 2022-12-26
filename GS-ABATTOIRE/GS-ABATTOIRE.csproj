@@ -180,6 +180,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AbattoireDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AbattoireDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AbattoireDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Auth\Ajouter_Utilisateur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +210,19 @@
     <Compile Include="Auth\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Autre Travail\Ajouter_Travail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autre Travail\Ajouter_Travail.Designer.cs">
+      <DependentUpon>Ajouter_Travail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autre Travail\Autre_Travail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Autre Travail\Autre_Travail.Designer.cs">
+      <DependentUpon>Autre_Travail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autre Travail\DataTravail.cs" />
     <Compile Include="Connexion.cs" />
     <Compile Include="Dashboard\Chartes.cs" />
     <Compile Include="Dashboard\Dashboard.cs">
@@ -221,6 +239,12 @@
     </Compile>
     <Compile Include="Facture\bonclient.Designer.cs">
       <DependentUpon>bonclient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facture\BonTravail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facture\BonTravail.Designer.cs">
+      <DependentUpon>BonTravail.cs</DependentUpon>
     </Compile>
     <Compile Include="Facture\Facture.cs">
       <SubType>Form</SubType>
@@ -356,6 +380,12 @@
     <Compile Include="Gestion Des Ventes\Details_vents.Designer.cs">
       <DependentUpon>Details_vents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gestion Des Ventes\Form_Travail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion Des Ventes\Form_Travail.Designer.cs">
+      <DependentUpon>Form_Travail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gestion Des Ventes\Liste_Des_Ventes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -426,11 +456,20 @@
     <EmbeddedResource Include="Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Autre Travail\Ajouter_Travail.resx">
+      <DependentUpon>Ajouter_Travail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autre Travail\Autre_Travail.resx">
+      <DependentUpon>Autre_Travail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facture\bonclient.resx">
       <DependentUpon>bonclient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facture\BonTravail.resx">
+      <DependentUpon>BonTravail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facture\Facture.resx">
       <DependentUpon>Facture.cs</DependentUpon>
@@ -496,6 +535,9 @@
     <EmbeddedResource Include="Gestion Des Ventes\Details_vents.resx">
       <DependentUpon>Details_vents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gestion Des Ventes\Form_Travail.resx">
+      <DependentUpon>Form_Travail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gestion Des Ventes\Liste_Des_Ventes.resx">
       <DependentUpon>Liste_Des_Ventes.cs</DependentUpon>
     </EmbeddedResource>
@@ -530,12 +572,15 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Sortie de caisse\Clotture_de_lacaisse.resx">
       <DependentUpon>Clotture_de_lacaisse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sortie de caisse\Retire.resx">
       <DependentUpon>Retire.cs</DependentUpon>
     </EmbeddedResource>
+
     <None Include="AbattoireDataSet.xsc">
       <DependentUpon>AbattoireDataSet.xsd</DependentUpon>
     </None>
@@ -557,6 +602,17 @@
     </None>
     <None Include="AbattoireDataSet1.xss">
       <DependentUpon>AbattoireDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AbattoireDataSet2.xsc">
+      <DependentUpon>AbattoireDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AbattoireDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AbattoireDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AbattoireDataSet2.xss">
+      <DependentUpon>AbattoireDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\GS_ABATTOIRE.Facture.objet.datasource" />
@@ -590,6 +646,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\financial-profit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

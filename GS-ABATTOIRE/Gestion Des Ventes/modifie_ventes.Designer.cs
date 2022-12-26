@@ -93,6 +93,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abattoireDataSet1 = new GS_ABATTOIRE.AbattoireDataSet1();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.bunifuButton23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuTextBox9 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox8 = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -234,7 +239,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 49;
+            this.dataGridViewTextBoxColumn2.Width = 57;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -292,12 +297,14 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             // M
             // 
             this.M.HeaderText = "Montant vente";
+            this.M.MinimumWidth = 6;
             this.M.Name = "M";
             this.M.ReadOnly = true;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "Benifice";
+            this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
@@ -628,7 +635,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.supp.Name = "supp";
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 17;
+            this.supp.Width = 21;
             // 
             // bunifuPanel11
             // 
@@ -739,6 +746,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuPanel7.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel7.BorderRadius = 3;
             this.bunifuPanel7.BorderThickness = 1;
+            this.bunifuPanel7.Controls.Add(this.label6);
+            this.bunifuPanel7.Controls.Add(this.label10);
+            this.bunifuPanel7.Controls.Add(this.label11);
+            this.bunifuPanel7.Controls.Add(this.label12);
+            this.bunifuPanel7.Controls.Add(this.label13);
             this.bunifuPanel7.Controls.Add(this.bunifuButton23);
             this.bunifuPanel7.Controls.Add(this.bunifuTextBox9);
             this.bunifuPanel7.Controls.Add(this.bunifuTextBox8);
@@ -751,6 +763,61 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuPanel7.ShowBorders = true;
             this.bunifuPanel7.Size = new System.Drawing.Size(1111, 222);
             this.bunifuPanel7.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(357, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 18);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Versement";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(52, 77);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 18);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Prix Aprés Remise";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(52, 137);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(78, 18);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Prix Totale";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.White;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(357, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 18);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Remise";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(52, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 18);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Prix Totale";
             // 
             // bunifuButton23
             // 
@@ -799,7 +866,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuButton23.IdleIconLeftImage = null;
             this.bunifuButton23.IdleIconRightImage = null;
             this.bunifuButton23.IndicateFocus = false;
-            this.bunifuButton23.Location = new System.Drawing.Point(350, 136);
+            this.bunifuButton23.Location = new System.Drawing.Point(350, 147);
             this.bunifuButton23.Name = "bunifuButton23";
             this.bunifuButton23.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton23.OnDisabledState.BorderRadius = 20;
@@ -870,7 +937,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuTextBox9.IconRight = null;
             this.bunifuTextBox9.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox9.Lines = new string[0];
-            this.bunifuTextBox9.Location = new System.Drawing.Point(40, 136);
+            this.bunifuTextBox9.Location = new System.Drawing.Point(40, 147);
             this.bunifuTextBox9.MaxLength = 32767;
             this.bunifuTextBox9.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox9.Modified = false;
@@ -945,7 +1012,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuTextBox8.IconRight = null;
             this.bunifuTextBox8.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox8.Lines = new string[0];
-            this.bunifuTextBox8.Location = new System.Drawing.Point(350, 82);
+            this.bunifuTextBox8.Location = new System.Drawing.Point(350, 88);
             this.bunifuTextBox8.MaxLength = 32767;
             this.bunifuTextBox8.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox8.Modified = false;
@@ -1097,7 +1164,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.bunifuTextBox4.IconRight = null;
             this.bunifuTextBox4.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox4.Lines = new string[0];
-            this.bunifuTextBox4.Location = new System.Drawing.Point(40, 82);
+            this.bunifuTextBox4.Location = new System.Drawing.Point(40, 88);
             this.bunifuTextBox4.MaxLength = 32767;
             this.bunifuTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox4.Modified = false;
@@ -1244,6 +1311,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abattoireDataSet1)).EndInit();
             this.bunifuPanel7.ResumeLayout(false);
+            this.bunifuPanel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1286,5 +1354,10 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         private AbattoireDataSet1 abattoireDataSet1;
         private System.Windows.Forms.BindingSource clientsBindingSource;
         private AbattoireDataSet1TableAdapters.ClientsTableAdapter clientsTableAdapter;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
