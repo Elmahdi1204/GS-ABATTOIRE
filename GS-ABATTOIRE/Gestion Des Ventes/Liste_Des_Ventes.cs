@@ -148,5 +148,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
 
             }
         }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
+            Form_Travail frmT = new Form_Travail();
+            frmT.ShowDialog();
+        }
     }
 }

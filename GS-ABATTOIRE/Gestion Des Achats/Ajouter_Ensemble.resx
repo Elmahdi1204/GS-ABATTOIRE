@@ -399,7 +399,7 @@
   <data name="bunifuTextBox3.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARGSURBVFhHvZdn
+        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARGSURBVFhHvZdn
         rBRVGIaXIk0pooBIVQjEAiTWqAFiEARbQpASLH8QRBGVGARUBBMDAdQgmIiEIliiQEAwgEKsEOnYAakq
         vSWiP/mBzzOzhzt3d/buQuC+yZOdvbs7c8533u8952YugBrCLBgEVf1DZWsOvANLYQPcApWmO2A71Ije
         ZTIPwE7oGb27yKoGW6EH1IJ5oKqDS/EhDM5en7fqwH3wMnwK62EHHIF/YBEEXQGNYSU8Dm1gGZzzslwC
@@ -1133,7 +1133,7 @@
   <data name="bunifuTextBox4.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qgAAAKoBBgpwTwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQPSURBVFhHtddZ
+        qQAAAKkBq7NRIgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQPSURBVFhHtddZ
         qFVVGMDx45AazgOSKYpoOIMIpQ+iQoJQGs6hkBJhKYSmaJjmBGopagUaaA9OoVQSKT5ImaImCdLg8FAh
         qJlpo2ZZztf//7j3dp1917Xb9fTB77L3WmsPZ+1vDbdQUVFRIOrgRXyJn/ANXkFz6/9PxgPYBh+8AE9i
         Bb7HRbyKRrGLy8GYgvPolKvwxWbgAn7GS6gftikH4xjmxCpFtMLbuIEzmIyHY21rwvgVw4OCzgobJeWd
@@ -1340,7 +1340,7 @@
   <data name="supp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGdSURBVFhH7dc7
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGdSURBVFhH7dc7
         LwRRGMbxRSgp+QCUglDSCSpR0IhPYgsJCRKfgLgVhNCp+AoUEh2NS0OHuCVC+D9n5k1mL2ZnZo9unuSX
         zDnOeefds5uYKaRMHzZxh0/8hHR9i3X0wHsaMI8v2E3/ojVz8JoFRG9yjSMchHR9g+gab0304hsq+o5p
         6ETK04gZfEBrtacbdUffuX0q3bxW1ISt128icZqxBDtW8wQV03d7GM7F0Rr7rTyGc1GL0L0qMgbr/L+N
@@ -1353,5 +1353,8 @@
   </data>
   <metadata name="fournisseursTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>356, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
 </root>
