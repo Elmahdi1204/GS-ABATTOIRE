@@ -16,7 +16,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select  count(kottas.idkottas) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  (select sum(Produit_achet.qteunit)- (select isnull(sum(Produits_vendu.qteunit) , 0) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas)= 0 and kottas.date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select  count(kottas.idkottas) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  round((select sum(Produit_achet.qteunit)- (select isnull(sum(Produits_vendu.qteunit) , 0) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas), 1 , 0  )< 1 and kottas.date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 int count = 0;
 
@@ -40,7 +40,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select  count(kottas.idkottas) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  (select sum(Produit_achet.qteunit)- (select isnull(sum(Produits_vendu.qteunit) , 0) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas)<> 0 and kottas.date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select  count(kottas.idkottas) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and round( (select sum(Produit_achet.qteunit)- (select isnull(sum(Produits_vendu.qteunit) , 0) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas) , 1 , 0 )<> 0 and kottas.date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 int count = 0;
 
@@ -160,7 +160,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select  isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas  )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  (select sum(Produit_achet.qteunit)- (select isnull(sum(Produits_vendu.qteunit) , 0) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas)<> 0    and  date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select  isnull((select sum(prixtotal) from Vents where Vents.idkotta = Kottas.idkottas  )  , 0 ) -(prixfournisseur + transport + charges + (Prixterunitaire * qteunite)) from kottas, Fournisseurs where Fournisseurs.idfournisseur = Kottas.idfournisseur and  round((select sum(Produit_achet.qteunit)- (select isnull(sum(Produits_vendu.qteunit) , 0) from Produits_vendu where Produits_vendu.idkotta =kottas.idkottas) from Produit_achet where Produit_achet.idkotta =kottas.idkottas), 1 , 0)<> 0    and  date between '" + date1 + "' and '" + date2 + "' ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 double count = 0;
 

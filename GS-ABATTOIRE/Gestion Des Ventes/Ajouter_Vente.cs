@@ -83,9 +83,28 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         {
             try
             {
-                 id = bunifuDataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
+                if (bunifuDataGridView2.Rows.Count != 0)
+                {
+                   
 
-                Datavents.Get_produit_cotta(bunifuDataGridView1, int.Parse(id));
+                    DialogResult dialog = MessageBox.Show("Vous etes sur ?", "Selectioner une nouveau ensemble ", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                        bunifuDataGridView2.Rows.Clear();
+                        bunifuTextBox7.Text = totale().ToString();
+                        id = bunifuDataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                        Datavents.Get_produit_cotta(bunifuDataGridView1, int.Parse(id));
+                    }
+                }
+                else
+                {
+                    id = bunifuDataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                    Datavents.Get_produit_cotta(bunifuDataGridView1, int.Parse(id));
+                }
+
+               
 
             } catch
             {
@@ -99,7 +118,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             {
                 bunifuTextBox1.Text = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 bunifuTextBox2.Text = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                qnt = double.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                qnt = float.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                 bunifuTextBox3.Clear();
                 bunifuTextBox3.Focus();
                 bunifuTextBox10.Clear();
@@ -382,6 +401,11 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 Gestion_Des_Achats.DataAchats.List_des_ensembles(bunifuDataGridView3, bunifuTextBox11.Text);
 
             }
+        }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
