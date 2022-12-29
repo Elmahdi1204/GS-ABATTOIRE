@@ -1,4 +1,5 @@
-﻿using GS_ABATTOIRE.Gestion_des_clients;
+﻿using GS_ABATTOIRE.Facture;
+using GS_ABATTOIRE.Gestion_des_clients;
 using Microsoft.Reporting.Map.WebForms.BingMaps;
 using Microsoft.Win32;
 using System;
@@ -32,7 +33,7 @@ namespace GS_ABATTOIRE.Autre_Travail
             try
             {
                 int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
-                //bunifuButton22.PerformClick();
+                bunifuButton22.PerformClick();
                 String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
                 String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 String nom = bunifuDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -51,13 +52,31 @@ namespace GS_ABATTOIRE.Autre_Travail
                     }
 
 
+                   
+                }
+              
+                    int credit = int.Parse(bunifuDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
 
+
+                    if (colname == "mod")
+                    {
+
+
+                        Payecredit payecredit = new Payecredit(int.Parse(id), credit);
+                        payecredit.ShowDialog();
+
+
+
+                    }
+                    bunifuButton22.PerformClick();
 
                     bunifuDataGridView1.Rows[index].Selected = true;
-                }
+                
+               
             }
             catch
             {
+
             }
             
 
@@ -74,6 +93,25 @@ namespace GS_ABATTOIRE.Autre_Travail
         {
             DataTravail.List_des_travali(bunifuDataGridView1, bunifuTextBox1.Text);
 
+        }
+
+        private void bunifuDataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int index = bunifuDataGridView1.Rows[e.RowIndex].Index;
+                //bunifuButton22.PerformClick();
+                String colname = bunifuDataGridView1.Columns[e.ColumnIndex].Name;
+                String id = bunifuDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                BonTravail bon = new BonTravail(int.Parse(id));
+                bon.ShowDialog();
+                bunifuDataGridView1.Rows[index].Selected = true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
     }
 }

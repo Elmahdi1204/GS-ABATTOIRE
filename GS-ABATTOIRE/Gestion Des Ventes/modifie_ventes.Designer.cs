@@ -239,7 +239,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 57;
+            this.dataGridViewTextBoxColumn2.Width = 49;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -635,7 +635,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.supp.Name = "supp";
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 21;
+            this.supp.Width = 17;
             // 
             // bunifuPanel11
             // 
@@ -771,7 +771,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(357, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 18);
+            this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 37;
             this.label6.Text = "Versement";
             // 
@@ -782,7 +782,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(52, 77);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 18);
+            this.label10.Size = new System.Drawing.Size(123, 17);
             this.label10.TabIndex = 35;
             this.label10.Text = "Prix Aprés Remise";
             // 
@@ -793,7 +793,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(52, 137);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 18);
+            this.label11.Size = new System.Drawing.Size(75, 17);
             this.label11.TabIndex = 36;
             this.label11.Text = "Prix Totale";
             // 
@@ -804,7 +804,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(357, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 18);
+            this.label12.Size = new System.Drawing.Size(55, 17);
             this.label12.TabIndex = 34;
             this.label12.Text = "Remise";
             // 
@@ -815,7 +815,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(52, 17);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 18);
+            this.label13.Size = new System.Drawing.Size(75, 17);
             this.label13.TabIndex = 33;
             this.label13.Text = "Prix Totale";
             // 

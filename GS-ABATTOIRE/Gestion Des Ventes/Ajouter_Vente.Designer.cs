@@ -1025,7 +1025,7 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 57;
+            this.dataGridViewTextBoxColumn2.Width = 49;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1423,7 +1423,7 @@
             this.supp.Name = "supp";
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 21;
+            this.supp.Width = 17;
             // 
             // bunifuPanel11
             // 
@@ -1659,7 +1659,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(52, 189);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 18);
+            this.label9.Size = new System.Drawing.Size(123, 17);
             this.label9.TabIndex = 27;
             this.label9.Text = "Type de Paiement";
             // 
@@ -1670,7 +1670,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(363, 254);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 18);
+            this.label7.Size = new System.Drawing.Size(62, 17);
             this.label7.TabIndex = 26;
             this.label7.Text = "Imprimer";
             // 
@@ -1681,7 +1681,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(55, 254);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 18);
+            this.label8.Size = new System.Drawing.Size(79, 17);
             this.label8.TabIndex = 25;
             this.label8.Text = "Destination";
             // 
@@ -1692,7 +1692,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(363, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 18);
+            this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 24;
             this.label6.Text = "Versement";
             // 
@@ -1703,7 +1703,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(363, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 18);
+            this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 24;
             this.label3.Text = "T.V.A";
             // 
@@ -1714,7 +1714,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(55, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 18);
+            this.label5.Size = new System.Drawing.Size(123, 17);
             this.label5.TabIndex = 23;
             this.label5.Text = "Prix Aprés Remise";
             // 
@@ -1725,7 +1725,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(55, 133);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 18);
+            this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 23;
             this.label4.Text = "Prix Totale";
             // 
@@ -1736,7 +1736,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(363, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 18);
+            this.label2.Size = new System.Drawing.Size(55, 17);
             this.label2.TabIndex = 22;
             this.label2.Text = "Remise";
             // 
@@ -1747,7 +1747,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.818182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(55, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 18);
+            this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 21;
             this.label1.Text = "Prix Totale";
             // 

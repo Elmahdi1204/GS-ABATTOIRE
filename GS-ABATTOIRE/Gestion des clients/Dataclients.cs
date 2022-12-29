@@ -92,7 +92,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select *  , isnull((select sum(Vents.prixtotal - versment) from Vents where Vents.idclient = Clients.idclient ) -(select isnull(sum(Versement.montant) , 0) from Versement , Vents where Vents.idvent = Versement.idvente and Versement.type = 'Vents' and Vents.idclient = Clients.idclient) , 0) , (select count (Vents.idvent) from Vents where Vents.idclient = Clients.idclient) from Clients where idclient ='" + id + "'  ;", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select *  , isnull((select sum(Vents.prixtotal - versment) from Vents where Vents.idclient = Clients.idclient ) -(select isnull(sum(Versement.montant) , 0) from Versement , Vents where Vents.idvent = Versement.idvente and Versement.type = 'Vents' and Vents.idclient = Clients.idclient) , 0) , (select count (Vents.idvent) from Vents where Vents.idclient = Clients.idclient)  ,  (select isnull(sum(prixtotale -versement ), 0) from travail where travail.idclient = Clients.idclient) from Clients where idclient ='" + id + "'  ;", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
 
                 while (dr.Read())
@@ -107,6 +107,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                     list.Add(dr[7].ToString());
                     list.Add(dr[8].ToString());
                     list.Add(dr[9].ToString());
+                    list.Add(dr[11].ToString());
 
 
 
@@ -121,6 +122,61 @@ namespace GS_ABATTOIRE.Gestion_des_clients
                 return list;
             }
         }
+        public static List<String> GETCREDITTRV(int id  ,int idtrv)
+        {
+            List<String> list = new List<String>();
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select   (select isnull(sum(prixtotale -versement ), 0) from travail where travail.idclient = Clients.idclient and travail.idtrv <> '"+idtrv+"')  from Clients where idclient ='" + id + "'  ;", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    list.Add(dr[0].ToString());
+                   
+
+
+
+                }
+                Connexion.conn.Close();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+                return list;
+            }
+        }
+        public static List<String> GETCREDITANCIEN(int id, int idtrv)
+        {
+            List<String> list = new List<String>();
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand sql = new SqlCommand("select   isnull((select sum(Vents.prixtotal - versment) from Vents where Vents.idclient = Clients.idclient  and vents.idvent <> '"+idtrv+"') -(select isnull(sum(Versement.montant) , 0) from Versement , Vents where Vents.idvent = Versement.idvente and Versement.type = 'Vents' and Vents.idclient = Clients.idclient and vents.idvent ) , 0)  from Clients where idclient ='" + id + "'  ;", Connexion.conn);
+                SqlDataReader dr = sql.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    list.Add(dr[0].ToString());
+
+
+
+
+                }
+                Connexion.conn.Close();
+                return list;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Connexion.conn.Close();
+                return list;
+            }
+        }
+
 
         public static void Supprimer_clients(int id)
         {

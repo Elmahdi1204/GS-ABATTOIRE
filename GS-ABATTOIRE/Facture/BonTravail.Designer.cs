@@ -34,17 +34,18 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "GS_ABATTOIRE.Report4.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 540);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 767);
             this.reportViewer1.TabIndex = 0;
             // 
             // BonTravail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.ClientSize = new System.Drawing.Size(800, 767);
             this.Controls.Add(this.reportViewer1);
             this.Name = "BonTravail";
             this.Text = "BonTravail";

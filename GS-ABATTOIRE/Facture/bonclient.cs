@@ -21,14 +21,18 @@ namespace GS_ABATTOIRE.Facture
         {
             InitializeComponent();
             data = Datavents.Getvents(idvent);
+            dataclient = Dataclients.Getclient(int.Parse(data[2]));
             double totale = double.Parse(data[4]);
             double versment = double.Parse(data[5]);
             double rest = totale - versment;
+
             double remis = double.Parse(data[3]);
+          double ancien = double.Parse(dataclient[9]) - rest  ;
+
 
             double totale2 = remis + totale;
 
-            dataclient = Dataclients.Getclient(int.Parse(data[2]));
+            
 
             ReportParameterCollection parameters = new ReportParameterCollection();
 
@@ -40,6 +44,7 @@ namespace GS_ABATTOIRE.Facture
             parameters.Add(new ReportParameter("date", "" + data[6]));
             parameters.Add(new ReportParameter("numf", "" + data[0]));
             parameters.Add(new ReportParameter("remis", $"{remis:### ### ##0.00}"));
+              parameters.Add(new ReportParameter("ancien", $"{ancien:### ### ##0.00}"));
             parameters.Add(new ReportParameter("credit", $"{double.Parse(dataclient[9]):### ### ##0.00}"));
 
 

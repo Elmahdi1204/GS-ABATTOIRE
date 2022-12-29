@@ -62,8 +62,7 @@ namespace GS_ABATTOIRE.Auth
            
                 if (e.KeyCode == Keys.Enter)
                 {
-                bunifuButton21.PerformClick();
-                MessageBox.Show("abababab");
+             
                 }
 
          

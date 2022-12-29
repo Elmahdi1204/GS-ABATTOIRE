@@ -404,7 +404,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
         }
 
 
-        private void bunifuPanel7_Click(object sender, EventArgs e)
+        private void bunifuPanel7_Click(object sender, EventArgs e) { }
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 
