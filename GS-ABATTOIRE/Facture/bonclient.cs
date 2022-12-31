@@ -17,13 +17,16 @@ namespace GS_ABATTOIRE.Facture
     {
         List<String> data = new List<string>();
         List<String> dataclient = new List<string>();
+
         public bonclient(int idvent, List<objet> list)
         {
             InitializeComponent();
             data = Datavents.Getvents(idvent);
+           
             dataclient = Dataclients.Getclient(int.Parse(data[2]));
             double totale = double.Parse(data[4]);
-            double versment = double.Parse(data[5]);
+            double versment = double.Parse(data[5])+  Datavents.Totale_des_versment(int.Parse(data[0]));
+
             double rest = totale - versment;
 
             double remis = double.Parse(data[3]);
