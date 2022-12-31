@@ -48,5 +48,43 @@ namespace GS_ABATTOIRE.Dashboard
 
             }
         }
+        public static void chart2(Chart chart, DateTime date1, DateTime date2)
+        {
+            try
+            {
+                Connexion.conn.Open();
+                SqlCommand countmatier = new SqlCommand("select Top 12 nomclient , isnull((select sum(Vents.prixtotal - versment) from Vents where Vents.idclient = Clients.idclient ) -(select isnull(sum(Versement.montant) , 0) from Versement , Vents where Vents.idvent = Versement.idvente and Versement.type = 'Vents' and Vents.idclient = Clients.idclient) , 0) , (select count (Vents.idvent) from Vents where Vents.idclient = Clients.idclient) from Clients  ", Connexion.conn);
+
+                SqlDataReader dr = countmatier.ExecuteReader();
+
+
+                chart.Series["Series1"].Points.Clear();
+                chart.Series["Series2"].Points.Clear();
+
+
+                while (dr.Read())
+                {
+                    if (dr[1].ToString() != "")
+                    {
+                        chart.Series["Series1"].Points.AddXY("" + dr[0], dr[2]);
+                        chart.Series["Series2"].Points.AddXY(" ", dr[1]);
+                    }
+
+
+
+                }
+
+                Connexion.conn.Close();
+
+
+            }
+            catch (Exception e)
+            {
+                Connexion.conn.Close();
+                MessageBox.Show(e.Message);
+
+
+            }
+        }
     }
 }

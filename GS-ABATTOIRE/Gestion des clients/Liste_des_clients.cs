@@ -116,5 +116,11 @@ namespace GS_ABATTOIRE.Gestion_des_clients
 
             }
         }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            bunifuButton22.PerformClick();
+
+        }
     }
 }

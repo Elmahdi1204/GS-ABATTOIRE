@@ -30,14 +30,18 @@ namespace GS_ABATTOIRE.Dashboard
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuDatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -131,6 +135,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.totaledescharges = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -148,6 +153,7 @@ namespace GS_ABATTOIRE.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.bunifuShadowPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.bunifuShadowPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -182,6 +188,7 @@ namespace GS_ABATTOIRE.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.bunifuShadowPanel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPanel2
@@ -202,6 +209,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuPanel2.ShowBorders = false;
             this.bunifuPanel2.Size = new System.Drawing.Size(1597, 108);
             this.bunifuPanel2.TabIndex = 4;
+            this.bunifuPanel2.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuPanel1
             // 
@@ -226,6 +234,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuPanel1.ShowBorders = false;
             this.bunifuPanel1.Size = new System.Drawing.Size(1135, 68);
             this.bunifuPanel1.TabIndex = 4;
+            this.bunifuPanel1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuDatePicker2
             // 
@@ -252,6 +261,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuDatePicker2.Size = new System.Drawing.Size(199, 32);
             this.bunifuDatePicker2.TabIndex = 6;
             this.bunifuDatePicker2.ValueChanged += new System.EventHandler(this.bunifuDatePicker2_ValueChanged);
+            this.bunifuDatePicker2.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuDatePicker1
             // 
@@ -277,6 +287,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(201, 32);
             this.bunifuDatePicker1.TabIndex = 5;
+            this.bunifuDatePicker1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuButton25
             // 
@@ -297,11 +308,11 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton25.ColorContrastOnClick = 45;
             this.bunifuButton25.ColorContrastOnHover = 45;
             this.bunifuButton25.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges16.BottomLeft = true;
-            borderEdges16.BottomRight = true;
-            borderEdges16.TopLeft = true;
-            borderEdges16.TopRight = true;
-            this.bunifuButton25.CustomizableEdges = borderEdges16;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.bunifuButton25.CustomizableEdges = borderEdges11;
             this.bunifuButton25.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton25.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton25.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -368,6 +379,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton25.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton25.UseDefaultRadiusAndThickness = true;
             this.bunifuButton25.Click += new System.EventHandler(this.Dashboard_Load);
+            this.bunifuButton25.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuButton24
             // 
@@ -388,11 +400,11 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton24.ColorContrastOnClick = 45;
             this.bunifuButton24.ColorContrastOnHover = 45;
             this.bunifuButton24.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges17.BottomLeft = true;
-            borderEdges17.BottomRight = true;
-            borderEdges17.TopLeft = true;
-            borderEdges17.TopRight = true;
-            this.bunifuButton24.CustomizableEdges = borderEdges17;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.bunifuButton24.CustomizableEdges = borderEdges12;
             this.bunifuButton24.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton24.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton24.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -459,6 +471,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton24.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton24.UseDefaultRadiusAndThickness = true;
             this.bunifuButton24.Click += new System.EventHandler(this.bunifuButton24_Click);
+            this.bunifuButton24.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuButton23
             // 
@@ -479,11 +492,11 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton23.ColorContrastOnClick = 45;
             this.bunifuButton23.ColorContrastOnHover = 45;
             this.bunifuButton23.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges18.BottomLeft = true;
-            borderEdges18.BottomRight = true;
-            borderEdges18.TopLeft = true;
-            borderEdges18.TopRight = true;
-            this.bunifuButton23.CustomizableEdges = borderEdges18;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.bunifuButton23.CustomizableEdges = borderEdges13;
             this.bunifuButton23.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton23.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton23.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -550,6 +563,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton23.UseDefaultRadiusAndThickness = true;
             this.bunifuButton23.Click += new System.EventHandler(this.bunifuButton23_Click);
+            this.bunifuButton23.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuButton22
             // 
@@ -570,11 +584,11 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton22.ColorContrastOnClick = 45;
             this.bunifuButton22.ColorContrastOnHover = 45;
             this.bunifuButton22.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges19.BottomLeft = true;
-            borderEdges19.BottomRight = true;
-            borderEdges19.TopLeft = true;
-            borderEdges19.TopRight = true;
-            this.bunifuButton22.CustomizableEdges = borderEdges19;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.bunifuButton22.CustomizableEdges = borderEdges14;
             this.bunifuButton22.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton22.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton22.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -641,6 +655,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
             this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click);
+            this.bunifuButton22.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuButton21
             // 
@@ -661,11 +676,11 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
             this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges20.BottomLeft = true;
-            borderEdges20.BottomRight = true;
-            borderEdges20.TopLeft = true;
-            borderEdges20.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges20;
+            borderEdges15.BottomLeft = true;
+            borderEdges15.BottomRight = true;
+            borderEdges15.TopLeft = true;
+            borderEdges15.TopRight = true;
+            this.bunifuButton21.CustomizableEdges = borderEdges15;
             this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -732,6 +747,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
             this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
+            this.bunifuButton21.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuPanel3
             // 
@@ -751,6 +767,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuPanel3.ShowBorders = false;
             this.bunifuPanel3.Size = new System.Drawing.Size(1597, 337);
             this.bunifuPanel3.TabIndex = 5;
+            this.bunifuPanel3.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel3
             // 
@@ -768,6 +785,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1557, 291);
             this.tableLayoutPanel3.TabIndex = 10;
+            this.tableLayoutPanel3.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel9
             // 
@@ -792,23 +810,25 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel9.Size = new System.Drawing.Size(757, 285);
             this.bunifuShadowPanel9.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel9.TabIndex = 12;
+            this.bunifuShadowPanel9.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(10, 10);
             this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(737, 265);
             this.chart1.TabIndex = 9;
             this.chart1.Text = "chart1";
+            this.chart1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel2
             // 
@@ -828,6 +848,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(788, 285);
             this.tableLayoutPanel2.TabIndex = 10;
+            this.tableLayoutPanel2.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel2
             // 
@@ -854,6 +875,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 2;
             this.bunifuShadowPanel2.DoubleClick += new System.EventHandler(this.bunifuShadowPanel2_DoubleClick);
+            this.bunifuShadowPanel2.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox2
             // 
@@ -867,6 +889,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox2.DockChanged += new System.EventHandler(this.pictureBox2_DockChanged);
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.DoubleClick += new System.EventHandler(this.pictureBox2_DoubleClick);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // Caisse
             // 
@@ -879,6 +902,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.Caisse.TabIndex = 1;
             this.Caisse.Text = "Nombre des paiment ";
             this.Caisse.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Caisse.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label4
             // 
@@ -890,6 +914,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label4.Size = new System.Drawing.Size(77, 27);
             this.label4.TabIndex = 0;
             this.label4.Text = "Caisse ";
+            this.label4.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel3
             // 
@@ -915,6 +940,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel3.Size = new System.Drawing.Size(388, 137);
             this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel3.TabIndex = 3;
+            this.bunifuShadowPanel3.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox3
             // 
@@ -925,6 +951,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // totalev
             // 
@@ -937,6 +964,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.totalev.TabIndex = 1;
             this.totalev.Text = "Nombre des paiment ";
             this.totalev.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.totalev.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label6
             // 
@@ -948,6 +976,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label6.Size = new System.Drawing.Size(173, 27);
             this.label6.TabIndex = 0;
             this.label6.Text = "Totale des ventes";
+            this.label6.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel4
             // 
@@ -973,6 +1002,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel4.Size = new System.Drawing.Size(388, 137);
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 4;
+            this.bunifuShadowPanel4.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox4
             // 
@@ -983,6 +1013,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // benifice
             // 
@@ -995,6 +1026,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.benifice.TabIndex = 1;
             this.benifice.Text = "Nombre des paiment ";
             this.benifice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.benifice.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label9
             // 
@@ -1006,6 +1038,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label9.Size = new System.Drawing.Size(87, 27);
             this.label9.TabIndex = 0;
             this.label9.Text = "Benifice";
+            this.label9.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel1
             // 
@@ -1031,6 +1064,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(388, 136);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 1;
+            this.bunifuShadowPanel1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox1
             // 
@@ -1041,6 +1075,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // NbfacuterV
             // 
@@ -1054,6 +1089,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.NbfacuterV.TabIndex = 1;
             this.NbfacuterV.Text = "Nombre des paiment ";
             this.NbfacuterV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.NbfacuterV.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label1
             // 
@@ -1065,6 +1101,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label1.Size = new System.Drawing.Size(210, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Operations de ventes";
+            this.label1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuPanel4
             // 
@@ -1084,6 +1121,8 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuPanel4.ShowBorders = false;
             this.bunifuPanel4.Size = new System.Drawing.Size(1597, 378);
             this.bunifuPanel4.TabIndex = 6;
+            this.bunifuPanel4.Click += new System.EventHandler(this.bunifuPanel4_Click);
+            this.bunifuPanel4.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel1
             // 
@@ -1101,6 +1140,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1557, 319);
             this.tableLayoutPanel1.TabIndex = 11;
+            this.tableLayoutPanel1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel5
             // 
@@ -1108,6 +1148,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel5.BorderColor = System.Drawing.Color.Silver;
             this.bunifuShadowPanel5.BorderRadius = 20;
             this.bunifuShadowPanel5.BorderThickness = 1;
+            this.bunifuShadowPanel5.Controls.Add(this.chart2);
             this.bunifuShadowPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuShadowPanel5.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel5.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -1124,6 +1165,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel5.Size = new System.Drawing.Size(1086, 313);
             this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel5.TabIndex = 11;
+            this.bunifuShadowPanel5.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel4
             // 
@@ -1140,6 +1182,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(459, 313);
             this.tableLayoutPanel4.TabIndex = 10;
+            this.tableLayoutPanel4.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel7
             // 
@@ -1165,6 +1208,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel7.Size = new System.Drawing.Size(453, 151);
             this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel7.TabIndex = 3;
+            this.bunifuShadowPanel7.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox6
             // 
@@ -1175,6 +1219,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // totalecredit
             // 
@@ -1187,6 +1232,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.totalecredit.TabIndex = 1;
             this.totalecredit.Text = "Nombre des paiment ";
             this.totalecredit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.totalecredit.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label7
             // 
@@ -1198,6 +1244,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label7.Size = new System.Drawing.Size(168, 27);
             this.label7.TabIndex = 0;
             this.label7.Text = "Totale de credits";
+            this.label7.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel10
             // 
@@ -1223,6 +1270,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel10.Size = new System.Drawing.Size(453, 150);
             this.bunifuShadowPanel10.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel10.TabIndex = 1;
+            this.bunifuShadowPanel10.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox8
             // 
@@ -1233,6 +1281,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 2;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // nbfacturecredit
             // 
@@ -1246,6 +1295,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.nbfacturecredit.TabIndex = 1;
             this.nbfacturecredit.Text = "Nombre des paiment ";
             this.nbfacturecredit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nbfacturecredit.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label12
             // 
@@ -1257,6 +1307,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label12.Size = new System.Drawing.Size(246, 27);
             this.label12.TabIndex = 0;
             this.label12.Text = "Les factures avec credits";
+            this.label12.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuPanel5
             // 
@@ -1276,6 +1327,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuPanel5.ShowBorders = false;
             this.bunifuPanel5.Size = new System.Drawing.Size(1597, 335);
             this.bunifuPanel5.TabIndex = 7;
+            this.bunifuPanel5.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel5
             // 
@@ -1294,6 +1346,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 297F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1557, 297);
             this.tableLayoutPanel5.TabIndex = 10;
+            this.tableLayoutPanel5.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel7
             // 
@@ -1313,6 +1366,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(757, 291);
             this.tableLayoutPanel7.TabIndex = 11;
+            this.tableLayoutPanel7.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel6
             // 
@@ -1338,6 +1392,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel6.Size = new System.Drawing.Size(382, 139);
             this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel6.TabIndex = 2;
+            this.bunifuShadowPanel6.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox11
             // 
@@ -1348,6 +1403,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 2;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // Ensmblefinis
             // 
@@ -1360,6 +1416,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.Ensmblefinis.TabIndex = 1;
             this.Ensmblefinis.Text = "Nombre des paiment ";
             this.Ensmblefinis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Ensmblefinis.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label16
             // 
@@ -1371,6 +1428,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label16.Size = new System.Drawing.Size(154, 27);
             this.label16.TabIndex = 0;
             this.label16.Text = "Ensembles finis";
+            this.label16.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel14
             // 
@@ -1396,6 +1454,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel14.Size = new System.Drawing.Size(363, 140);
             this.bunifuShadowPanel14.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel14.TabIndex = 3;
+            this.bunifuShadowPanel14.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // flowLayoutPanel1
             // 
@@ -1404,6 +1463,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(257, 49);
             this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel1.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label18
             // 
@@ -1415,6 +1475,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label18.Size = new System.Drawing.Size(241, 54);
             this.label18.TabIndex = 1;
             this.label18.Text = "Benifice des ensmble en stock";
+            this.label18.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox12
             // 
@@ -1424,6 +1485,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 2;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // Money_out
             // 
@@ -1436,6 +1498,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.Money_out.TabIndex = 1;
             this.Money_out.Text = "Nombre des paiment ";
             this.Money_out.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Money_out.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel15
             // 
@@ -1461,6 +1524,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel15.Size = new System.Drawing.Size(382, 140);
             this.bunifuShadowPanel15.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel15.TabIndex = 4;
+            this.bunifuShadowPanel15.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox13
             // 
@@ -1470,6 +1534,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 2;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tempreel
             // 
@@ -1482,6 +1547,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tempreel.TabIndex = 1;
             this.tempreel.Text = "Nombre des paiment ";
             this.tempreel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tempreel.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label20
             // 
@@ -1493,6 +1559,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label20.Size = new System.Drawing.Size(211, 27);
             this.label20.TabIndex = 0;
             this.label20.Text = "Benifice en temp reel";
+            this.label20.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel16
             // 
@@ -1518,6 +1585,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel16.Size = new System.Drawing.Size(363, 139);
             this.bunifuShadowPanel16.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel16.TabIndex = 1;
+            this.bunifuShadowPanel16.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox14
             // 
@@ -1528,6 +1596,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 2;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // ensmbleencours
             // 
@@ -1541,6 +1610,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.ensmbleencours.TabIndex = 1;
             this.ensmbleencours.Text = "Nombre des paiment ";
             this.ensmbleencours.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ensmbleencours.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label22
             // 
@@ -1552,6 +1622,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label22.Size = new System.Drawing.Size(180, 27);
             this.label22.TabIndex = 0;
             this.label22.Text = "Ensmbles en stock";
+            this.label22.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel6
             // 
@@ -1571,6 +1642,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(788, 291);
             this.tableLayoutPanel6.TabIndex = 10;
+            this.tableLayoutPanel6.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel8
             // 
@@ -1596,6 +1668,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel8.Size = new System.Drawing.Size(398, 139);
             this.bunifuShadowPanel8.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel8.TabIndex = 2;
+            this.bunifuShadowPanel8.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox5
             // 
@@ -1606,6 +1679,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // totaleachat
             // 
@@ -1618,6 +1692,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.totaleachat.TabIndex = 1;
             this.totaleachat.Text = "Nombre des paiment ";
             this.totaleachat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.totaleachat.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label3
             // 
@@ -1629,6 +1704,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label3.Size = new System.Drawing.Size(187, 27);
             this.label3.TabIndex = 0;
             this.label3.Text = "Le Cout des achats";
+            this.label3.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel11
             // 
@@ -1654,6 +1730,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel11.Size = new System.Drawing.Size(378, 140);
             this.bunifuShadowPanel11.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel11.TabIndex = 3;
+            this.bunifuShadowPanel11.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox7
             // 
@@ -1664,6 +1741,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 2;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // nbcredit
             // 
@@ -1676,6 +1754,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.nbcredit.TabIndex = 1;
             this.nbcredit.Text = "Nombre des paiment ";
             this.nbcredit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nbcredit.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label8
             // 
@@ -1687,6 +1766,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label8.Size = new System.Drawing.Size(212, 27);
             this.label8.TabIndex = 0;
             this.label8.Text = "Factures avec credits";
+            this.label8.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel12
             // 
@@ -1712,6 +1792,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel12.Size = new System.Drawing.Size(398, 140);
             this.bunifuShadowPanel12.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel12.TabIndex = 4;
+            this.bunifuShadowPanel12.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox9
             // 
@@ -1722,6 +1803,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 2;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // credittotale
             // 
@@ -1734,6 +1816,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.credittotale.TabIndex = 1;
             this.credittotale.Text = "Nombre des paiment ";
             this.credittotale.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.credittotale.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label11
             // 
@@ -1745,6 +1828,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label11.Size = new System.Drawing.Size(168, 27);
             this.label11.TabIndex = 0;
             this.label11.Text = "Totale de credits";
+            this.label11.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel13
             // 
@@ -1770,6 +1854,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel13.Size = new System.Drawing.Size(378, 139);
             this.bunifuShadowPanel13.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel13.TabIndex = 1;
+            this.bunifuShadowPanel13.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox10
             // 
@@ -1780,6 +1865,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 2;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // nbachat
             // 
@@ -1793,6 +1879,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.nbachat.TabIndex = 1;
             this.nbachat.Text = "Nombre des paiment ";
             this.nbachat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nbachat.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label14
             // 
@@ -1804,6 +1891,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label14.Size = new System.Drawing.Size(186, 27);
             this.label14.TabIndex = 0;
             this.label14.Text = "Operation d\'achats";
+            this.label14.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuPanel6
             // 
@@ -1823,6 +1911,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuPanel6.ShowBorders = false;
             this.bunifuPanel6.Size = new System.Drawing.Size(1597, 210);
             this.bunifuPanel6.TabIndex = 8;
+            this.bunifuPanel6.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // tableLayoutPanel8
             // 
@@ -1841,6 +1930,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1557, 145);
             this.tableLayoutPanel8.TabIndex = 13;
+            this.tableLayoutPanel8.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel21
             // 
@@ -1866,6 +1956,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel21.Size = new System.Drawing.Size(513, 139);
             this.bunifuShadowPanel21.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel21.TabIndex = 2;
+            this.bunifuShadowPanel21.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox15
             // 
@@ -1876,6 +1967,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 2;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // revenuglobale
             // 
@@ -1887,6 +1979,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.revenuglobale.Size = new System.Drawing.Size(209, 27);
             this.revenuglobale.TabIndex = 1;
             this.revenuglobale.Text = "Nombre des paiment ";
+            this.revenuglobale.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label27
             // 
@@ -1898,6 +1991,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label27.Size = new System.Drawing.Size(180, 27);
             this.label27.TabIndex = 0;
             this.label27.Text = "Total des revenus ";
+            this.label27.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel23
             // 
@@ -1923,6 +2017,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel23.Size = new System.Drawing.Size(513, 139);
             this.bunifuShadowPanel23.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel23.TabIndex = 4;
+            this.bunifuShadowPanel23.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox16
             // 
@@ -1933,6 +2028,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox16.TabIndex = 2;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // profitnet
             // 
@@ -1944,6 +2040,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.profitnet.Size = new System.Drawing.Size(243, 35);
             this.profitnet.TabIndex = 2;
             this.profitnet.Text = "Totale des revenu";
+            this.profitnet.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label21
             // 
@@ -1955,6 +2052,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.label21.Size = new System.Drawing.Size(103, 27);
             this.label21.TabIndex = 1;
             this.label21.Text = "Profit Net";
+            this.label21.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // bunifuShadowPanel22
             // 
@@ -1980,6 +2078,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel22.Size = new System.Drawing.Size(513, 139);
             this.bunifuShadowPanel22.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel22.TabIndex = 3;
+            this.bunifuShadowPanel22.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // pictureBox17
             // 
@@ -1990,6 +2089,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 2;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // totaledescharges
             // 
@@ -2001,6 +2101,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.totaledescharges.Size = new System.Drawing.Size(176, 27);
             this.totaledescharges.TabIndex = 2;
             this.totaledescharges.Text = "Totale des revenu";
+            this.totaledescharges.MouseEnter += new System.EventHandler(this.Dashboard_Load);
             // 
             // label24
             // 
@@ -2012,6 +2113,28 @@ namespace GS_ABATTOIRE.Dashboard
             this.label24.Size = new System.Drawing.Size(173, 27);
             this.label24.TabIndex = 1;
             this.label24.Text = "Total des charges";
+            this.label24.MouseEnter += new System.EventHandler(this.Dashboard_Load);
+            // 
+            // chart2
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
+            this.chart2.Location = new System.Drawing.Point(10, 10);
+            this.chart2.Name = "chart2";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series2";
+            this.chart2.Series.Add(series4);
+            this.chart2.Series.Add(series5);
+            this.chart2.Size = new System.Drawing.Size(1066, 293);
+            this.chart2.TabIndex = 10;
+            this.chart2.Text = "chart2";
             // 
             // Dashboard
             // 
@@ -2047,6 +2170,7 @@ namespace GS_ABATTOIRE.Dashboard
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.bunifuShadowPanel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.bunifuShadowPanel7.ResumeLayout(false);
             this.bunifuShadowPanel7.PerformLayout();
@@ -2095,6 +2219,7 @@ namespace GS_ABATTOIRE.Dashboard
             this.bunifuShadowPanel22.ResumeLayout(false);
             this.bunifuShadowPanel22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2194,5 +2319,6 @@ namespace GS_ABATTOIRE.Dashboard
         private System.Windows.Forms.Label totaledescharges;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }

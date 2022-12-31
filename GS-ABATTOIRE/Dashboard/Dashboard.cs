@@ -41,6 +41,7 @@ namespace GS_ABATTOIRE.Dashboard
             double profit = DataDashboard2.benifice_temp_reel(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)) - DataDashboard2.Totale_des_charges(bunifuDatePicker1.Value, bunifuDatePicker2.Value.AddHours(24)) ;
             profitnet.Text = $"{ profit:### ### ##0.##} DA";
             Chartes.chart1(chart1  , bunifuDatePicker1.Value , bunifuDatePicker2.Value);
+            Chartes.chart2(chart2, bunifuDatePicker1.Value, bunifuDatePicker2.Value);
             if (profit <= 0)
             {
                 pictureBox16.Image = Properties.Resources.money__1_;
@@ -158,6 +159,11 @@ namespace GS_ABATTOIRE.Dashboard
         {
             Clotture_de_lacaisse clotture_ = new Clotture_de_lacaisse();
             clotture_.ShowDialog();
+        }
+
+        private void bunifuPanel4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

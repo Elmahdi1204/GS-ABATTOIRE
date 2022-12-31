@@ -182,7 +182,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 57;
+            this.Column1.Width = 49;
             // 
             // Column2
             // 
@@ -265,7 +265,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.mod.ReadOnly = true;
             this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.mod.Width = 21;
+            this.mod.Width = 17;
             // 
             // supp
             // 
@@ -278,7 +278,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.supp.ReadOnly = true;
             this.supp.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.supp.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.supp.Width = 21;
+            this.supp.Width = 17;
             // 
             // bunifuPanel1
             // 
@@ -326,7 +326,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(63, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 24);
+            this.label3.Size = new System.Drawing.Size(194, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Voir les client avec credits ";
             // 
@@ -642,6 +642,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuTextBox1.TextPlaceholder = "Recherche";
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
+            this.bunifuTextBox1.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
             // 
             // Liste_des_clients
             // 
