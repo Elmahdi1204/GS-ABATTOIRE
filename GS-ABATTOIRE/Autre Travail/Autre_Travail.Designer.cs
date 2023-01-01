@@ -53,9 +53,11 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mod = new System.Windows.Forms.DataGridViewImageColumn();
             this.sup = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -66,6 +68,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.pictureBox1);
             this.bunifuPanel1.Controls.Add(this.bunifuButton22);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBox1);
             this.bunifuPanel1.Controls.Add(this.bunifuButton21);
@@ -121,7 +124,7 @@
             this.bunifuButton22.IdleBorderRadius = 20;
             this.bunifuButton22.IdleBorderThickness = 1;
             this.bunifuButton22.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton22.IdleIconLeftImage = null;
+            this.bunifuButton22.IdleIconLeftImage = global::GS_ABATTOIRE.Properties.Resources.update_arrows__1_;
             this.bunifuButton22.IdleIconRightImage = null;
             this.bunifuButton22.IndicateFocus = false;
             this.bunifuButton22.Location = new System.Drawing.Point(970, 28);
@@ -148,7 +151,7 @@
             this.bunifuButton22.OnIdleState.BorderThickness = 1;
             this.bunifuButton22.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
             this.bunifuButton22.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton22.OnIdleState.IconLeftImage = null;
+            this.bunifuButton22.OnIdleState.IconLeftImage = global::GS_ABATTOIRE.Properties.Resources.update_arrows__1_;
             this.bunifuButton22.OnIdleState.IconRightImage = null;
             this.bunifuButton22.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bunifuButton22.OnPressedState.BorderRadius = 20;
@@ -485,7 +488,7 @@
             this.mod.ReadOnly = true;
             this.mod.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.mod.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.mod.Width = 17;
+            this.mod.Width = 21;
             // 
             // sup
             // 
@@ -497,7 +500,18 @@
             this.sup.ReadOnly = true;
             this.sup.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.sup.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.sup.Width = 17;
+            this.sup.Width = 21;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Autre_Travail
             // 
@@ -511,6 +525,7 @@
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -532,5 +547,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn mod;
         private System.Windows.Forms.DataGridViewImageColumn sup;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

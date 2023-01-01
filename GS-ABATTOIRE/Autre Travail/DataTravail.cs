@@ -95,12 +95,12 @@ namespace GS_ABATTOIRE.Autre_Travail
                 Connexion.conn.Close();
             }
         }
-        public static void Modifier_Travail(int Idtrv, int idclient, int mort, int qtegrl, int qtetriash, double prixabattage, double priwtriash, double prixtotale, double remise, double versment, double credit, DateTime date)
+        public static void Modifier_Travail(int Idtrv, int idclient, int mort, int qtegrl, int qtetriash, double prixabattage, double priwtriash, double prixtotale, double remise, double versment, DateTime date)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("update   Travail set  idclient = '" + idclient + "' , mor='"+mort+"',qtegrl='"+qtegrl+"',qtetriash='"+qtetriash+"',priwabattage='"+prixabattage+"',prixtriash='"+priwtriash+ "', ,prixtotale='" + prixtotale + "', remise=N'" + remise + "', versment ='" + versment + "' ,credit='"+credit+"',date ='" + date + "' where idvent ='" + Idtrv + "';", Connexion.conn);
+                SqlCommand sql = new SqlCommand("update   Travail set  idclient = '" + idclient + "' , mor='"+mort+"',qtegrl='"+qtegrl+"',qtetriash='"+qtetriash+"',priwabattage='"+prixabattage+"',prixtriash='"+priwtriash+ "', ,prixtotale='" + prixtotale + "', remise=N'" + remise + "', versment ='" + versment + "' ,date ='" + date + "' where idvent ='" + Idtrv + "';", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
