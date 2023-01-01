@@ -15,8 +15,10 @@ namespace GS_ABATTOIRE.Autre_Travail
         public Ajouter_Travail()
         {
             InitializeComponent();
-           
           
+
+
+
         }
 
         private void Ajouter_Travail_Load(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace GS_ABATTOIRE.Autre_Travail
             else
             {
                 //int idtrv = DataTravail.Get_lastid_trv() + 1;
-                DataTravail.Ajouter_Travail(int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuTextBox2.Text), int.Parse(bunifuTextBox3.Text), int.Parse(bunifuTextBox6.Text), float.Parse(bunifuTextBox4.Text), float.Parse(bunifuTextBox7.Text), float.Parse(bunifuTextBox10.Text), float.Parse(bunifuTextBox9.Text), float.Parse(bunifuTextBox11.Text), float.Parse(bunifuTextBox12.Text), bunifuDatePicker1.Value);
+                DataTravail.Ajouter_Travail(int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuTextBox2.Text), int.Parse(bunifuTextBox3.Text), int.Parse(bunifuTextBox6.Text), float.Parse(bunifuTextBox4.Text), float.Parse(bunifuTextBox7.Text), float.Parse(bunifuTextBox22.Text), float.Parse(bunifuTextBox9.Text), float.Parse(bunifuTextBox11.Text), float.Parse(bunifuTextBox12.Text), bunifuDatePicker1.Value);
                 MessageBox.Show("Travail ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
@@ -142,6 +144,29 @@ namespace GS_ABATTOIRE.Autre_Travail
                 bunifuTextBox14.Text = (double.Parse(bunifuTextBox5.Text) + double.Parse(bunifuTextBox8.Text) + double.Parse(bunifuTextBox17.Text)).ToString();
             }
             catch { }
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox20_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox22.Text = (double.Parse(bunifuTextBox10.Text) + Double.Parse(bunifuTextBox20.Text) + double.Parse(bunifuTextBox21.Text)).ToString();
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void bunifuTextBox21_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

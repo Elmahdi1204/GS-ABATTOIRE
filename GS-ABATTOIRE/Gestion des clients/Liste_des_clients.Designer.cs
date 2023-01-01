@@ -417,7 +417,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuButton22.IdleBorderRadius = 20;
             this.bunifuButton22.IdleBorderThickness = 1;
             this.bunifuButton22.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuButton22.IdleIconLeftImage = null;
+            this.bunifuButton22.IdleIconLeftImage = global::GS_ABATTOIRE.Properties.Resources.update_arrows__1_;
             this.bunifuButton22.IdleIconRightImage = null;
             this.bunifuButton22.IndicateFocus = false;
             this.bunifuButton22.Location = new System.Drawing.Point(672, 22);
@@ -445,7 +445,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             this.bunifuButton22.OnIdleState.BorderThickness = 1;
             this.bunifuButton22.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
             this.bunifuButton22.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton22.OnIdleState.IconLeftImage = null;
+            this.bunifuButton22.OnIdleState.IconLeftImage = global::GS_ABATTOIRE.Properties.Resources.update_arrows__1_;
             this.bunifuButton22.OnIdleState.IconRightImage = null;
             this.bunifuButton22.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.bunifuButton22.OnPressedState.BorderRadius = 20;
