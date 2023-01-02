@@ -1,4 +1,8 @@
-﻿using GS_ABATTOIRE.Gestion_Des_Achats;
+﻿using Bunifu.UI.WinForms;
+using GS_ABATTOIRE.Facture;
+using GS_ABATTOIRE.Gestion_Des_Achats;
+using GS_ABATTOIRE.Gestion_des_clients;
+using GS_ABATTOIRE.Gestion_des_fournisseurs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,13 +23,15 @@ namespace GS_ABATTOIRE.Autre_Travail
             InitializeComponent();
             data = DataTravail.GetTravail(id);
             bunifuDatePicker1.Value = DateTime.Parse(data[11].ToString());
+            bunifuDropdown1.SelectedValue = data[1];
+            bunifuDropdown1.Text = Dataclients.Get_specifice_client(int.Parse(data[1]));
             bunifuTextBox2.Text = data[2];
             bunifuTextBox3.Text = data[3];
             bunifuTextBox1.Text = (double.Parse(bunifuTextBox2.Text) + double.Parse(bunifuTextBox3.Text)).ToString();
             bunifuTextBox4.Text = data[5];
             bunifuTextBox5.Text = (double.Parse(bunifuTextBox4.Text) * double.Parse(bunifuTextBox3.Text)).ToString();
             bunifuTextBox6.Text = data[4];
-            bunifuTextBox6.Text = data[6];
+            bunifuTextBox7.Text = data[6];
             bunifuTextBox8.Text = (double.Parse(bunifuTextBox6.Text) * double.Parse(bunifuTextBox7.Text)).ToString();
             bunifuTextBox15.Text = data[16];
             bunifuTextBox16.Text = data[17];
@@ -69,6 +75,11 @@ namespace GS_ABATTOIRE.Autre_Travail
         private void bunifuTextBox21_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -169,6 +169,19 @@
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.clientsTableAdapter = new GS_ABATTOIRE.AbattoireDataSet1TableAdapters.ClientsTableAdapter();
             this.abattoireDataSet2 = new GS_ABATTOIRE.AbattoireDataSet();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abattoireDataSet1)).BeginInit();
@@ -183,6 +196,19 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.label34);
+            this.bunifuPanel1.Controls.Add(this.label33);
+            this.bunifuPanel1.Controls.Add(this.label32);
+            this.bunifuPanel1.Controls.Add(this.label31);
+            this.bunifuPanel1.Controls.Add(this.label30);
+            this.bunifuPanel1.Controls.Add(this.label29);
+            this.bunifuPanel1.Controls.Add(this.label28);
+            this.bunifuPanel1.Controls.Add(this.label27);
+            this.bunifuPanel1.Controls.Add(this.label26);
+            this.bunifuPanel1.Controls.Add(this.label25);
+            this.bunifuPanel1.Controls.Add(this.label24);
+            this.bunifuPanel1.Controls.Add(this.label23);
+            this.bunifuPanel1.Controls.Add(this.label18);
             this.bunifuPanel1.Controls.Add(this.label22);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBox22);
             this.bunifuPanel1.Controls.Add(this.label21);
@@ -267,7 +293,7 @@
             this.bunifuTextBox22.BorderThickness = 1;
             this.bunifuTextBox22.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox22.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox22.DefaultFont = new System.Drawing.Font("Segoe UI", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextBox22.DefaultFont = new System.Drawing.Font("Segoe UI", 15.70909F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextBox22.DefaultText = "";
             this.bunifuTextBox22.FillColor = System.Drawing.Color.White;
             this.bunifuTextBox22.HideSelection = true;
@@ -313,10 +339,10 @@
             this.bunifuTextBox22.SelectionLength = 0;
             this.bunifuTextBox22.SelectionStart = 0;
             this.bunifuTextBox22.ShortcutsEnabled = true;
-            this.bunifuTextBox22.Size = new System.Drawing.Size(286, 46);
+            this.bunifuTextBox22.Size = new System.Drawing.Size(303, 54);
             this.bunifuTextBox22.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox22.TabIndex = 48;
-            this.bunifuTextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuTextBox22.TextMarginBottom = 0;
             this.bunifuTextBox22.TextMarginLeft = 3;
             this.bunifuTextBox22.TextMarginTop = 1;
@@ -868,7 +894,7 @@
             this.bunifuTextBox17.Size = new System.Drawing.Size(416, 45);
             this.bunifuTextBox17.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox17.TabIndex = 12;
-            this.bunifuTextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuTextBox17.TextMarginBottom = 0;
             this.bunifuTextBox17.TextMarginLeft = 3;
             this.bunifuTextBox17.TextMarginTop = 1;
@@ -1210,7 +1236,7 @@
             this.bunifuButton22.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton22.OnPressedState.IconLeftImage = null;
             this.bunifuButton22.OnPressedState.IconRightImage = null;
-            this.bunifuButton22.Size = new System.Drawing.Size(285, 49);
+            this.bunifuButton22.Size = new System.Drawing.Size(292, 54);
             this.bunifuButton22.TabIndex = 18;
             this.bunifuButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton22.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1218,6 +1244,7 @@
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
             this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click);
+            this.bunifuButton22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuButton22_KeyDown);
             // 
             // bunifuButton21
             // 
@@ -1812,7 +1839,7 @@
             this.bunifuTextBox8.Size = new System.Drawing.Size(555, 45);
             this.bunifuTextBox8.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.bunifuTextBox8.TabIndex = 9;
-            this.bunifuTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuTextBox8.TextMarginBottom = 0;
             this.bunifuTextBox8.TextMarginLeft = 3;
             this.bunifuTextBox8.TextMarginTop = 1;
@@ -2358,6 +2385,150 @@
             this.abattoireDataSet2.DataSetName = "AbattoireDataSet";
             this.abattoireDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(836, 314);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 17);
+            this.label18.TabIndex = 51;
+            this.label18.Text = "DA";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(836, 386);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(29, 17);
+            this.label23.TabIndex = 52;
+            this.label23.Text = "DA";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(519, 256);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(29, 17);
+            this.label24.TabIndex = 53;
+            this.label24.Text = "DA";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(519, 329);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(29, 17);
+            this.label25.TabIndex = 54;
+            this.label25.Text = "DA";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(519, 395);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(29, 17);
+            this.label26.TabIndex = 55;
+            this.label26.Text = "DA";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(517, 461);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(29, 17);
+            this.label27.TabIndex = 56;
+            this.label27.Text = "DA";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(439, 517);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(29, 17);
+            this.label28.TabIndex = 57;
+            this.label28.Text = "DA";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(517, 578);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(29, 17);
+            this.label29.TabIndex = 58;
+            this.label29.Text = "DA";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(517, 643);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 17);
+            this.label30.TabIndex = 59;
+            this.label30.Text = "DA";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(217, 643);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(29, 17);
+            this.label31.TabIndex = 60;
+            this.label31.Text = "DA";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(217, 712);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(29, 17);
+            this.label32.TabIndex = 61;
+            this.label32.Text = "DA";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(517, 712);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(29, 17);
+            this.label33.TabIndex = 62;
+            this.label33.Text = "DA";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(405, 792);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(35, 20);
+            this.label34.TabIndex = 63;
+            this.label34.Text = "DA";
+            // 
             // Ajouter_Travail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2432,5 +2603,18 @@
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Label label19;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox19;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
     }
 }
