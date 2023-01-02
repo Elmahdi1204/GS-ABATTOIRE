@@ -54,6 +54,8 @@ namespace GS_ABATTOIRE
             this.bunifuButton26 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.liste_Utilisateur1 = new GS_ABATTOIRE.Auth.Liste_Utilisateur();
+            this.dashboard1 = new GS_ABATTOIRE.Dashboard.Dashboard();
             this.list_des_versment1 = new GS_ABATTOIRE.Gestion_Des_Versement.List_des_versment();
             this.liste_Des_Charges1 = new GS_ABATTOIRE.Gestion_Des_Charges.Liste_Des_Charges();
             this.liste_Des_Stocks1 = new GS_ABATTOIRE.Gestion_Des_Stocks.Liste_Des_Stocks();
@@ -62,8 +64,6 @@ namespace GS_ABATTOIRE
             this.liste_Des_Produits1 = new GS_ABATTOIRE.Gestion_Des_Projets.Liste_Des_Produits();
             this.liste_des_fournisseur1 = new GS_ABATTOIRE.Gestion_des_fournisseurs.Liste_des_fournisseur();
             this.liste_des_clients1 = new GS_ABATTOIRE.Gestion_des_clients.Liste_des_clients();
-            this.liste_Utilisateur1 = new GS_ABATTOIRE.Auth.Liste_Utilisateur();
-            this.dashboard1 = new GS_ABATTOIRE.Dashboard.Dashboard();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
@@ -1073,6 +1073,23 @@ namespace GS_ABATTOIRE
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // liste_Utilisateur1
+            // 
+            this.liste_Utilisateur1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.liste_Utilisateur1.Location = new System.Drawing.Point(209, 0);
+            this.liste_Utilisateur1.Name = "liste_Utilisateur1";
+            this.liste_Utilisateur1.Size = new System.Drawing.Size(1026, 689);
+            this.liste_Utilisateur1.TabIndex = 10;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.AutoScroll = true;
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(209, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1026, 689);
+            this.dashboard1.TabIndex = 10;
+            // 
             // list_des_versment1
             // 
             this.list_des_versment1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1138,23 +1155,6 @@ namespace GS_ABATTOIRE
             this.liste_des_clients1.Size = new System.Drawing.Size(1026, 689);
             this.liste_des_clients1.TabIndex = 2;
             // 
-            // liste_Utilisateur1
-            // 
-            this.liste_Utilisateur1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.liste_Utilisateur1.Location = new System.Drawing.Point(209, 0);
-            this.liste_Utilisateur1.Name = "liste_Utilisateur1";
-            this.liste_Utilisateur1.Size = new System.Drawing.Size(1026, 689);
-            this.liste_Utilisateur1.TabIndex = 10;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.AutoScroll = true;
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(209, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1026, 689);
-            this.dashboard1.TabIndex = 10;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1175,6 +1175,7 @@ namespace GS_ABATTOIRE
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);

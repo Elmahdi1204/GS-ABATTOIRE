@@ -136,7 +136,7 @@ namespace GS_ABATTOIRE.Dashboard
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("select sum(prixfournisseur -kottas.versment  ) - (select isnull(sum(Versement.montant),0) from Versement where Versement.type ='Achats'  )  from Kottas     ", Connexion.conn);
+                SqlCommand sql = new SqlCommand("select isnull(sum(prixfournisseur -kottas.versment  ),0)  - (select isnull(sum(Versement.montant),0) from Versement where Versement.type ='Achats'  )  from Kottas     ", Connexion.conn);
                 SqlDataReader dr = sql.ExecuteReader();
                 double count = 0;
 
