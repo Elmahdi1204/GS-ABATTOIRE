@@ -37,7 +37,7 @@ namespace GS_ABATTOIRE.Autre_Travail
             else
             {
                 //int idtrv = DataTravail.Get_lastid_trv() + 1;
-                DataTravail.Ajouter_Travail(int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuTextBox2.Text), int.Parse(bunifuTextBox3.Text), int.Parse(bunifuTextBox6.Text), float.Parse(bunifuTextBox4.Text), float.Parse(bunifuTextBox7.Text), float.Parse(bunifuTextBox22.Text), float.Parse(bunifuTextBox9.Text), float.Parse(bunifuTextBox11.Text), float.Parse(bunifuTextBox12.Text), bunifuDatePicker1.Value);
+                DataTravail.Ajouter_Travail(int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuTextBox2.Text), int.Parse(bunifuTextBox3.Text), int.Parse(bunifuTextBox6.Text), float.Parse(bunifuTextBox4.Text), float.Parse(bunifuTextBox7.Text), float.Parse(bunifuTextBox22.Text), float.Parse(bunifuTextBox9.Text), float.Parse(bunifuTextBox11.Text), float.Parse(bunifuTextBox12.Text), float.Parse(bunifuTextBox20.Text), float.Parse(bunifuTextBox21.Text), int.Parse(bunifuTextBox13.Text), int.Parse(bunifuTextBox19.Text), int.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), bunifuDatePicker1.Value);
                 MessageBox.Show("Travail ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
@@ -153,6 +153,12 @@ namespace GS_ABATTOIRE.Autre_Travail
 
         private void bunifuTextBox20_TextChanged(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void bunifuTextBox21_TextChanged(object sender, EventArgs e)
+        {
             try
             {
                 bunifuTextBox22.Text = (double.Parse(bunifuTextBox10.Text) + Double.Parse(bunifuTextBox20.Text) + double.Parse(bunifuTextBox21.Text)).ToString();
@@ -162,11 +168,6 @@ namespace GS_ABATTOIRE.Autre_Travail
 
             }
 
-        }
-
-        private void bunifuTextBox21_TextChanged(object sender, EventArgs e)
-        {
-           
         }
     }
 }

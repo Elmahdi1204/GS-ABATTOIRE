@@ -41,7 +41,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             bunifuTextBox15.Text = data[7];
             bunifuTextBox16.Text = data[8];
             bunifuTextBox11.Text = data[9];
-                bunifuTextBox19.Text = (DataAchats.Totale_des_versment(id) + double.Parse(data[9]) ).ToString();
+            bunifuTextBox19.Text = (DataAchats.Totale_des_versment(id) + double.Parse(data[9]) ).ToString();
 
             bunifuTextBox12.Text= (double.Parse(bunifuTextBox16.Text)  -(DataAchats.Totale_des_versment(id) + double.Parse(data[9]))  ).ToString();
             bunifuTextBox2.Text = data[10];

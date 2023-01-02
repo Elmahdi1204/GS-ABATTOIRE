@@ -46,8 +46,9 @@ namespace GS_ABATTOIRE.Facture
            parameters.Add(new ReportParameter("Qteabattage", data[3]));
            parameters.Add(new ReportParameter("prixabattage"," X " +data[5]+" = "+$"{totaleabatage :### ### ##0.00}"));
             parameters.Add(new ReportParameter("nom", "" + dataclient[1]));
-            parameters.Add(new ReportParameter("date", "" + data[10]));
-           parameters.Add(new ReportParameter("prixtotale", $"{totale2:### ### ##0.00}"));
+            parameters.Add(new ReportParameter("date", "" + data[11]));
+            parameters.Add(new ReportParameter("numf", "" + data[0]));
+            parameters.Add(new ReportParameter("prixtotale", $"{totale2:### ### ##0.00}"));
            parameters.Add(new ReportParameter("remise", $"{remis:### ### ##0.00}"));
           parameters.Add(new ReportParameter("prixaprremise", $"{totale:### ### ##0.00}"));
            parameters.Add(new ReportParameter("rest", $"{rest:### ### ##0.00}"));

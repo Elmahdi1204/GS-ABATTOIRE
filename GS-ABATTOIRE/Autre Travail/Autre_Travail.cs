@@ -1,5 +1,7 @@
 ﻿using GS_ABATTOIRE.Facture;
 using GS_ABATTOIRE.Gestion_des_clients;
+using GS_ABATTOIRE.Gestion_Des_Versement;
+using GS_ABATTOIRE.Sortie_de_caisse;
 using Microsoft.Reporting.Map.WebForms.BingMaps;
 using Microsoft.Win32;
 using System;
@@ -9,6 +11,7 @@ using System.Data;
 using System.Data.Common;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +20,7 @@ namespace GS_ABATTOIRE.Autre_Travail
 {
     public partial class Autre_Travail : UserControl
     {
+        
         public Autre_Travail()
         {
             InitializeComponent();
@@ -42,6 +46,12 @@ namespace GS_ABATTOIRE.Autre_Travail
                 String Versement = bunifuDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 String Credit = bunifuDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 String Date = bunifuDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                if (colname == "modd")
+                {
+                    Detail_Travail dtrv = new Detail_Travail(int.Parse(id));
+                    dtrv.ShowDialog();
+                }
+
 
                 if (colname == "sup")
                 {
@@ -68,6 +78,7 @@ namespace GS_ABATTOIRE.Autre_Travail
 
 
                     }
+                 
                     bunifuButton22.PerformClick();
 
                     bunifuDataGridView1.Rows[index].Selected = true;
@@ -106,12 +117,17 @@ namespace GS_ABATTOIRE.Autre_Travail
                 BonTravail bon = new BonTravail(int.Parse(id));
                 bon.ShowDialog();
                 bunifuDataGridView1.Rows[index].Selected = true;
+               
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-           
+        }
+
+        private void bunifuButton23_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

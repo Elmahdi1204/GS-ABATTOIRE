@@ -12,12 +12,12 @@ namespace GS_ABATTOIRE.Autre_Travail
     internal class DataTravail
     {
       
-        public static void Ajouter_Travail(int idclient, int mort, int qtegrl, int qtetriash, double prixabattage, double priwtriash, double prixtotale, double remise, double versment, double credit, DateTime date)
+        public static void Ajouter_Travail(int idclient, int mort, int qtegrl, int qtetriash, double prixabattage, double priwtriash, double prixtotale, double remise, double versment, double credit,double transport,double charge,int poid,int poidapres,int qtehache,double prixhaxhe, DateTime date)
         {
             try
             {
                 Connexion.conn.Open();
-                SqlCommand sql = new SqlCommand("INSERT INTO Travail (idclient ,mor,qtegrl,qtetriash,prixabattage,prixtriash,prixtotale,remise,versement,date )VALUES ('" + idclient + "', '" + mort + "','" + qtegrl + "','" + qtetriash + "','" + prixabattage + "','" + priwtriash + "', '" + prixtotale + "','" + remise + "','" + versment + "','" + date + "');", Connexion.conn);
+                SqlCommand sql = new SqlCommand("INSERT INTO Travail (idclient ,mor,qtegrl,qtetriash,prixabattage,prixtriash,prixtotale,remise,versement,transport,charge,poid,poidapes,qtehache,prixhache,date )VALUES ('" + idclient + "', '" + mort + "','" + qtegrl + "','" + qtetriash + "','" + prixabattage + "','" + priwtriash + "', '" + prixtotale + "','" + remise + "','" + versment + "','"+transport+"','"+charge+"','"+poid+"','"+poidapres+"','"+qtehache+"','"+prixhaxhe+"','" + date + "');", Connexion.conn);
                 sql.ExecuteNonQuery();
                 Connexion.conn.Close();
             }
@@ -132,8 +132,15 @@ namespace GS_ABATTOIRE.Autre_Travail
                     list.Add(dr[8].ToString());
                     list.Add(dr[9].ToString());
                     list.Add(dr[10].ToString());
-                    
-                    
+                    list.Add(dr[11].ToString());
+                    list.Add(dr[12].ToString());
+                    list.Add(dr[13].ToString());
+                    list.Add(dr[14].ToString());
+                    list.Add(dr[15].ToString());
+                    list.Add(dr[16].ToString());
+                    list.Add(dr[17].ToString());
+
+
 
 
 
@@ -150,4 +157,5 @@ namespace GS_ABATTOIRE.Autre_Travail
             }
         }
     }
+   
 }
