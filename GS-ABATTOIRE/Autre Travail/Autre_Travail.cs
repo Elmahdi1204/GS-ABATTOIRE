@@ -46,6 +46,7 @@ namespace GS_ABATTOIRE.Autre_Travail
                 String Versement = bunifuDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 String Credit = bunifuDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 String Date = bunifuDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+
                 if (colname == "modd")
                 {
                     Detail_Travail dtrv = new Detail_Travail(int.Parse(id));

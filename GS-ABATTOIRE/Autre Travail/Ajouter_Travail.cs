@@ -25,8 +25,10 @@ namespace GS_ABATTOIRE.Autre_Travail
         {
             // TODO: cette ligne de code charge les données dans la table 'abattoireDataSet1.Clients'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.clientsTableAdapter.Fill(this.abattoireDataSet1.Clients);
+          
 
         }
+  
 
         private void bunifuButton22_Click(object sender, EventArgs e)
         {
@@ -167,6 +169,16 @@ namespace GS_ABATTOIRE.Autre_Travail
             {
 
             }
+
+        }
+
+        private void bunifuButton22_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
 
         }
     }
