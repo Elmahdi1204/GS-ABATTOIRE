@@ -1,6 +1,6 @@
 ﻿namespace GS_ABATTOIRE.Autre_Travail
 {
-    partial class Ajouter_Travail
+    partial class Detail_Travail
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ajouter_Travail));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detail_Travail));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -153,8 +152,6 @@
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuTextBox13 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuDropdown1 = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.abattoireDataSet1 = new GS_ABATTOIRE.AbattoireDataSet1();
             this.bunifuTextBox12 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox11 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox10 = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -167,12 +164,7 @@
             this.bunifuTextBox3 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.clientsTableAdapter = new GS_ABATTOIRE.AbattoireDataSet1TableAdapters.ClientsTableAdapter();
-            this.abattoireDataSet2 = new GS_ABATTOIRE.AbattoireDataSet();
             this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abattoireDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abattoireDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -236,8 +228,7 @@
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(892, 840);
-            this.bunifuPanel1.TabIndex = 0;
-            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
+            this.bunifuPanel1.TabIndex = 1;
             // 
             // label22
             // 
@@ -496,7 +487,6 @@
             this.bunifuTextBox20.TextPlaceholder = "Transport";
             this.bunifuTextBox20.UseSystemPasswordChar = false;
             this.bunifuTextBox20.WordWrap = true;
-            this.bunifuTextBox20.TextChanged += new System.EventHandler(this.bunifuTextBox20_TextChanged);
             // 
             // bunifuSeparator2
             // 
@@ -1217,7 +1207,6 @@
             this.bunifuButton22.TextMarginLeft = 0;
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click);
             // 
             // bunifuButton21
             // 
@@ -1307,7 +1296,6 @@
             this.bunifuButton21.TextMarginLeft = 0;
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
             // bunifuTextBox13
             // 
@@ -1391,8 +1379,6 @@
             this.bunifuDropdown1.BorderColor = System.Drawing.Color.Silver;
             this.bunifuDropdown1.BorderRadius = 20;
             this.bunifuDropdown1.Color = System.Drawing.Color.Silver;
-            this.bunifuDropdown1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientsBindingSource, "idclient", true));
-            this.bunifuDropdown1.DataSource = this.clientsBindingSource;
             this.bunifuDropdown1.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.bunifuDropdown1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.bunifuDropdown1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1431,16 +1417,6 @@
             this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.bunifuDropdown1.TextLeftMargin = 5;
             this.bunifuDropdown1.ValueMember = "idclient";
-            // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "Clients";
-            this.clientsBindingSource.DataSource = this.abattoireDataSet1;
-            // 
-            // abattoireDataSet1
-            // 
-            this.abattoireDataSet1.DataSetName = "AbattoireDataSet1";
-            this.abattoireDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bunifuTextBox12
             // 
@@ -1591,7 +1567,6 @@
             this.bunifuTextBox11.TextPlaceholder = "Versement";
             this.bunifuTextBox11.UseSystemPasswordChar = false;
             this.bunifuTextBox11.WordWrap = true;
-            this.bunifuTextBox11.TextChanged += new System.EventHandler(this.bunifuTextBox11_TextChanged);
             // 
             // bunifuTextBox10
             // 
@@ -1667,7 +1642,6 @@
             this.bunifuTextBox10.TextPlaceholder = "Prix Aprés Remise";
             this.bunifuTextBox10.UseSystemPasswordChar = false;
             this.bunifuTextBox10.WordWrap = true;
-            this.bunifuTextBox10.TextChanged += new System.EventHandler(this.bunifuTextBox10_TextChanged);
             // 
             // bunifuTextBox9
             // 
@@ -1743,7 +1717,6 @@
             this.bunifuTextBox9.TextPlaceholder = "Remise";
             this.bunifuTextBox9.UseSystemPasswordChar = false;
             this.bunifuTextBox9.WordWrap = true;
-            this.bunifuTextBox9.TextChanged += new System.EventHandler(this.bunifuTextBox9_TextChanged);
             // 
             // bunifuTextBox8
             // 
@@ -1819,7 +1792,6 @@
             this.bunifuTextBox8.TextPlaceholder = "Prix Totale Teraush";
             this.bunifuTextBox8.UseSystemPasswordChar = false;
             this.bunifuTextBox8.WordWrap = true;
-            this.bunifuTextBox8.TextChanged += new System.EventHandler(this.bunifuTextBox8_TextChanged);
             // 
             // bunifuTextBox7
             // 
@@ -1895,7 +1867,6 @@
             this.bunifuTextBox7.TextPlaceholder = "Prix Teriash";
             this.bunifuTextBox7.UseSystemPasswordChar = false;
             this.bunifuTextBox7.WordWrap = true;
-            this.bunifuTextBox7.TextChanged += new System.EventHandler(this.bunifuTextBox7_TextChanged);
             // 
             // bunifuTextBox6
             // 
@@ -2121,7 +2092,6 @@
             this.bunifuTextBox4.TextPlaceholder = "Prix Abattage";
             this.bunifuTextBox4.UseSystemPasswordChar = false;
             this.bunifuTextBox4.WordWrap = true;
-            this.bunifuTextBox4.TextChanged += new System.EventHandler(this.bunifuTextBox4_TextChanged);
             // 
             // bunifuTextBox3
             // 
@@ -2349,30 +2319,17 @@
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 
-            // clientsTableAdapter
-            // 
-            this.clientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // abattoireDataSet2
-            // 
-            this.abattoireDataSet2.DataSetName = "AbattoireDataSet";
-            this.abattoireDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Ajouter_Travail
+            // Detail_Travail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 840);
             this.Controls.Add(this.bunifuPanel1);
-            this.Name = "Ajouter_Travail";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ajouter_Travail";
-            this.Load += new System.EventHandler(this.Ajouter_Travail_Load);
+            this.Name = "Detail_Travail";
+            this.Text = "Detail_Travail";
+            this.Load += new System.EventHandler(this.Detail_Travail_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abattoireDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.abattoireDataSet2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2380,30 +2337,17 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox12;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox11;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox10;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox9;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox8;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox7;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox6;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox5;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox4;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox3;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
-        private AbattoireDataSet1 abattoireDataSet1;
-        private System.Windows.Forms.BindingSource clientsBindingSource;
-        private AbattoireDataSet1TableAdapters.ClientsTableAdapter clientsTableAdapter;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox13;
-        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox14;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox17;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox16;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox15;
+        private System.Windows.Forms.Label label22;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox22;
+        private System.Windows.Forms.Label label21;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox21;
+        private System.Windows.Forms.Label label20;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox20;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.Label label19;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox19;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -2420,17 +2364,26 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label17;
-        private AbattoireDataSet abattoireDataSet2;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Label label22;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox22;
-        private System.Windows.Forms.Label label21;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox21;
-        private System.Windows.Forms.Label label20;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox20;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
-        private System.Windows.Forms.Label label19;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox19;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox17;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox16;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox15;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox14;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox13;
+        private Bunifu.UI.WinForms.BunifuDropdown bunifuDropdown1;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox12;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox11;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox10;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox9;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox8;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox7;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox6;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox5;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox4;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox3;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
     }
 }

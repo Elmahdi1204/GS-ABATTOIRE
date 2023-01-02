@@ -26,5 +26,10 @@ namespace GS_ABATTOIRE.Autre_Travail
             MessageBox.Show("payer avec success", "paye un credit ");
             this.Close();
         }
+
+        private void Payecredit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

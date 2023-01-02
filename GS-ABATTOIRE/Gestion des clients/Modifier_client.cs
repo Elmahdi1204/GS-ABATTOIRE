@@ -47,7 +47,7 @@ namespace GS_ABATTOIRE.Gestion_des_clients
             else
             {
                 Dataclients.Modifier_Client(bunifuTextBox1.Text, bunifuTextBox4.Text, bunifuTextBox3.Text, bunifuTextBox6.Text, bunifuTextBox2.Text, bunifuTextBox5.Text, bunifuTextBox7.Text, bunifuTextBox8.Text, int.Parse(Idclient.Text));
-                MessageBox.Show("Client ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Client Modifier avec succes", "Modifier avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
             }
