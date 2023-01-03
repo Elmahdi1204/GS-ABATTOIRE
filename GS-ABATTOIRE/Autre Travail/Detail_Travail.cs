@@ -38,15 +38,15 @@ namespace GS_ABATTOIRE.Autre_Travail
             bunifuTextBox17.Text = (double.Parse(bunifuTextBox15.Text) * double.Parse(bunifuTextBox16.Text)).ToString();
             bunifuTextBox14.Text = (double.Parse(bunifuTextBox5.Text) + double.Parse(bunifuTextBox8.Text) + double.Parse(bunifuTextBox17.Text)).ToString();
             bunifuTextBox9.Text = data[8];
-            bunifuTextBox10.Text = data[7];
+            bunifuTextBox10.Text = (double.Parse(bunifuTextBox14.Text) - double.Parse(bunifuTextBox9.Text)).ToString();
             bunifuTextBox11.Text = data[9];
-            bunifuTextBox12.Text = (double.Parse(bunifuTextBox10.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
             bunifuTextBox13.Text = data[14];
             bunifuTextBox19.Text = data[15];
             bunifuTextBox20.Text = data[12];
             bunifuTextBox21.Text = data[13];
-            bunifuTextBox22.Text = (double.Parse(bunifuTextBox10.Text) + Double.Parse(bunifuTextBox20.Text) + double.Parse(bunifuTextBox21.Text)).ToString();
-           
+            bunifuTextBox22.Text = data[7];
+            bunifuTextBox12.Text = (double.Parse(bunifuTextBox22.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
+
 
 
 
@@ -80,6 +80,16 @@ namespace GS_ABATTOIRE.Autre_Travail
         private void bunifuButton22_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void bunifuTextBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuTextBox9_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

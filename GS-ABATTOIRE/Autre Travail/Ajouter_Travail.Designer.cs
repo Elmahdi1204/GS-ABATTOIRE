@@ -117,6 +117,19 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties83 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties84 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.bunifuTextBox22 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -169,19 +182,6 @@
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.clientsTableAdapter = new GS_ABATTOIRE.AbattoireDataSet1TableAdapters.ClientsTableAdapter();
             this.abattoireDataSet2 = new GS_ABATTOIRE.AbattoireDataSet();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abattoireDataSet1)).BeginInit();
@@ -264,6 +264,150 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(892, 840);
             this.bunifuPanel1.TabIndex = 0;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(405, 792);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(35, 20);
+            this.label34.TabIndex = 63;
+            this.label34.Text = "DA";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(517, 712);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(29, 17);
+            this.label33.TabIndex = 62;
+            this.label33.Text = "DA";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(217, 712);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(29, 17);
+            this.label32.TabIndex = 61;
+            this.label32.Text = "DA";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(217, 643);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(29, 17);
+            this.label31.TabIndex = 60;
+            this.label31.Text = "DA";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(517, 643);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(29, 17);
+            this.label30.TabIndex = 59;
+            this.label30.Text = "DA";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(517, 578);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(29, 17);
+            this.label29.TabIndex = 58;
+            this.label29.Text = "DA";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(439, 517);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(29, 17);
+            this.label28.TabIndex = 57;
+            this.label28.Text = "DA";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(517, 461);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(29, 17);
+            this.label27.TabIndex = 56;
+            this.label27.Text = "DA";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(519, 395);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(29, 17);
+            this.label26.TabIndex = 55;
+            this.label26.Text = "DA";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(519, 329);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(29, 17);
+            this.label25.TabIndex = 54;
+            this.label25.Text = "DA";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(519, 256);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(29, 17);
+            this.label24.TabIndex = 53;
+            this.label24.Text = "DA";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(836, 386);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(29, 17);
+            this.label23.TabIndex = 52;
+            this.label23.Text = "DA";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(836, 314);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 17);
+            this.label18.TabIndex = 51;
+            this.label18.Text = "DA";
             // 
             // label22
             // 
@@ -349,6 +493,7 @@
             this.bunifuTextBox22.TextPlaceholder = "Montant Totale";
             this.bunifuTextBox22.UseSystemPasswordChar = false;
             this.bunifuTextBox22.WordWrap = true;
+            this.bunifuTextBox22.TextChanged += new System.EventHandler(this.bunifuTextBox22_TextChanged);
             // 
             // label21
             // 
@@ -2384,150 +2529,6 @@
             // 
             this.abattoireDataSet2.DataSetName = "AbattoireDataSet";
             this.abattoireDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(836, 314);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 17);
-            this.label18.TabIndex = 51;
-            this.label18.Text = "DA";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(836, 386);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(29, 17);
-            this.label23.TabIndex = 52;
-            this.label23.Text = "DA";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(519, 256);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(29, 17);
-            this.label24.TabIndex = 53;
-            this.label24.Text = "DA";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(519, 329);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(29, 17);
-            this.label25.TabIndex = 54;
-            this.label25.Text = "DA";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(519, 395);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(29, 17);
-            this.label26.TabIndex = 55;
-            this.label26.Text = "DA";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(517, 461);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(29, 17);
-            this.label27.TabIndex = 56;
-            this.label27.Text = "DA";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(439, 517);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(29, 17);
-            this.label28.TabIndex = 57;
-            this.label28.Text = "DA";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(517, 578);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(29, 17);
-            this.label29.TabIndex = 58;
-            this.label29.Text = "DA";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(517, 643);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(29, 17);
-            this.label30.TabIndex = 59;
-            this.label30.Text = "DA";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(217, 643);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(29, 17);
-            this.label31.TabIndex = 60;
-            this.label31.Text = "DA";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(217, 712);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(29, 17);
-            this.label32.TabIndex = 61;
-            this.label32.Text = "DA";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(517, 712);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(29, 17);
-            this.label33.TabIndex = 62;
-            this.label33.Text = "DA";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.12727F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(405, 792);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(35, 20);
-            this.label34.TabIndex = 63;
-            this.label34.Text = "DA";
             // 
             // Ajouter_Travail
             // 
