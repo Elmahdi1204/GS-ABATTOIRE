@@ -102,15 +102,7 @@ namespace GS_ABATTOIRE.Autre_Travail
 
         private void bunifuTextBox10_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                bunifuTextBox11.Text = double.Parse(bunifuTextBox10.Text).ToString();
-
-            }
-            catch
-            {
-
-            }
+           
            
         }
 
@@ -118,7 +110,7 @@ namespace GS_ABATTOIRE.Autre_Travail
         {
             try
             {
-                bunifuTextBox12.Text = (double.Parse(bunifuTextBox10.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
+                bunifuTextBox12.Text = (double.Parse(bunifuTextBox22.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
 
             }
             catch
@@ -180,6 +172,19 @@ namespace GS_ABATTOIRE.Autre_Travail
         private void label29_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuTextBox22_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                bunifuTextBox11.Text = double.Parse(bunifuTextBox22.Text).ToString();
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }
