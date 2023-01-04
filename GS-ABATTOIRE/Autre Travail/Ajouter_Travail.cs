@@ -15,6 +15,7 @@ namespace GS_ABATTOIRE.Autre_Travail
         public Ajouter_Travail()
         {
             InitializeComponent();
+
           
 
 
