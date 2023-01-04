@@ -291,7 +291,11 @@
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(260, 32);
             this.bunifuDatePicker1.TabIndex = 4;
+
             this.bunifuDatePicker1.Value = new System.DateTime(2023, 1, 3, 0, 0, 0, 0);
+
+            this.bunifuDatePicker1.Value = new System.DateTime(2023, 1, 4, 0, 0, 0, 0);
+
             // 
             // bunifuTextBox2
             // 
