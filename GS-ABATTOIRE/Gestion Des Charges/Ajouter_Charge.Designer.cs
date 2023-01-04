@@ -173,7 +173,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.32727F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(73, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 29);
+            this.label1.Size = new System.Drawing.Size(228, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nouveau Charge";
             // 
@@ -291,7 +291,11 @@
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(260, 32);
             this.bunifuDatePicker1.TabIndex = 4;
+
+            this.bunifuDatePicker1.Value = new System.DateTime(2023, 1, 3, 0, 0, 0, 0);
+
             this.bunifuDatePicker1.Value = new System.DateTime(2023, 1, 4, 0, 0, 0, 0);
+
             // 
             // bunifuTextBox2
             // 
