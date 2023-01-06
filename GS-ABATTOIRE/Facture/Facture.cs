@@ -17,7 +17,7 @@ namespace GS_ABATTOIRE.Facture
     {
         List<String> data = new List<string>();
         List<String> dataclient = new List<string>();
-        public Facture( int idvent , List<objet> list , double tva , string methode , String dest )
+        public Facture(int idvent, List<objet> list, double tva, string methode, String dest)
         {
             InitializeComponent();
             string notice = "";
@@ -30,12 +30,12 @@ namespace GS_ABATTOIRE.Facture
             double prix = double.Parse(data[4]);
             double prixtva = double.Parse(data[4]) * (tva / 100);
             double totale = prix + prixtva;
-         
+
             dataclient = Dataclients.Getclient(int.Parse(data[2]));
             ReportParameterCollection parameters = new ReportParameterCollection();
-            parameters.Add(new ReportParameter("prix", $"{ prix:### ### ##0.00} "));
-            parameters.Add(new ReportParameter("prixtva", $"{ prixtva:### ### ##0.00} "));
-            parameters.Add(new ReportParameter("prixavectva", $"{ totale:### ### ##0.00} "));
+            parameters.Add(new ReportParameter("prix", $"{prix:### ### ##0.00} "));
+            parameters.Add(new ReportParameter("prixtva", $"{prixtva:### ### ##0.00} "));
+            parameters.Add(new ReportParameter("prixavectva", $"{totale:### ### ##0.00} "));
             parameters.Add(new ReportParameter("tva", "" + tva));
             parameters.Add(new ReportParameter("method", "" + methode));
             parameters.Add(new ReportParameter("nomclient", "" + dataclient[1]));
@@ -45,10 +45,10 @@ namespace GS_ABATTOIRE.Facture
             parameters.Add(new ReportParameter("rc", "" + dataclient[6]));
             parameters.Add(new ReportParameter("art", "" + dataclient[7]));
             parameters.Add(new ReportParameter("rip", "" + dataclient[8]));
-            parameters.Add(new ReportParameter("totalecar", NumberToWords(((int)totale))));
-            parameters.Add(new ReportParameter("numf", ""+data[0]));
-            parameters.Add(new ReportParameter("date", ""+DateTime.Parse( data[6]).ToString("dd/MM/yyyy")));
-            parameters.Add(new ReportParameter("dest", "" +dest));
+            parameters.Add(new ReportParameter("totalecar", ConvertToWord((totale))));
+            parameters.Add(new ReportParameter("numf", "" + data[0]));
+            parameters.Add(new ReportParameter("date", "" + DateTime.Parse(data[6]).ToString("dd/MM/yyyy")));
+            parameters.Add(new ReportParameter("dest", "" + dest));
             parameters.Add(new ReportParameter("notice", "" + notice));
 
 
@@ -77,10 +77,11 @@ namespace GS_ABATTOIRE.Facture
         {
 
             this.reportViewer1.RefreshReport();
-           
+
         }
         public static string NumberToWords(int number)
         {
+            
             if (number == 0)
                 return "zero";
 
@@ -109,8 +110,8 @@ namespace GS_ABATTOIRE.Facture
 
             if (number > 0)
             {
-                if (words != "")
-                    words += "et ";
+                //if (words != "")
+                    //words += "et ";
 
                 var unitsMap = new[] { "zero", "un", "deux", "trois", "quatre", "cenque", "six", "sept", "huit", "neuf", "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize", "dix-sept", "dix-huit", "dix-neuf" };
                 var tensMap = new[] { "zero", "dix", "vingt", "trente", "quarente", "cinquante", "soixante", "soixante-dix", "quatre-vingts", "quatre-vingts-dix" };
@@ -127,7 +128,31 @@ namespace GS_ABATTOIRE.Facture
 
             return words;
         }
+        public static string ConvertToWord(double n)
+        {
+            // Split the number into the part before and after the decimal point
+            string[] parts = n.ToString().Split(',');
+
+            // Convert the part before the decimal point to a word
+            string word = NumberToWords(Convert.ToInt32(parts[0]));
+
+            // If there is a part after the decimal point,
+            // convert it to a word and concatenate with "and"
+            if (parts.Length > 1)
+            {
+                for (int i = 0; i < parts[1].Length; i++) {
+
+                    word += " Dinnars algeriennes ";
+                    word += " et " + NumberToWords(Convert.ToInt32(parts[1]));
+                }
+            }
+           
+
+            return word;
+        }
+
+        
     }
-
-
 }
+        
+    

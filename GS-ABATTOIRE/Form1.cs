@@ -19,7 +19,7 @@ namespace GS_ABATTOIRE
             dashboard1.Show();
             dashboard1.BringToFront();
 
-            if (Connexion.Type != "Admin")
+            if (Connexion.Type == "Employé")
             {
                 bunifuButton21.Visible = false;
                 bunifuButton210.Visible = false;

@@ -33,5 +33,10 @@ namespace GS_ABATTOIRE.Auth
                 this.Close();
             }
         }
+
+        private void Ajouter_Utilisateur_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -47,9 +47,9 @@
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,10 +62,10 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.bunifuDatePicker1);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBox3);
             this.bunifuPanel1.Controls.Add(this.bunifuPanel2);
             this.bunifuPanel1.Controls.Add(this.bunifuButton21);
-            this.bunifuPanel1.Controls.Add(this.bunifuDatePicker1);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBox2);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBox1);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -267,36 +267,6 @@
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
             this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
-            // bunifuDatePicker1
-            // 
-            this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatePicker1.BorderColor = System.Drawing.Color.Silver;
-            this.bunifuDatePicker1.BorderRadius = 17;
-            this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
-            this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDatePicker1.DisplayWeekNumbers = false;
-            this.bunifuDatePicker1.DPHeight = 0;
-            this.bunifuDatePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.bunifuDatePicker1.FillDatePicker = false;
-            this.bunifuDatePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuDatePicker1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker1.Icon")));
-            this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
-            this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.bunifuDatePicker1.LeftTextMargin = 5;
-            this.bunifuDatePicker1.Location = new System.Drawing.Point(42, 344);
-            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
-            this.bunifuDatePicker1.Name = "bunifuDatePicker1";
-            this.bunifuDatePicker1.Size = new System.Drawing.Size(260, 32);
-            this.bunifuDatePicker1.TabIndex = 4;
-
-            this.bunifuDatePicker1.Value = new System.DateTime(2023, 1, 3, 0, 0, 0, 0);
-
-            this.bunifuDatePicker1.Value = new System.DateTime(2023, 1, 4, 0, 0, 0, 0);
-
-            // 
             // bunifuTextBox2
             // 
             this.bunifuTextBox2.AcceptsReturn = false;
@@ -448,6 +418,31 @@
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 
+            // bunifuDatePicker1
+            // 
+            this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker1.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuDatePicker1.BorderRadius = 17;
+            this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.DisplayWeekNumbers = false;
+            this.bunifuDatePicker1.DPHeight = 0;
+            this.bunifuDatePicker1.FillDatePicker = false;
+            this.bunifuDatePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker1.Icon")));
+            this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker1.LeftTextMargin = 5;
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(42, 348);
+            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bunifuDatePicker1.Name = "bunifuDatePicker1";
+            this.bunifuDatePicker1.Size = new System.Drawing.Size(259, 32);
+            this.bunifuDatePicker1.TabIndex = 6;
+            this.bunifuDatePicker1.Value = new System.DateTime(2023, 1, 6, 15, 31, 0, 0);
+            // 
             // Ajouter_Charge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,7 +469,7 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
-        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox3;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
     }
 }

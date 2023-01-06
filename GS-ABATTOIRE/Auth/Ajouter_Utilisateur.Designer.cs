@@ -472,6 +472,7 @@
             this.Name = "Ajouter_Utilisateur";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ajouter_Utilisateur";
+            this.Load += new System.EventHandler(this.Ajouter_Utilisateur_Load);
             this.bunifuPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);

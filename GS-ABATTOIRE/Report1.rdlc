@@ -1475,7 +1475,7 @@
                     <Style />
                   </TextRun>
                   <TextRun>
-                    <Value> Dinnars algeriennes</Value>
+                    <Value xml:space="preserve"> </Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
