@@ -74,7 +74,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
                 Connexion.conn.Close();
             }
         }
-        public static void Ajouter_vents(int idvent , int idkotta, int idclient , double remise , double prixtotale , double versment , DateTime date)
+        public static void Ajouter_vents(int idvent , int idkotta, int idclient , double remise , string prixtotale , string versment , DateTime date)
         {
             try
             {

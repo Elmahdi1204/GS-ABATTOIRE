@@ -323,7 +323,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Ventes
             else
             {
                 int idvent = Datavents.Get_lastid() + 1;
-                Datavents.Ajouter_vents(idvent, int.Parse(id), int.Parse(bunifuDropdown1.SelectedValue.ToString()) , float.Parse(bunifuTextBox5.Text) , double.Parse(bunifuTextBox4.Text.Replace(',' , '.'))   , double.Parse(bunifuTextBox8.Text) , bunifuDatePicker1.Value) ;
+                Datavents.Ajouter_vents(idvent, int.Parse(id), int.Parse(bunifuDropdown1.SelectedValue.ToString()) , float.Parse(bunifuTextBox5.Text) ,bunifuTextBox4.Text.Replace(',' , '.')   , bunifuTextBox8.Text.Replace(",", ".") , bunifuDatePicker1.Value) ;
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
                     int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());

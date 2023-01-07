@@ -204,7 +204,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
         {
             try
             {
-                bunifuTextBox10.Text = ((int)Math.Ceiling( double.Parse(bunifuTextBox8.Text) * double.Parse(bunifuTextBox9.Text))).ToString();
+                bunifuTextBox10.Text = ( double.Parse(bunifuTextBox8.Text) * double.Parse(bunifuTextBox9.Text)).ToString();
                 bunifuTextBox16.Text = (double.Parse(bunifuTextBox10.Text) - double.Parse(bunifuTextBox15.Text)).ToString();
                 bunifuTextBox11.Text = bunifuTextBox16.Text;
                 bunifuTextBox12.Text = (double.Parse(bunifuTextBox16.Text) - double.Parse(bunifuTextBox11.Text)).ToString();
@@ -407,7 +407,7 @@ namespace GS_ABATTOIRE.Gestion_Des_Achats
             else
             {
                 int idkottas = DataAchats.Get_lastid() + 1;
-                DataAchats.Ajouter_kottas(idkottas, "Ensemble - " +bunifuDropdown2.Text+ " - " + idkottas + " - " + DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), bunifuTextBox8.Text.Replace(",","."),(int)Math.Ceiling( double.Parse(bunifuTextBox9.Text)),(int)Math.Ceiling( double.Parse(bunifuTextBox15.Text)),(int)Math.Ceiling( double.Parse(bunifuTextBox16.Text)),(int)Math.Ceiling( double.Parse(bunifuTextBox11.Text)), bunifuTextBox2.Text.Replace(",", "."), bunifuTextBox1.Text.Replace(",","."), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), double.Parse(bunifuTextBox4.Text), DateTime.Now , int.Parse(bunifuTextBox6.Text));
+                DataAchats.Ajouter_kottas(idkottas, "Ensemble - " +bunifuDropdown2.Text+ " - " + idkottas + " - " + DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year, int.Parse(bunifuDropdown1.SelectedValue.ToString()), bunifuDropdown2.Text, int.Parse(bunifuTextBox7.Text), bunifuTextBox8.Text.Replace(",","."), bunifuTextBox9.Text.Replace(",", ".") ,(int)Math.Ceiling( double.Parse(bunifuTextBox15.Text)), bunifuTextBox16.Text.Replace(",", "."),bunifuTextBox11.Text.Replace(",", "."), bunifuTextBox2.Text.Replace(",", "."), bunifuTextBox1.Text.Replace(",","."), double.Parse(bunifuTextBox13.Text), double.Parse(bunifuTextBox14.Text), bunifuTextBox4.Text.Replace(",", "."), DateTime.Now , int.Parse(bunifuTextBox6.Text));
                 for (int i = 0; bunifuDataGridView2.Rows.Count > i; i++)
                 {
                     int idproduit = int.Parse(bunifuDataGridView2.Rows[i].Cells[0].Value.ToString());
