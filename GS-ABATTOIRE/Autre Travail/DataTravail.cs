@@ -12,7 +12,7 @@ namespace GS_ABATTOIRE.Autre_Travail
     internal class DataTravail
     {
       
-        public static void Ajouter_Travail(int idclient, int mort, int qtegrl, int qtetriash, double prixabattage, double priwtriash, double prixtotale, double remise, double versment, double credit,double transport,double charge,int poid,int poidapres,int qtehache,double prixhaxhe, DateTime date)
+        public static void Ajouter_Travail(int idclient, int mort, int qtegrl, int qtetriash, string prixabattage, string priwtriash, string prixtotale, string remise, string versment, double credit,double transport,double charge,int poid,int poidapres,int qtehache,string prixhaxhe, DateTime date)
         {
             try
             {

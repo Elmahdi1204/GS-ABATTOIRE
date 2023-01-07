@@ -40,7 +40,7 @@ namespace GS_ABATTOIRE.Autre_Travail
             else
             {
                 //int idtrv = DataTravail.Get_lastid_trv() + 1;
-                DataTravail.Ajouter_Travail(int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuTextBox2.Text), int.Parse(bunifuTextBox3.Text), int.Parse(bunifuTextBox6.Text), float.Parse(bunifuTextBox4.Text), float.Parse(bunifuTextBox7.Text), float.Parse(bunifuTextBox22.Text), float.Parse(bunifuTextBox9.Text), float.Parse(bunifuTextBox11.Text), float.Parse(bunifuTextBox12.Text), float.Parse(bunifuTextBox20.Text), float.Parse(bunifuTextBox21.Text), int.Parse(bunifuTextBox13.Text), int.Parse(bunifuTextBox19.Text), int.Parse(bunifuTextBox15.Text), double.Parse(bunifuTextBox16.Text), bunifuDatePicker1.Value);
+                DataTravail.Ajouter_Travail(int.Parse(bunifuDropdown1.SelectedValue.ToString()), int.Parse(bunifuTextBox2.Text), int.Parse(bunifuTextBox3.Text), int.Parse(bunifuTextBox6.Text),bunifuTextBox4.Text.Replace(",", "."), bunifuTextBox7.Text.Replace(",", "."), bunifuTextBox22.Text.Replace(",", "."), bunifuTextBox9.Text.Replace(",", "."), bunifuTextBox11.Text.Replace(",", "."), float.Parse(bunifuTextBox12.Text), float.Parse(bunifuTextBox20.Text), float.Parse(bunifuTextBox21.Text), int.Parse(bunifuTextBox13.Text), int.Parse(bunifuTextBox19.Text), int.Parse(bunifuTextBox15.Text), bunifuTextBox16.Text.Replace(",", "."), bunifuDatePicker1.Value);
                 MessageBox.Show("Travail ajouter avec succes", "Ajouter avec succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 

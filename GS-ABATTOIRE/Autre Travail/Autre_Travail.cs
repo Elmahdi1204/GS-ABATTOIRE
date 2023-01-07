@@ -30,6 +30,7 @@ namespace GS_ABATTOIRE.Autre_Travail
         {
             Ajouter_Travail ajtt = new Ajouter_Travail();
             ajtt.ShowDialog();
+            DataTravail.List_des_travali(bunifuDataGridView1, bunifuTextBox1.Text);
         }
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
